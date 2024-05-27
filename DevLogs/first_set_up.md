@@ -11,13 +11,15 @@
 4. Dev Utilities
    1. Installing nvm, node, npm 
    2. GITHUB CLI (gh) in terminal ; Didn't 
+5. Signed in to Mozilla to keep Consistent stuff
+   - used legendsonthemove1111@gmail.com to sign in
 
 
 
 > [PUSH ALL THE SIGNATURES TO GITHUB] 
 
 
-### Explor after all Projects
+### Explore after all Projects
 - jk / arrowKeys speed needs to increase the longer you press it 
 - yay pacman sway waybar cliphist
 - start using other aliases related to aur and arch repo
@@ -35,10 +37,10 @@ abbrev-alias vc='code' # gui code editor
 
 - zathura keybindings
 
-## 
+## PLEASE WORK : running a Windows VM
 
 
-## 4. All the fodings made in this file is PERSISTENT 
+## 4. All the foldings made in this file is PERSISTENT 
 
 Adding this to config :-
 
