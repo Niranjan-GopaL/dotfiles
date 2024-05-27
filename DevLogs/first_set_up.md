@@ -10,6 +10,7 @@
 3. zsh abbrv-alias IS GOD-TIER ;
 4. Dev Utilities
    1. Installing nvm, node, npm 
+   2. GITHUB CLI (gh) in terminal ; Didn't 
 
 
 
@@ -33,6 +34,8 @@ abbrev-alias vc='code' # gui code editor
 ```
 
 - zathura keybindings
+
+## 
 
 
 ## 4. All the fodings made in this file is PERSISTENT 
