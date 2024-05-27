@@ -6,6 +6,7 @@
    1. Connect to Bluetooth 
    2. Zathura Zathura-pdf-popler ( further customisation later ) 
    3. Made .zshrc to be here ~/.config/zsh/.zshrc
+   4. made .config A REPOSITORY
 3. zsh abbrv-alias IS GOD-TIER ;
 4. Dev Utilities
    1. Installing nvm, node, npm 
@@ -20,13 +21,13 @@
 - yay pacman sway waybar cliphist
 - start using other aliases related to aur and arch repo
 ```sh
-abbrev-alias ld='eza -lhD --icons=auto' # long list dirs
+abbrev-alias ld='eza -lhD --icons=auto'   # long list dirs
 abbrev-alias lt='eza --icons=auto --tree' # list folder as tree
-abbrev-alias un='$aurhelper -Rns' # uninstall package
-abbrev-alias up='$aurhelper -Syu' # update system/package/aur
-abbrev-alias pl='$aurhelper -Qs' # list installed package
-abbrev-alias pa='$aurhelper -Ss' # list availabe package
-abbrev-alias pc='$aurhelper -Sc' # remove unused cache
+abbrev-alias un='$aurhelper -Rns'         # uninstall package
+abbrev-alias up='$aurhelper -Syu'         # update system/package/aur
+abbrev-alias pl='$aurhelper -Qs'          # list installed package
+abbrev-alias pa='$aurhelper -Ss'          # list availabe package
+abbrev-alias pc='$aurhelper -Sc'          # remove unused cache
 abbrev-alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
 abbrev-alias vc='code' # gui code editor
 ```
@@ -34,10 +35,15 @@ abbrev-alias vc='code' # gui code editor
 - zathura keybindings
 
 
+## 4. All the fodings made in this file is PERSISTENT 
+
+Adding this to config :-
+
+>  "editor.foldingStrategy":"auto",
 
 
 
-## Moving .zshrc to be inside .config
+## 3. Moving .zshrc to be inside .config
 
 Quick commands ; Detailed gpt response below
 
@@ -125,13 +131,13 @@ Open a new terminal session, and you should see the message indicating the `.zsh
 By moving your `.zshrc` to `~/.config` and creating a symlink in the home directory, you maintain compatibility with any applications or scripts that expect to find `.zshrc` in the home directory while keeping your configuration files organized in `~/.config`. This approach provides the best of both worlds: cleanliness and compatibility.
 
 
-## Bluetooth
+## 2. Bluetooth
 All you need is :-
 ```sh
 $ blueman-manager
 ``` 
 
-## Connecting to Github in terminal via ssh [ GPT-4o ]
+## 1. Connecting to Github in terminal via ssh [ GPT-4o ]
 
 To set up SSH for GitHub and use it for pushing and pulling from your terminal, follow these steps:
 
