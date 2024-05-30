@@ -1,7 +1,8 @@
 # Things I want in VIM
 - MULTI-CURSOR
 - How to change multiple instances of the word SIMULTANEOUSLY
-
+- Absolutely loved NvChad
+> It helps you when you are typing in commands ; just writing vim commands
 
 # Windows Terminal
 
@@ -15,7 +16,7 @@
 - You can change the theme by JUST `CHANGING THE NAME` in :-
 > oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\hul10.omp.json" | Invoke-Expression 
 #### Fav :-
-- hul10
+- hul10 ; kushal ; kali
 
 
 ### Keybindings
