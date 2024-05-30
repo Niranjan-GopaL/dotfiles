@@ -17,6 +17,9 @@ Function openCVdir {Set-Location -Path D:\"Code Practise"\__Exploring_Deep_Learn
 Function gitstatus {git status}
 Function gitlog {git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all}
 
+Function jupyterNotebook {jupyter notebook --notebook-dir=D:/"Code Practise"}
+
+
 # Alias
 
 # Path Aliases
@@ -32,5 +35,6 @@ Set-Alias c   cls
 Set-Alias g   git
 Set-Alias gs  gitstatus 
 # add git commit
-Set-Alias glog  gitlog
+Set-Alias gg  gitlog
+Set-Alias jn    jupyterNotebook 
 Set-Alias grep findstr   
