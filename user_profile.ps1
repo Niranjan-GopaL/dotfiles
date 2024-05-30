@@ -11,7 +11,7 @@ Import-Module PSReadLine
 
 Function CD32 {Set-Location -Path D:\"Code Practise"}
 Function dot {Set-Location -Path D:\"Code Practise"\dotfiles}
-Function openCVdir {Set-Location -Path D:\"Code Practise"\__Exploring_Deep_Learning}
+Function openCVdir {Set-Location -Path D:\"Code Practise"\Exploring__Open_CV__}
 # Function gitadd {git add} we want something like abbrev-alias in fish ; ga should autocomplete to git add 
 # OR take in inputs after ga 
 Function gitstatus {git status}
