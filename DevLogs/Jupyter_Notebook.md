@@ -17,8 +17,12 @@
 ```
 
 - Keybindings ?
-    - alt + enter  => run only the current cell
-    - ctrl + enter => run all the cells upto current cell
+    - convert cell to code     => ctrl + M , Y
+    - convert cell to markdown => ctrl + M , M
+
+    - ctrl + enter  => run cell advance
+    - shift + enter => run the cell and advance
+    - alt + enter   => run only the current cell and advance to next cell
     - ctrl + M + j/k to navigate ( Vim Navigation )
         - dd to delte cell
         - a to inset above
