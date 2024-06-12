@@ -1,8 +1,15 @@
 Import-Module PSReadLine
 
 # Loading Theme and Shell :- All previes of themes are available in :- https://ohmyposh.dev/docs/themes
- 
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\kushal.omp.json" | Invoke-Expression
+#  `$ Get-PoshThemes` execute this in pwsh to see all the installed themes
+
+
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\tokyo.omp.json" | Invoke-Expression
+# oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\tokyonight_storm.omp.json" | Invoke-Expression
+# oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\if_tea.omp.json" | Invoke-Expression
+# oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\cert.omp.json" | Invoke-Expression
+# oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\kushal.omp.json" | Invoke-Expression
+# oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\1_shell.omp.json" | Invoke-Expression
 # oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\kali.omp.json" | Invoke-Expression
 # oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\json.omp.json" | Invoke-Expression
 # oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\hul10.omp.json" | Invoke-Expression
@@ -12,6 +19,7 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\kushal.omp.json" | Invoke-E
 Function CD32 {Set-Location -Path D:\"Code Practise"}
 Function dot {Set-Location -Path D:\"Code Practise"\dotfiles}
 Function openCVdir {Set-Location -Path D:\"Code Practise"\Exploring__Open_CV__}
+Function Api-Dev {Set-Location -Path D:\"Code Practise"\API_Dev}
 # Function gitadd {git add} we want something like abbrev-alias in fish ; ga should autocomplete to git add 
 # OR take in inputs after ga 
 Function gitstatus {git status}
@@ -82,6 +90,7 @@ Function List-DirectoryContents {
 Set-Alias -Name code-prac -Value CD32
 Set-Alias -Name cv2-proj  -Value openCVdir
 Set-Alias -Name devlog  -Value dot
+Set-Alias -Name api  -Value Api-Dev
 
 
 # Commands
