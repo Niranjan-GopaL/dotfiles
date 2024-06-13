@@ -1,0 +1,488 @@
+{
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.sideBar.location": "right",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Ubuntu (WSL)": {
+
+      "path": "C:\\Windows\\System32\\wsl.exe",
+      "args": ["-d", "Ubuntu"]
+    }
+  },
+  "[python]": {
+    "editor.formatOnType": true,
+    // "editor.defaultFormatter": "ms-python.autopep8",
+    },
+
+  // this is GODSEND ; but THEY WILL SLOW computer down if it 
+  "python.analysis.autoImportCompletions":true, 
+  "python.analysis.indexing": true,
+
+  "code-runner.saveFileBeforeRun": true,
+  "solidity.telemetry": true,
+  // "[solidity]": {
+  //   "editor.defaultFormatter": "NomicFoundation.hardhat-solidity"
+  // },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "vscode.github",
+  "editor.guides.bracketPairs": "active",
+  "cSpell.enabled": false,
+  "editor.mouseWheelZoom": true,
+  "css.format.spaceAroundSelectorSeparator": true,
+  "tabnine.experimentalAutoImports": true,
+
+
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "code-runner.runInTerminal": false,
+  "code-runner.executorMapByFileExtension": {
+    ".cpp": "cd $dir && g++ *.cpp -o $fileNameWithoutExt && $fileNameWithoutExt.exe ",
+    ".vb": "cd $dir && vbc /nologo $fileName && $dir$fileNameWithoutExt",
+    ".vbs": "cscript //Nologo",
+    ".scala": "scala",
+    ".jl": "julia",
+    ".cr": "crystal",
+    ".ml": "ocaml",
+    ".zig": "zig run",
+    ".exs": "elixir",
+    ".hx": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    ".rkt": "racket",
+    ".scm": "csi -script",
+    ".ahk": "autohotkey",
+    ".au3": "autoit3",
+    ".kt": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar",
+    ".kts": "kotlinc -script",
+    ".dart": "dart",
+    ".pas": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".pp": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    ".d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    ".hs": "runhaskell",
+    ".nim": "nim compile --verbosity:0 --hints:off --run",
+    ".csproj": "dotnet run --project",
+    ".fsproj": "dotnet run --project",
+    ".lisp": "sbcl --script",
+    ".kit": "kitc --run",
+    ".v": "v run",
+    ".vsh": "v run",
+    ".sass": "sass --style expanded",
+    ".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    ".ring": "ring",
+    ".sml": "cd $dir && sml $fileName",
+
+  },
+
+
+
+// ----------------------------------------------------------------------------------------------------------------
+
+/*  LIGATURES 
+
+      --
+      ---
+      -~
+      (*
+      {|
+      }#
+      [|
+      ]#
+      .-
+      ..
+      ...
+      ..=
+      ..<
+      .?
+      .=
+      ::
+      :::
+      ::=
+      :=
+      ://
+      ;;
+      !.
+      !:
+      !!
+      !!.
+      !=
+      !==
+      ?.
+      ?:
+      ??
+      ??=
+      ?=
+      *)
+      **
+      ***
+      *>
+      */ /*
+      #(
+      #{
+      #[
+      #:
+      #!
+      #?
+      #=
+      #_
+      #_(
+      /*
+      />
+      // 
+      ///
+      /\
+      \/
+      \\
+      &&
+      |}
+      |]
+      ||
+      |||
+      |||>
+      ||>
+      |>
+      $>
+      ++
+      +++
+      +>
+      ==
+      ===
+      >=
+      >>
+      >>>
+      <!--
+      <*
+      <*>
+      <|
+      <||
+      <|||
+      <|>
+      <$
+      <$>
+      <+
+      <+>
+      <=
+      <>
+      <<
+      <<<
+      <~
+      <~>
+      <~~
+      </
+      </>
+      ~-
+      ~@
+      ~=
+      ~>
+      ~~
+      ~~>
+      ^=
+      %%
+      
+*/
+      
+      
+      
+"editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",      
+"editor.fontFamily": "'Monaspace Radon', 'Cascadia Code', 'Monaspace Krypton','Abecedary', Consolas,  'Courier New' ,'Gabriola','JetBrainsMono Nerd Font'",
+"terminal.integrated.fontFamily": "'Cascadia Code','Abecedary', Consolas,  'Courier New' ,'Gabriola','JetBrainsMono Nerd Font'",
+
+  "git.openRepositoryInParentFolders": "never",
+  "rapidapi.terminalLink.enabled": false,
+  "editor.codeActionsOnSave": {},
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "php": "C:\\php\\php.exe",
+    "python": "python",
+    "perl": "perl",
+    "ruby": "C:\\Ruby23-x64\\bin\\ruby.exe",
+    "go": "go run",
+    "html": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "cd,$  && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+  },
+  "code-runner.clearPreviousOutput": true,
+  "terminal.integrated.fontSize": 20,
+  "git.autofetch": true,
+  "[markdown]": {
+    "editor.wordWrap": "off"
+  },
+"editor.cursorBlinking": "expand",
+  "git.postCommitCommand": "push",
+  "git.enableSmartCommit": true,
+  "terminal.integrated.env.windows": {},
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[jsonc]": {
+    "editor.defaultFormatter":"vscode.github"
+  },
+  "prettier.tabWidth": 4,
+
+  // "editor.fontFamily": "'Fira Code iScript', 'Fira Code', 'Courier New', monospace",
+  
+  // "editor.fontLigatures": true,
+  "window.newWindowDimensions": "offset",
+  "window.restoreFullscreen": true,
+
+
+
+
+
+
+
+
+
+
+
+//   // <--------------------------VIM CONFIGS--------------------------------------------------------------------------------------------------------------------------------->
+//   "vim.easymotion": true,
+//   "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+//   "vim.useCtrlKeys": true,
+//   "vim.hlsearch": true,
+//   "vim.leader": "<space>"
+//   /"C:\Users\HP\.vscode\extensions\exceedsystem.vscode-macros-1.4.0\macros.js"when cursor moves over it
+  "vim.foldfix" : true,
+
+  "vim.cursorStylePerMode.insert": "block",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.replace": "line",
+  "vim.cursorStylePerMode.visual": "line",
+
+
+//     // ---------------------NORMAL MODE --------------------------------------------------------------
+//   "vim.normalModeKeyBindings": [
+//     {
+//       "before": ["<leader>", "d"],
+//       "after": ["d", "d"]
+//     }
+   
+//   ],
+
+//     // ---------------------INSERT MODE --------------------------------------------------------------
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    },
+],  
+  
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    },
+],  
+  
+//     // --------------------- NORMAL KEYBINDINGS MODE --------------------------------------------------------------
+//   "vim.normalModeKeyBindingsNonRecursive": [
+//     {
+//       "before": ["<leader>", "d"],
+//       "after": ["d", "d"]
+//     },
+//     {
+//       "before": ["<C-n>"],
+//       "commands": [":nohl"]
+//     },
+//     {
+//       "before": ["<leader>", "w"],
+//       "commands": ["workbench.action.splitEditor"]
+//     },
+//     {
+//       "before": ["<leader>", "h"],
+//       "after": ["_"]
+//     },
+//     {
+//       "before": ["<leader>", "l"],
+//       "after": ["$"]
+//     } 
+//   ],
+
+//   // ---------------------NORMAL MODE --------------------------------------------------------------
+//   "vim.handleKeys": {
+//     "<C-w>":false,
+//     "<C-[>":false,
+//     "<C-]>":false,
+//     "<C-b>":false,
+//     "<C-l>":false,
+//     "<C-a>": false,
+//     "<C-f>": false,
+//     // VS Code new marker @ next occurence
+//     "<C-d>": false,
+//     // Copy
+//     "<C-c>": false,
+//     // Cut
+//     "<C-x>": false,
+//     // Paste
+//     "<C-v>": false,
+//     "<C-z>": false,
+//     "<C-y>": false
+
+//   }, 
+//   // <--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "editor.lineNumbers": "relative",
+  "workbench.iconTheme": "material-icon-theme",
+// "window.zoomLevel": 1,
+"editor.cursorSmoothCaretAnimation": "on",
+"workbench.editor.enablePreview": false,
+"editor.minimap.scale": 2,
+"editor.minimap.renderCharacters": false,
+"screencastMode.fontSize": 30,
+"screencastMode.verticalOffset": 5,
+"security.workspace.trust.untrustedFiles": "open",
+"workbench.editor.tabSizing": "shrink",
+"workbench.editor.wrapTabs": true,
+"javascript.inlayHints.enumMemberValues.enabled": true,
+"go.inlayHints.compositeLiteralFields": true,
+"go.inlayHints.constantValues": true,
+"git.confirmSync": false,
+"security.workspace.trust.banner": "never",
+
+
+// "vscodemacros.userMacroCommands": [
+  
+//   {
+//     "path": "C:\\Users\\HP\\OneDrive\\Desktop\\Learning_Blog-2.txt",
+//     "name": "OpenLearningBlog"
+//   },
+//   {
+//     "path": "C:\\Users\\HP\\.vscode\\extensions\\exceedsystem.vscode-macros-1.4.0\\macros.js",
+//     "name": "OpenMacrojs"
+//   },
+//   {
+//     "path": "C:\\Users\\HP\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\HS for paths.ahk",
+//     "OpenHS": "OpenHS"
+//   }
+// ],
+
+
+"glassit.alpha": 255,
+"editor.smoothScrolling": true,
+"editor.fastScrollSensitivity": 15,
+"errorLens.enabled": true,
+"hediet.vscode-drawio.resizeImages": null,
+"editor.inlayHints.enabled": "offUnlessPressed",
+"diffEditor.wordWrap": "off",
+"go.toolsManagement.autoUpdate": true,
+"code-runner.terminalRoot": "/mnt/",
+"reactSnippets.settings.prettierEnabled": true,
+"vscodeGoogleTranslate.preferredLanguage": "English",
+"window.menuBarVisibility": "compact",
+"C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\g++.exe",
+"terminal.integrated.enableMultiLinePasteWarning": false,
+"workbench.colorTheme": "Palenight Italic",
+"settingsSync.ignoredExtensions": [
+  "nhoizey.gremlins"
+],
+"workbench.editor.pinnedTabSizing": "compact",
+"editor.showFoldingControls": "always",
+"workbench.editorAssociations": {
+    "*.pdf": "default",
+    "*.c": "default"
+},
+"graphviz-interactive-preview.renderLockAdditionalTimeout": 10000,
+"aws.suppressPrompts": {
+  "codeWhispererConnectionExpired": true
+},
+"editor.detectIndentation": false,
+"AutoHotkey2.CompilerCMD": "C:\\Program Files\\AutoHotkey\\v2\\AutoHotkey64.exe",
+
+// Toggle intendation  indentation guides (those lines that show intendetation level)
+// "editor.guides.indentation": false, // NICE SOLUTION := Toggle extension
+
+/* in ctrl k l ( my keybindings )
+  {
+    "key": "F3",
+    "command": "toggle",
+    "when": "editorTextFocus",
+    "args": {
+        "id": "indentation_guide",
+        "value": [
+              {
+                "editor.guides.indentation": true
+              },
+              {
+                "editor.guides.indentation": false
+              }
+        ]
+    }
+  }
+*/
+
+
+
+
+"vscode-neovim.useWSL": true,
+"vscode-neovim.neovimInitVimPaths.linux": "~/.local/bin/nvim",
+"redhat.telemetry.enabled": true,
+
+"indentRainbow.colors": [
+    "rgba(255,255,64,0.07)",
+    "rgba(127,255,127,0.07)",
+    "rgba(255,127,255,0.07)",
+    "rgba(79,236,236,0.07)"
+  ],
+"indentRainbow.tabmixColor": "",
+"errorLens.enabledDiagnosticLevels": [
+    "error",
+    "info"
+],
+"C_Cpp.inlayHints.referenceOperator.showSpace": true,
+"C_Cpp.inlayHints.referenceOperator.enabled": true,
+"cph.general.defaultLanguage": "cpp",
+"errorLens.messageEnabled": true,
+"editor.lineHeight": 38,
+"editor.guides.indentation": false,
+"editor.guides.highlightActiveBracketPair": false,
+"workbench.editor.centeredLayoutAutoResize": false,
+"ahk++.file.helpPathV1": "C:/Program Files/AutoHotkey/v1.1.37.01/AutoHotkey.chm",
+"ahk++.file.interpreterPathV1": "C:/Program Files/AutoHotkey/v1.1.37.01/AutoHotkeyU64.exe",
+
+"notebook.experimental.useMarkdownRenderer": true,
+"jupyter.widgetScriptSources": [
+    "jsdelivr.com",
+    "unpkg.com"
+],
+"workbench.activityBar.location": "hidden",
+"files.autoSave": "afterDelay",
+"codeium.enableCodeLens": false,
+
+}
