@@ -1,8 +1,106 @@
+# ABSOLUTELY FIRE THINGS I GOT IN NEOVIM 
+
+1. THERE ARE DIFFERENT MODES IN TERMINAL :-
+
+I copied the stuff in TERMINAL ; as if it was a text file 
+
+┏[ HP from  Win-10][ 0s][ RAM: 7/7GB][ Monday at 1:31:21 AM][ main ≡  ~1]
+┖[D:\Code Practise\dotfiles\DevLogs]
+
+2. You can do git version control inside NVIM ; SPC + G + T 
+
+
+
+In Neovim, particularly in setups like NvChad, there are different modes for working with the terminal:
+
+1. *Normal Mode (`n`)*   : Standard mode, you can navigate and use various Vim commands.
+2. *Insert Mode (`i`)*   : This is where you type text or interact with the terminal.
+3. *Terminal Mode (`t`)* : This is specific to the terminal buffer where you interact with the shell directly.
+4. *Visual Mode (`v`)*   : Used for selecting and manipulating blocks of text.
+
+When you open a `terminal in Neovim` (including with setups like NvChad),
+you can `switch between these modes` using keybindings.
+
+### Switching Between Modes in Neovim Terminal
+
+1. **Entering Terminal Mode**:
+   - When you first open a terminal (`:term`), you are typically put into Terminal Mode (`t`).
+
+2. **Switching to Normal Mode**:
+   - To switch from Terminal Mode to Normal Mode, use `Ctrl-w` followed by `N`.
+     Alternatively, you can use `Ctrl-\` followed by `Ctrl-n` to enter Normal Mode.
+
+3. **Switching Back to Terminal Mode**:
+   - To switch back to Terminal Mode from Normal Mode, press `i` or `a` to enter Insert Mode, and then interact with the terminal.
+     ```vim
+     i
+     ```
+     or
+     ```vim
+     a
+     ```
+
+### Keybindings in NvChad for Terminal Operations
+
+NvChad provides some convenient keybindings and configurations for working with terminal buffers. Here are the default keybindings you can use:
+
+[ In NvChad this is reserved for THEMES ; `SPC + h` is the KEY answer ]
+1. **Open a New Horizontal Terminal**:
+   - `SPC t h` (assuming `SPC` is the leader key in NvChad)
+
+2. **Open a New Vertical Terminal**:
+   - `SPC t v`
+
+3. **Toggle the Terminal Visibility**:
+   - `SPC t t` (This might require you to have the `nvim-toggleterm.lua` plugin configured as mentioned earlier)
+
+### Example Configuration in NvChad
+
+Here’s how you might configure your NvChad setup to handle terminal keybindings:
+
+1. **Install and Configure ToggleTerm Plugin (Optional)**:
+   If you haven't already, install the `nvim-toggleterm.lua` plugin for better terminal management:
+   
+
+   ```lua
+   -- Add this to your NvChad custom configuration
+   use 'akinsho/nvim-toggleterm.lua'
+   
+   -- Then set up the plugin
+   require('toggleterm').setup{
+       open_mapping = [[<leader>tt]],
+       direction = 'horizontal',
+       shade_terminals = true,
+       start_in_insert = true,
+       close_on_exit = false,
+       shell = 'pwsh', -- or 'cmd.exe' if you prefer Command Prompt
+   }
+   ```
+
+2. **Set Custom Keybindings**:
+   Add custom keybindings to toggle terminal buffers:
+   ```lua
+   -- Assuming you use Lua for configuring NvChad
+   vim.api.nvim_set_keymap('n', '<leader>tt', ':ToggleTerm<CR>', { noremap = true, silent = true })
+   vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
+   vim.api.nvim_set_keymap('t', '<C-w>h', '<C-\\><C-n><C-w>h', { noremap = true, silent = true })
+   vim.api.nvim_set_keymap('t', '<C-w>j', '<C-\\><C-n><C-w>j', { noremap = true, silent = true })
+   vim.api.nvim_set_keymap('t', '<C-w>k', '<C-\\><C-n><C-w>k', { noremap = true, silent = true })
+   vim.api.nvim_set_keymap('t', '<C-w>l', '<C-\\><C-n><C-w>l', { noremap = true, silent = true })
+   ```
+
+By configuring these keybindings and understanding the different modes in the terminal, you can efficiently toggle and manage terminal buffers within Neovim using NvChad. This setup will help you "minimize" terminal windows and switch between them without losing the running processes.
+
+
+
+
 # Things I want in VIM
 - MULTI-CURSOR
 - How to change multiple instances of the word SIMULTANEOUSLY
 - Absolutely loved NvChad
 > It helps you when you are typing in commands ; just writing vim commands
+
+
 
 # Windows Terminal
 
@@ -24,7 +122,6 @@
 
 
 # NVChad
-Sure! Here's a quick reference table for keybindings and commands in NvChad that will help you get started and become productive quickly:
 
 ### Keybindings and Commands in NvChad
 
