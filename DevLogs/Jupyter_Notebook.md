@@ -1,6 +1,33 @@
-## Game plan for today :-
-- Finish Face_recognition App
-- Finish first 5 videos by Afternoon
+## Miniconda in WSL home
+
+```sh
+conda env list
+conda activate base
+conda activate yolov8
+
+```
+
+#### Issues faced :-
+Conda will be activated on startup by default in BASH (shell) But could face issue is ZSH (shellscript)
+https://stackoverflow.com/questions/55507519/python-activate-conda-env-through-shell-script <--
+
+Easiest way :-
+- DO ALL THE CONDA ACTIVATE / DEACTIVATE FROM BASH
+every time you wanna be in a particular conda env => 
+```sh
+bash
+conda activate env_name 
+zsh
+```
+
+to deactivate
+```sh
+bash
+conda deactivate
+zsh
+```
+
+
 
 
 ## Initial Worries

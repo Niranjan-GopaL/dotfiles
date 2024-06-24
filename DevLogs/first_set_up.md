@@ -277,6 +277,12 @@ Understand Keybindings.conf to set KNOW IT ALL !!!
 
 ### VSC
 
+
+#### Find it Faster ( fzf and rg ) extension
+cmd+shift+j / ctrl+shift+j to search files,
+cmd+shift+u / ctrl+shift+u to search for text within files,
+cmd+shift+ctrl+u / ctrl+shift+alt+u to search for text within files with type pre-filtering.
+
 - Open terminal in vsc directory    : Ctrl + shift + C
 
 - Current file to rightpanel        : Ctrl + Alt + left / right

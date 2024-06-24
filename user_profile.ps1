@@ -2,6 +2,10 @@ Import-Module PSReadLine
 
 # Loading Theme and Shell :- All previes of themes are available in :- https://ohmyposh.dev/docs/themes
 #  `$ Get-PoshThemes` execute this in pwsh to see all the installed themes
+# MOdify this :- 'C:\Users\HP\AppData\Local\Programs\oh-my-posh\themes\tokyo.omp.json 
+
+
+# GET CUSTOM POWERSHELL FONTS FROM => https://windowsterminalthemes.dev/ <-- EXTREMELY COOL ; I am using Argonaut now ; absolutely joyful
 
 
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\tokyo.omp.json" | Invoke-Expression
@@ -17,6 +21,9 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\tokyo.omp.json" | Invoke-Ex
 
 
 Function CD32 {Set-Location -Path D:\"Code Practise"}
+Function nvim-configuration {Set-Location -Path C:\Users\HP\AppData\Local\nvim}
+Function App-Dev {Set-Location -Path D:\"Code Practise"\"App Development"}
+Function Next-Js-Dev {Set-Location -Path D:\"Code Practise"\\NextJS\bleeding_edge_travel_planner}
 Function dot {Set-Location -Path D:\"Code Practise"\dotfiles}
 Function openCVdir {Set-Location -Path D:\"Code Practise"\Exploring__Open_CV__}
 Function Api-Dev {Set-Location -Path D:\"Code Practise"\API_Dev}
@@ -24,7 +31,7 @@ Function Api-Dev {Set-Location -Path D:\"Code Practise"\API_Dev}
 # OR take in inputs after ga 
 Function gitstatus {git status}
 Function gitlog {git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all}
-
+Function npm-run-dev{npm run dev}
 Function jupyterNotebook {jupyter notebook --notebook-dir=D:/"Code Practise"}
 
 
@@ -91,6 +98,9 @@ Set-Alias -Name code-prac -Value CD32
 Set-Alias -Name cv2-proj  -Value openCVdir
 Set-Alias -Name devlog  -Value dot
 Set-Alias -Name api  -Value Api-Dev
+Set-Alias -Name app  -Value App-Dev
+Set-Alias -Name next  -Value Next-Js-Dev
+Set-Alias -Name vim-config  -Value nvim-configuration
 
 
 # Commands
@@ -98,9 +108,10 @@ Set-Alias vim nvim
 Set-Alias c   cls
 Set-Alias gs  gitstatus 
 # add git commit
-Set-Alias g   gitlog
+Set-Alias g     gitlog
+Set-Alias nrd   npm-run-dev
 Set-Alias jn    jupyterNotebook 
-Set-Alias grep findstr   
+Set-Alias grep  findstr   
 
 # Set alias ll to the List-DirectoryContents function
 Set-Alias l  List-DirectoryContents
