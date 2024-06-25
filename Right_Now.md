@@ -1,4 +1,9 @@
 ## Temporary To-do
+- [ ] 3 hours today in GIT ; finish it ONCE and FOR ALL !!
+    - [ ] MOST IMPORTANT :- WORKFLOW
+    - [ ] having multiple branch
+    - [ ] resolving conflicts
+
 - [ ] Get git and github hooked in Hyprland config
 - [ ] Update readme for this
 
