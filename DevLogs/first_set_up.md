@@ -39,7 +39,17 @@ abbrev-alias vc='code' # gui code editor
 
 - zathura keybindings
 
-## PLEASE WORK : running a Windows VM
+<!--     FUCK THIS ; JUST USE THIS CAREFULLY  -->
+ <!-- ## PLEASE WORK : running a Windows VM -->
+
+## 5. Installing nvm, npm, yaarn
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+
+nvm list-remote
+
+nvm install node
+```
 
 
 ## 4. All the foldings made in this file is PERSISTENT 
@@ -256,9 +266,8 @@ By following these steps, you will have configured your terminal to use SSH for 
 ### Hyprland
 
 Understand Keybindings.conf to set KNOW IT ALL !!!
-- Immediate worry :-
-   - system_brightness
 
+- super + mouse_roll       : mouse through workspace 
 
 - ctrl + alt + w           : toggle waybar 
 
