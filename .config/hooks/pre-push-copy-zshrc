@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Define paths
+SYSTEM_ZSHRC="$HOME/.config/zsh/.zshrc"
+REPO_ZSHRC="./.config/.zshrc"
+
+# Check if system's zshrc file exists
+if [ ! -f "$SYSTEM_ZSHRC" ]; then
+  echo "System zshrc file does not exist at $SYSTEM_ZSHRC"
+  exit 1
+fi
+
+# Compare the system's zshrc with the repository's zshrc
+if ! cmp -s "$SYSTEM_ZSHRC" "$REPO_ZSHRC"; then
+  echo "System zshrc file differs from the repository's zshrc file."
+  
+  # Copy the system's zshrc to the repository's zshrc
+  cp "$SYSTEM_ZSHRC" "$REPO_ZSHRC"
+  
+  # Add changes to git
+  git add "$REPO_ZSHRC"
+  
+  # Commit the changes
+  git commit -m "[Bot] changes in zshrc is copied"
+else
+  echo "System zshrc file is identical to the repository's zshrc file."
+fi
+
+# Continue with the push
+exit 0
