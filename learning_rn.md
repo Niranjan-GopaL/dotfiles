@@ -1,1 +1,0 @@
-Cltr + 0 / 1 => switching between SIDEBAR and EDITOR FILE
