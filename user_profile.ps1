@@ -29,7 +29,7 @@ Function openCVdir {Set-Location -Path D:\"Code Practise"\Exploring__Open_CV__}
 Function Api-Dev {Set-Location -Path D:\"Code Practise"\API_Dev}
 # Function gitadd {git add} we want something like abbrev-alias in fish ; ga should autocomplete to git add 
 # OR take in inputs after ga 
-Function gitstatus {git status}
+Function gitstatus {git status -s}
 Function gitlog {git log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --all}
 Function npm-run-dev{npm run dev}
 Function jupyterNotebook {jupyter notebook --notebook-dir=D:/"Code Practise"}
