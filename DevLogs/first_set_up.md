@@ -7,12 +7,14 @@
    2. Zathura Zathura-pdf-popler ( further customisation later ) 
    3. Made .zshrc to be here ~/.config/zsh/.zshrc
    4. made .config A REPOSITORY
+   5. OpenVPN installation 
 3. zsh abbrv-alias IS GOD-TIER ;
 4. Dev Utilities
    1. Installing nvm, node, npm 
-   2. GITHUB CLI (gh) in terminal ; Didn't 
+   2. GITHUB CLI (gh) in terminal 
 5. Signed in to Mozilla to keep Consistent stuff
    - used legendsonthemove1111@gmail.com to sign in
+   - add-ons don't persist ?
 
 
 
