@@ -119,7 +119,7 @@ abbrev-alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
-abbrev-alias devlog='code ~/.config/dotfiles'
+abbrev-alias devlog='code ~/Documents/dotfiles'
 
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
