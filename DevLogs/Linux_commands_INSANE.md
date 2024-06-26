@@ -25,5 +25,9 @@ sudo systemctl restart docker
 ```sh
 $ dmesg | grep nvidia
 $ dmesg | grep usb
+
+$ git checkout newImage && git commit 
+$ => first the astrisck will go to newImage ; then new commit will be made ; newImage will point to new commit
+
 ```
 
