@@ -10,6 +10,7 @@
    5. OpenVPN installation 
 3. zsh abbrv-alias IS GOD-TIER ;
 4. Dev Utilities
+   0. `sudo pacman -Sy timew` <-- Time spent in command line
    1. Installing nvm, node, npm 
    2. GITHUB CLI (gh) in terminal 
    3. Docker [PLEASE_WORK]
@@ -43,6 +44,32 @@ abbrev-alias vc='code' # gui code editor
 <!--     FUCK THIS ; JUST USE THIS CAREFULLY  -->
 <!-- ## PLEASE WORK : running a Windows VM -->
 
+## 8. Installing QEMU + VirtManager
+```sh
+sudo pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables iptables libguestfs
+
+# add your user and create group:
+sudo usermod -a -G libvirt $(whoami)
+newgrp libvirt
+
+sudo nvim /etc/libvirt/libvirtd.conf
+
+```
+
+`nvim /etc/libvirt/libvirtd.conf`
+uncomment the lines :- 
+
+unix_sock_group = "libvirt"
+unix_sock_rw_perms = "0770"
+
+
+
+```sh
+sudo systemctl enable --now libvirtd
+sudo systemctl start libvirtd1
+```
+S
+
 ## 7. Installing Docker, setting up a NextJS project
 
 ```sh
@@ -71,6 +98,7 @@ docker run -d -p 80:80 docker/getting-started  # now you have a guide that can b
 
 # from AUR install docker desktop
 
+sudo systemctl status docker 
 
 ```
 
@@ -90,6 +118,11 @@ sudo systemctl restart docker
 ```
 
 
+#### Dokcer compose installation
+
+DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+mkdir -p $DOCKER_CONFIG/cli-plugins
+curl -SL https://github.com/docker/compose/releases/download/v2.28.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 
 
 ## 6. Installing neovim
@@ -341,6 +374,8 @@ Understand Keybindings.conf to set KNOW IT ALL !!!
 - sup + shift + [0-9]      : Move focused widnow to that workspace
 - sup + [0-9]              : Go to that workspace
 
+
+- sup + backspace          : wlogout menu
 
 ### VSC
 

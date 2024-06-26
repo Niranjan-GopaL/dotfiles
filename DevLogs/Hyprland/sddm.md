@@ -48,9 +48,11 @@ SessionLogFile=.local/share/sddm/xorg-session.log
 
 # Path to Xephyr binary
 XephyrPath=/usr/bin/Xephyr
-````
+```
 
 
 
 
-## /usr/share/sddm/
+## /usr/share/sddm/themes
+
+this is where all the themes reside
