@@ -12,6 +12,7 @@
 4. Dev Utilities
    1. Installing nvm, node, npm 
    2. GITHUB CLI (gh) in terminal 
+   3. Docker [PLEASE_WORK]
 5. Signed in to Mozilla to keep Consistent stuff
    - used legendsonthemove1111@gmail.com to sign in
    - add-ons don't persist ?
@@ -40,7 +41,62 @@ abbrev-alias vc='code' # gui code editor
 - zathura keybindings
 
 <!--     FUCK THIS ; JUST USE THIS CAREFULLY  -->
- <!-- ## PLEASE WORK : running a Windows VM -->
+<!-- ## PLEASE WORK : running a Windows VM -->
+
+## 7. Installing Docker, setting up a NextJS project
+
+```sh
+sudo pacman -S gnome-terminal
+sudo pacman -S docker
+
+# when you do enable, it'll automatically do start too ; it's kinda redundant but oh well !
+sudo systemctl enable --now docker
+sudo systemctl start  --now docker
+# this will be the output 
+# Created symlink '/etc/systemd/system/multi-user.target.wants/docker.service' → '/usr/lib/systemd/system/docker.service'
+
+
+
+sudo docker info                    # is docker running properly
+
+sudo usermod -a -G docker niranjan  # to make docker be ran by a user otehr than root
+
+sudo docker info                    # is docker running properly
+
+su niranjan # log back into your account 
+
+
+docker run -d -p 80:80 docker/getting-started  # now you have a guide that can be ran from localhost:80
+
+
+# from AUR install docker desktop
+
+
+```
+
+#### Trouble shoot :-
+
+If there is any can't find in mirror list error, just do the below
+
+you can add more nameservers to /etc/resolv.conf
+```
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+```
+
+```sh
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
+
+
+
+## 6. Installing neovim
+```sh
+sudo pacman -Sy neovim
+git clone https://github.com/NvChad/starter ~/.config/nvim && nvim
+```
 
 ## 5. Installing nvm, npm, yaarn
 ```sh
