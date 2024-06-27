@@ -150,10 +150,12 @@ abbrev-alias rc=rustc
 abbrev-alias ca=cargo
 
 
+
+# THIS FRIKKIN WORKS
+#
 # Compare .zshrc with the version in ~/Documents/dotfiles/.config/.zshrc
 if ! cmp -s ~/.zshrc ~/Documents/dotfiles/.config/.zshrc; then
     echo "Changes in .zshrc are gonna be pushed" 
-    
     # Change to the dotfiles directory
     cd ~/Documents/dotfiles
     # Push the changes to the remote repository, this will trigger a HOOK
