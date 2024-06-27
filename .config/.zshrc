@@ -58,7 +58,7 @@ function in {
 }
 
 
-# ---------------------------- abbrev-alias in zsh ------------------------------------------------------------- 
+# ---------------------------- abbrev-alias in zsh --------------------------------------------------------
 
 
 # declare a list of expandable aliases to fill up later
@@ -111,7 +111,7 @@ abbrev-alias pa='$aurhelper -Ss' # list availabe package
 abbrev-alias pc='$aurhelper -Sc' # remove unused cache
 abbrev-alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
 abbrev-alias vc='code' # gui code editor
-
+abbrev-alias ueb='ueberzug'
 
 # Handy change dir shortcuts
 abbrev-alias ..='cd ..'
@@ -120,7 +120,7 @@ alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 abbrev-alias devlog='code ~/Documents/dotfiles'
-
+abbrev-alias czsh='nvim ~/.config/zsh/.zshrc'   
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
@@ -150,6 +150,15 @@ abbrev-alias rc=rustc
 abbrev-alias ca=cargo
 
 
+# Compare .zshrc with the version in ~/Documents/dotfiles/.config/.zshrc
+if ! cmp -s ~/.zshrc ~/Documents/dotfiles/.config/.zshrc; then
+    echo "Changes in .zshrc are gonna be pushed" 
+    
+    # Change to the dotfiles directory
+    cd ~/Documents/dotfiles
+    # Push the changes to the remote repository, this will trigger a HOOK
+    git push 
+fi
 
 
 
