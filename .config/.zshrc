@@ -123,9 +123,10 @@ abbrev-alias devlog='code ~/Documents/dotfiles'
 abbrev-alias czsh='nvim ~/.config/zsh/.zshrc'   
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
-alias mkdir='mkdir -p'
+abbrev-alias mkdir='mkdir -p'
 
 
+abbrev-alias r='ranger'
 
 
 abbrev-alias g='git '
