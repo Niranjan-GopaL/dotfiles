@@ -1,19 +1,34 @@
 ### Initial Things done+
 
 0. Make a DevFile to record everything
+
 1. Log in to Github via ssh 
+
 2. Common Utilities
    1. Connect to Bluetooth 
    2. Zathura Zathura-pdf-popler ( further customisation later ) 
-   3. Made .zshrc to be here ~/.config/zsh/.zshrc
-   4. made .config A REPOSITORY
-   5. OpenVPN installation 
+   3. Made .zshrc  be here ~/.config/zsh/.zshrc
+   <!-- 4. made .config A REPOSITORY -->
+   4. install ranger, image viewer `see your images in terminal lol`  
+   5. install tor 
+```sh
+   sudo pacman -Sy ranger
+   sudo yay -Sy ueberzug
+```
+   5. cava + mcp + ncmpcpp => $MUSIC
+
+
+
 3. zsh abbrv-alias IS GOD-TIER ;
+
+
 4. Dev Utilities
    0. `sudo pacman -Sy timew` <-- Time spent in command line
-   1. Installing nvm, node, npm 
-   2. GITHUB CLI (gh) in terminal 
+   1. Installing tmux 
+   2. Installing nvm, node, npm, GITHUB CLI (gh) in terminal 
    3. Docker [PLEASE_WORK]
+
+
 5. Signed in to Mozilla to keep Consistent stuff
    - used legendsonthemove1111@gmail.com to sign in
    - add-ons don't persist ?
@@ -39,90 +54,10 @@ abbrev-alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages,
 abbrev-alias vc='code' # gui code editor
 ```
 
-- zathura keybindings
-
 <!--     FUCK THIS ; JUST USE THIS CAREFULLY  -->
 <!-- ## PLEASE WORK : running a Windows VM -->
 
-## 8. Installing QEMU + VirtManager
-```sh
-sudo pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables iptables libguestfs
-
-# add your user and create group:
-sudo usermod -a -G libvirt $(whoami)
-newgrp libvirt
-
-sudo nvim /etc/libvirt/libvirtd.conf
-
-```
-
-`nvim /etc/libvirt/libvirtd.conf`
-uncomment the lines :- 
-
-unix_sock_group = "libvirt"
-unix_sock_rw_perms = "0770"
-
-
-
-```sh
-sudo systemctl enable --now libvirtd
-sudo systemctl start libvirtd1
-```
-S
-
-## 7. Installing Docker, setting up a NextJS project
-
-```sh
-sudo pacman -S gnome-terminal
-sudo pacman -S docker
-
-# when you do enable, it'll automatically do start too ; it's kinda redundant but oh well !
-sudo systemctl enable --now docker
-sudo systemctl start  --now docker
-# this will be the output 
-# Created symlink '/etc/systemd/system/multi-user.target.wants/docker.service' → '/usr/lib/systemd/system/docker.service'
-
-
-
-sudo docker info                    # is docker running properly
-
-sudo usermod -a -G docker niranjan  # to make docker be ran by a user otehr than root
-
-sudo docker info                    # is docker running properly
-
-su niranjan # log back into your account 
-
-
-docker run -d -p 80:80 docker/getting-started  # now you have a guide that can be ran from localhost:80
-
-
-# from AUR install docker desktop
-
-sudo systemctl status docker 
-
-```
-
-#### Trouble shoot :-
-
-If there is any can't find in mirror list error, just do the below
-
-you can add more nameservers to /etc/resolv.conf
-```
-nameserver 8.8.8.8
-nameserver 8.8.4.4
-```
-
-```sh
-sudo systemctl daemon-reload
-sudo systemctl restart docker
-```
-
-
-#### Dokcer compose installation
-
-DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
-mkdir -p $DOCKER_CONFIG/cli-plugins
-curl -SL https://github.com/docker/compose/releases/download/v2.28.1/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+## 7. Installing mpd ( Music Player Daemon ) + NCMPCPP ( front-end for it, manages music, lyrics fetch, vizulisation )
 
 
 ## 6. Installing neovim
@@ -352,10 +287,58 @@ By following these steps, you will have configured your terminal to use SSH for 
 
 # Keybindings
 
+
+### Zathura
+
+` $ zathura .pdf & disown `
+` $ something & disown` 
+This is how you run something ( generally a GUI application if you launch through Terminal )
+
+- :open            <-- Tab complete and open a file in current session
+- :info            <-- All metadata info (when this was made, etc)
+- :bmark <name>    <-- add current page as <name> to bookmark
+- :blist           <-- Show all bookmarks available
+- :blist <name>    <-- got to that bookmark
+- :bdelete         <-- prompt to delete a bookmark
+
+
+Navigation
+- jkhl / JKHL / arrow keys  
+- Tab + hjkl <-- Table of Contents [Hyprlinks?]
+- :10 (10th page) 
+- Create temporary bookmarks :-
+   m + [0-9] <-- creates a temp bookmark on that page and store that in the number[0-9]
+   ' + [0-9] <-- go to the page associated with that number
+
+
+- Ctrl + R  <-- Invert colors
+- /         <-- search forward  ( just like in vim )
+- Shift + / <-- search backward
+- = + -     <-- zooming ( control + scroll also ) 
+- 60=       <-- zoom by 60% ( similar 150= 300= etc ) 
+
+
+Interface Navigation :-
+
+- D/d <-- booklet form 
+- R   <-- Rotate current pag by 90
+- A   <-- Fit Back to the Screen size
+- Q   <-- Terminate session
+- Ctrl + N <--- toggle information bar
+- Ctrl + M <--- toggle input field
+- Ctrl + F11 (F11) <--- Fullscreen mode
+
+
 ### Hyprland
 
 Understand Keybindings.conf to set KNOW IT ALL !!!
 
+- Sup + J                    : Change orientation
+- Sup + alt + S              : move to special workspace
+- Sup + shift + Ctrl + arrow : move relative to curr workspace
+
+
+- super + ctrl + down      : Move to first empty workspace [SO_GOOD]
 - super + mouse_roll       : mouse through workspace 
 
 - ctrl + alt + w           : toggle waybar 

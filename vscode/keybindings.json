@@ -109,6 +109,11 @@
     "key": "ctrl+shift+alt+t ctrl+shift+alt+t",
     "command": "editor.action.transformToTitlecase"
 },
+{
+  "key": "shift+alt+m shift+alt+m",
+  "command": "editor.action.transformToCamelcase"
+},
+
 
 
   // toggling visibility of  status_bar, minimap , activity_bar
@@ -437,10 +442,6 @@
     "key": "ctrl+shift+r",
     "command": "-workbench.action.quickOpenNavigatePreviousInRecentFilesPicker",
     "when": "inQuickOpen && inRecentFilesPicker"
-},
-{
-    "key": "shift+alt+m shift+alt+m",
-    "command": "editor.action.transformToCamelcase"
 },
 {
     "key": "ctrl+shift+g g",
