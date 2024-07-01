@@ -13,7 +13,7 @@
    5. install tor 
 ```sh
    sudo pacman -Sy ranger
-   sudo yay -Sy ueberzug
+   sudo yay -Sy ueberzugq
 ```
    5. cava + mcp + ncmpcpp => $MUSIC
 
