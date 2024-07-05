@@ -1,5 +1,7 @@
 ## General facts
 
+- When you install a font using `pacman`, it's stored in `/usr/share/fonts`
+    - `pacman -S noto-fonts-cjk` => makes a `/usr/share/fonts/noto-cjk` folder noto-cjk is chinese japanese korean Glyphs
 - You shouldn't use a terminal to start a gui application
 - `ff -> fastfetch`          <-- show device stats
 - ` pokemon-colorscripts -r` <-- makes my heart melt
@@ -32,6 +34,8 @@ sudo nvim /etc/hosts    # Replace any occurrence of the existing computer name w
 
 > Currently, there seems to be issues downloading plugins and cant' get NerdFonts work inside TMUX, BUT kitty out of the box has support for TABS and PANES ; These are the functionalities that I need right now, in the future sessions would com more in handy 
 
+
+TMUX COPY MODE IS LIKE NTERMINAL IN NEOVIM ; IT'S INSANLY USEFULLL !!
 
 
 ```sh
@@ -156,3 +160,63 @@ $ dmesg | grep nvidia
 $ dmesg | grep usb
 ```
 
+- /etc/environment has this :-
+```sh
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+#QT_QPA_PLATFORMTHEME=qt5ct
+#QT_STYLE_OVERRIDE=kvantum
+BROWSER=firefox
+EDITOR=vim
+# for japanese im
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+```
+
+- All you're system information 
+
+> this was generated when I was trying to set up fcitx ( this is the first part of `fcitx-diagnose` !! That's crazy )
+
+1.  `uname -a`:
+
+        Linux Arch 6.9.6-arch1-1 #1 SMP PREEMPT_DYNAMIC Fri, 21 Jun 2024 19:49:19 +0000 x86_64 GNU/Linux
+
+2.  `lsb_release -a`:
+
+        LSB Version:	n/a
+        Distributor ID:	EndeavourOS
+        Description:	EndeavourOS Linux
+        Release:	rolling
+        Codename:	rolling
+
+3.  `lsb_release -d`:
+
+        Description:	EndeavourOS Linux
+
+4.  `/etc/lsb-release`:
+
+        DISTRIB_ID="EndeavourOS"
+        DISTRIB_RELEASE="rolling"
+        DISTRIB_DESCRIPTION="EndeavourOS Linux"
+        DISTRIB_CODENAME="rolling"
+
+5.  `/etc/os-release`:
+
+        NAME="EndeavourOS"
+        PRETTY_NAME="EndeavourOS"
+        ID="endeavouros"
+        ID_LIKE="arch"
+        BUILD_ID=rolling
+        ANSI_COLOR="38;2;23;147;209"
+        HOME_URL="https://endeavouros.com"
+        DOCUMENTATION_URL="https://discovery.endeavouros.com"
+        SUPPORT_URL="https://forum.endeavouros.com"
+        BUG_REPORT_URL="https://forum.endeavouros.com/c/general-system/endeavouros-installation"
+        PRIVACY_POLICY_URL="https://endeavouros.com/privacy-policy-2"
+        LOGO="endeavouros"
+
+6.  Desktop Environment:

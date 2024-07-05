@@ -1,6 +1,10 @@
 # Blown away by
-- mcp+ncmpcpp => Music Library Customizaiton is NEVER_SEEN_BEFORE_LEVEL [EVEN_LYRICS_!!]
-- you can add more wallpapers !!
+- tmux copy mode
+- `yt-dlp`
+- `mcp+ncmpcpp` => Music Library Customizaiton is NEVER_SEEN_BEFORE_LEVEL [EVEN_LYRICS_!!]
+- `kitty`
+- `tmux`
+- you can add more wallpapers wayyy more customized
 - each theme is UNIQUE (entirely)
 - connected to both Laptop and Linux through same headphones
 - sddm is HOT

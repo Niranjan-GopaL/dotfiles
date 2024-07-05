@@ -3,6 +3,8 @@
 - You can press `escape` twice, and it will append sudo to you're command 
 - Cltr + 0 / 1 => switching between SIDEBAR and EDITOR FILE
 - shift + alt + [ / ] = Folding / Unfolding
+- Sup + z / x                --> Resize the window SIMPLY BY USING MOUSE
+    ( or rightClick / LeftClick )
 - Sup + J                    --> Change orientation
 - Sup + alt + S              --> move to special workspace
 - Sup + shift + Ctrl + arrow --> move relative to curr workspace

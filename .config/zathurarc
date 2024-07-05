@@ -1,0 +1,20 @@
+set recolor true
+set guioptions ""
+set recolor-darkcolor "#D4BE98"
+set recolor-lightcolor "#292828"
+
+set selection-clipboard clipboard
+
+map t scroll half-left
+map y scroll half-right
+map T scroll full-left
+map Y scroll full-right
+
+
+map <C-j> zoom in
+map <C-k> zoom out
+
+
+map , navigate previous
+map . navigate next
+map <C-d> toggle_page_mode

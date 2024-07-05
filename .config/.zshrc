@@ -8,6 +8,13 @@ fi
 # Path to your oh-my-zsh installation.
 ZSH=/usr/share/oh-my-zsh/
 
+# Using fcitx for japanese IM
+export GTK_IM_MODULE='fcitx'
+export QT_IM_MODULE='fcitx'
+export SDL_IM_MODULE='fcitx'
+export XMODIFIERS='@im=fcitx'
+
+
 # Path to powerlevel10k theme
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
@@ -110,11 +117,14 @@ zle -N accept-line expand-alias-and-accept-line
 abbrev-alias  c='clear' # clear terminal
 abbrev-alias  e='exit'  # exit terminal
 
-abbrev-alias  l='eza -lh  --icons=auto' # long list
+abbrev-alias  l='eza -lah  --icons=auto' # long list
 abbrev-alias ls='eza -1   --icons=auto' # short list
-abbrev-alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
+abbrev-alias ll='eza -lah --icons=auto --sort=name --group-directories-first' # long list all
 abbrev-alias ld='eza -lhD --icons=auto' # long list dirs
 abbrev-alias lt='eza --icons=auto --tree' # list folder as tree
+
+
+
 abbrev-alias un='$aurhelper -Rns' # uninstall package
 abbrev-alias up='$aurhelper -Syu' # update system/package/aur
 abbrev-alias pl='$aurhelper -Qs' # list installed package
@@ -124,14 +134,25 @@ abbrev-alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages,
 abbrev-alias vc='code' # gui code editor
 abbrev-alias ueb='ueberzug'
 
+
 # Handy change dir shortcuts
 abbrev-alias ..='cd ..'
 abbrev-alias ...='cd ../..'
-alias .3='cd ../../..'
-alias .4='cd ../../../..'
-alias .5='cd ../../../../..'
-abbrev-alias devlog='code ~/Documents/dotfiles'
+abbrev-alias .3='cd ../../..'
+abbrev-alias .4='cd ../../../..'
+abbrev-alias .5='cd ../../../../..'
+
 abbrev-alias czsh='nvim ~/.config/zsh/.zshrc'   
+abbrev-alias czathura='nvim ~/.config/zathura/zathurarc'
+
+abbrev-alias devlog='cd ~/Documents/code/dotfiles'
+abbrev-alias devlog-code='code ~/Documents/code/dotfiles'
+
+abbrev-alias gh-prof='cd ~/Documents/code/Niranjan-GopaL'
+abbrev-alias gh-prof-code='code ~/Documents/code/Niranjan-GopaL'
+
+
+
 
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
@@ -175,13 +196,13 @@ abbrev-alias glg3="git log --graph --abbrev-commit --decorate --format=format:'%
 # THIS FRIKKIN WORKS
 
 # Compare .zshrc with the version in ~/Documents/dotfiles/.config/.zshrc
-if ! cmp -s ~/.zshrc ~/Documents/dotfiles/.config/.zshrc; then
-    echo " [ZSH] System zshrc file differs from the repository's zshrc file."
-    echo " [ZSH] Changes in .zshrc are gonna be copied" 
+if ! cmp -s ~/.zshrc ~/Documents/code/dotfiles/.config/.zshrc; then
+    # echo " [ZSH] System zshrc file differs from the repository's zshrc file."
+    # echo " [ZSH] Changes in .zshrc are gonna be copied" 
     # This is bad since, it'll always make the new session in a ~/Documents/dotfiles/ folder
     # Change to the dotfiles directory
     # cd ~/Documents/dotfiles
-    cp  "$HOME/.config/zsh/.zshrc" "$HOME/Documents/dotfiles/.config/.zshrc" 
+    cp  "$HOME/.config/zsh/.zshrc" "$HOME/Documents/code/dotfiles/.config/.zshrc" 
 
     # This was sooo slow ! 
     
@@ -191,29 +212,42 @@ if ! cmp -s ~/.zshrc ~/Documents/dotfiles/.config/.zshrc; then
 fi
 
 
-if ! cmp -s ~/.config/tmux/tmux.conf ~/Documents/dotfiles/.config/tmux.conf; then
-    echo " [TMUX] Tmux config file differs from repository's tmux.conf "
-    echo " [TMUX] Changes are being copied"
-    cp  "$HOME/.config/tmux/tmux.conf" "$HOME/Documents/dotfiles/.config/tmux.conf" 
+if ! cmp -s ~/.config/tmux/tmux.conf ~/Documents/code/dotfiles/.config/tmux.conf; then
+    # echo " [TMUX] Tmux config file differs from repository's tmux.conf "
+    # echo " [TMUX] Changes are being copied"
+    cp  "$HOME/.config/tmux/tmux.conf" "$HOME/Documents/code/dotfiles/.config/tmux.conf" 
 fi
 
 
-if ! cmp -s ~/.config/kitty/kitty.conf ~/Documents/dotfiles/.config/kitty.conf; then
-    echo " [kitty] Kitty config file differs from repository's kitty.conf "
-    echo " [kitty] Changes are being copied"
-    cp  "$HOME/.config/tmux/tmux.conf" "$HOME/Documents/dotfiles/.config/kitty.conf" 
+if ! cmp -s ~/.config/kitty/kitty.conf ~/Documents/code/dotfiles/.config/kitty.conf; then
+    # echo " [kitty] Kitty config file differs from repository's kitty.conf "
+    # echo " [kitty] Changes are being copied"
+    cp  "$HOME/.config/tmux/tmux.conf" "$HOME/Documents/code/dotfiles/.config/kitty.conf" 
 fi
 
 
+
+if ! cmp -s ~/.config/zathura/zathurarc ~/Documents/code/dotfiles/.config/zathurarc; then
+    cp  "$HOME/.config/zathura/zathurarc" "$HOME/Documents/code/dotfiles/.config/zathurarc"
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #Display Pokemon
-pokemon-colorscripts --no-title -r 1,3,6
+# pokemon-colorscripts --no-title -r 1,3,6
+# pokemon-colorscripts -r 1,3,6
 
-echo "Sourcing ~/.config/zsh/.zshrc"
+# echo "Sourcing ~/.config/zsh/.zshrc"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pnpm
+export PNPM_HOME="/home/niranjan/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

@@ -1,3 +1,50 @@
+# Installing yt-dlp
+
+You can have MULTIPLE config files ; 
+- one for downloading every vid+aud in a playlist
+- one for downloading jap songs with subtitles
+
+test :- https://www.youtube.com/watch?v=PDSkFeMVNFs&pp=ygULemVuemVuemVuc2U%3D [ZENZENSE]
+
+```sh
+yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 URL
+
+```
+
+![Got it to work in the first try](./../assets/GOT-IT-WORKING-ARCH-BABYYY.png)
+
+
+# Installing `youtube-dl` [DEPRECATED_NOW; use yt-dlp]
+
+https://github.com/ytdl-org/youtube-dl <-- Readme has CONCISE stuff
+
+```sh
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+```
+
+If you get something like this :-
+```xml
+<h1>Access denied</h1>
+
+<p>
+  Due to a <a href="https://openjur.de/u/2466945.html" target="_blank">ruling</a> of the Hamburg Regional Court, access to this website is blocked.
+</p>
+
+<hr />
+
+<h1>Zugriff gesperrt</h1>
+
+<p>
+  Aufgrund eines <a href="https://openjur.de/u/2466945.html" target="_blank">Urteils</a> des Landgerichts Hamburg ist der Zugriff auf diese Website gesperrt.
+</p>
+
+```
+
+FRICKIN TURN OFF THE VPN !!
+
+Also just use `yt-dlp` <------ WAYYYYYYY better
+
 # Installing Postgres
 
 CONCISE and commands
@@ -6,19 +53,12 @@ https://gist.github.com/NickMcSweeney/3444ce99209ee9bd9393ae6ab48599d8
 
 
 
-
-
 # Installing VPN 
 
 ```sh
-
 # these are already shiped with HyDE
 sudo pacman -S openvpn networkmanager networkmanager-openvpn network-manager-applet 
 sudo systemctl enable NetworkManager.service
-
-
-
-
 ```
 
 

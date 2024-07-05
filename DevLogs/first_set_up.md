@@ -333,6 +333,7 @@ Interface Navigation :-
 
 Understand Keybindings.conf to set KNOW IT ALL !!!
 
+- Sup + shift + w            : Change wallpaper from list
 - Sup + J                    : Change orientation
 - Sup + alt + S              : move to special workspace
 - Sup + shift + Ctrl + arrow : move relative to curr workspace

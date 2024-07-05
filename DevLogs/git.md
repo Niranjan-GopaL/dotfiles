@@ -1,3 +1,8 @@
+## PR for hyprdots
+- git clone -b <branch_name> <repo_url>
+- While creating a fork, remember to UNCHECK the ]MERGE ONLY main branch[
+
+
 ## Main Objective :-
 
 - How to have 2 local repositories collaborate
