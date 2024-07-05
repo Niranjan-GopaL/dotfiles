@@ -156,11 +156,12 @@ abbrev-alias gh-prof-code='code ~/Documents/code/Niranjan-GopaL'
 
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
-abbrev-alias mkdir='mkdir -p'
-
-# this stops the border issues in kitty + nvim 
+abbrev-alias mkdir=' mkdir -p'
 
 
+
+# pokemon-colorscripts --no-title -r 1,3,6
+abbrev-alias p='pokemon-colorscripts -r 1,3,6'
 abbrev-alias t='tmux -u'
 abbrev-alias r='ranger'
 abbrev-alias f='fastfetch'
@@ -193,50 +194,10 @@ abbrev-alias glg2="git log --graph --abbrev-commit --decorate --format=format:'%
 abbrev-alias glg3="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)' "
 
 
-# THIS FRIKKIN WORKS
-
-# Compare .zshrc with the version in ~/Documents/dotfiles/.config/.zshrc
-if ! cmp -s ~/.zshrc ~/Documents/code/dotfiles/.config/.zshrc; then
-    # echo " [ZSH] System zshrc file differs from the repository's zshrc file."
-    # echo " [ZSH] Changes in .zshrc are gonna be copied" 
-    # This is bad since, it'll always make the new session in a ~/Documents/dotfiles/ folder
-    # Change to the dotfiles directory
-    # cd ~/Documents/dotfiles
-    cp  "$HOME/.config/zsh/.zshrc" "$HOME/Documents/code/dotfiles/.config/.zshrc" 
-
-    # This was sooo slow ! 
-    
-    # Push the changes to the remote repository, this will trigger a HOOK
-    # How to git FROM ANOTHER FOLDER ; this is insane !!
-    # git --git-dir=/home/niranjan/Documents/dotfiles/.git push 
-fi
-
-
-if ! cmp -s ~/.config/tmux/tmux.conf ~/Documents/code/dotfiles/.config/tmux.conf; then
-    # echo " [TMUX] Tmux config file differs from repository's tmux.conf "
-    # echo " [TMUX] Changes are being copied"
-    cp  "$HOME/.config/tmux/tmux.conf" "$HOME/Documents/code/dotfiles/.config/tmux.conf" 
-fi
-
-
-if ! cmp -s ~/.config/kitty/kitty.conf ~/Documents/code/dotfiles/.config/kitty.conf; then
-    # echo " [kitty] Kitty config file differs from repository's kitty.conf "
-    # echo " [kitty] Changes are being copied"
-    cp  "$HOME/.config/tmux/tmux.conf" "$HOME/Documents/code/dotfiles/.config/kitty.conf" 
-fi
-
-
-
-if ! cmp -s ~/.config/zathura/zathurarc ~/Documents/code/dotfiles/.config/zathurarc; then
-    cp  "$HOME/.config/zathura/zathurarc" "$HOME/Documents/code/dotfiles/.config/zathurarc"
-fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#Display Pokemon
-# pokemon-colorscripts --no-title -r 1,3,6
-# pokemon-colorscripts -r 1,3,6
 
 # echo "Sourcing ~/.config/zsh/.zshrc"
 
