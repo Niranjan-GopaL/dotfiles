@@ -1,49 +1,44 @@
 {
-    "workbench.colorTheme": "Nebula Oni (Favorite)",
+    "workbench.colorTheme": "Palenight Italic",
     "window.menuBarVisibility": "toggle",
     "editor.fontSize": 12,
     "editor.scrollbar.verticalScrollbarSize": 0,
     "security.workspace.trust.untrustedFiles": "newWindow",
     "security.workspace.trust.startupPrompt": "never",
     "security.workspace.trust.enabled": false,
-    "editor.fontFamily": "'Maple Mono', 'monospace', monospace",
-    "extensions.autoUpdate": false,
+
+    // My fonts
+    "editor.fontFamily": "'Maple Mono','CaskaydiaCove Nerd Font','Monaspace Neon','JetBrainsMono Nerd Font Propo','Fira Code', 'monospace', monospace",
+    "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'liga'",
+
+    "extensions.autoUpdate": "onlySelectedExtensions",
     "terminal.external.linuxExec": "kitty",
     "terminal.explorerKind": "both",
     "terminal.sourceControlRepositoriesKind": "both",
     "telemetry.telemetryLevel": "off",
     "editor.mouseWheelZoom": true,
     "workbench.sideBar.location": "right",
-    "nebulaOni.update.restoreConfiguration": {
-      "themeSettings": {
-        "background": "Grey",
-        "main": "Bumblebee",
-        "highlight": "Ultra Violet",
-        "focusBorder": "ON",
-        "fontStyle": "Italic",
-        "syntaxBrightness": "Normal",
-        "comments": "Dark Violet",
-        "favorite": "OFF"
-      },
-      "favoriteSettings": {
-        "background": "Glacial Blue",
-        "main": "Sakura",
-        "highlight": "Ultra Violet",
-        "focusBorder": "ON",
-        "fontStyle": "Italic",
-        "syntaxBrightness": "Dimmed",
-        "comments": "Dark Magenta",
-        "favorite": "Nebula Oni (Pegasus)"
-      }
-    },
-    "editor.minimap.enabled": false,
     "errorLens.enabled": true,
     "files.autoSave": "afterDelay",
+
+    // vim settings
+    "vim.useSystemClipboard": true,
+    "vim.insertModeKeyBindings": [
+      {
+        "before": ["j", "k"],
+        "after": ["<Esc>", "l"]
+      }
+    ],
+    "vim.useCtrlKeys": true,
+    "vim.handleKeys": {
+      "<C-f>": false,
+      "<C-h>": false,
+      "<C-a>": false
+    },
   
     // persists the foldings 
     "editor.foldingStrategy": "auto",
     "editor.scrollbar.vertical": "visible",
-    "workbench.activityBar.location": "hidden",
   
 
     // how to display .git folder [ YOU CAN ADD USEFULL PRE-PUSH scripts to run in HOOKS ]
@@ -54,7 +49,14 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true
-    }
+    },
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.confirmDragAndDrop": false,
+    "workbench.productIconTheme": "fluent-icons",
+    "workbench.activityBar.location": "hidden",
+    "editor.wordWrap": "on",
+    "explorer.confirmDelete": false,
   
   }
   

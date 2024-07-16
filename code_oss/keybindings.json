@@ -1,0 +1,185 @@
+// Place your key bindings in this file to override the defaults
+[
+  // Place your key bindings in this file to override the defaults
+  
+  //   how to open this file (keybindings.jaon) , settings
+  {
+    "key": "ctrl+k ctrl+l",
+    "command": "workbench.action.openGlobalKeybindingsFile"
+  },
+
+  {
+    "key": "ctrl+o ctrl+p",
+    "command": "workbench.action.openApplicationSettingsJson"
+  },
+
+
+// THIS IS REALLY USEFUL for webDev lol
+  {
+    "key": "ctrl+n",
+    "command": "extension.advancedNewFile"
+  },
+
+  {
+    "key": "ctrl+shift+f ctrl+shift+f",
+    "command": "fileutils.newFolder"
+  },
+
+
+//   FOLDING KEYBINDINGS
+
+{
+    "key": "ctrl+k ctrl+-",
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+},
+
+{
+    "key": "ctrl+k ctrl+j",
+    "command": "-editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+},
+
+
+{
+    "key": "shift+alt+[",
+    "command": "editor.fold",
+    "when": "editorTextFocus && foldingEnabled"
+},
+{
+    "key": "ctrl+shift+[",
+    "command": "-editor.fold",
+    "when": "editorTextFocus && foldingEnabled"
+},
+{
+    "key": "shift+alt+]",
+    "command": "editor.unfold",
+    "when": "editorTextFocus && foldingEnabled"
+},
+{
+    "key": "ctrl+shift+]",
+    "command": "-editor.unfold",
+    "when": "editorTextFocus && foldingEnabled"
+},
+
+
+
+//   changing tabs easily --------------------------------------------------------------------------------------------------
+{
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "ctrl+1",
+    "command": "workbench.action.openEditorAtIndex1"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "workbench.action.openEditorAtIndex2"
+  },
+  {
+    "key": "ctrl+3",
+    "command": "workbench.action.openEditorAtIndex3"
+  },
+  {
+    "key": "ctrl+4",
+    "command": "workbench.action.openEditorAtIndex4"
+  },
+// --------------------------------------------------------------------------------------------------------------------
+
+
+
+// transform upper_Case, lower_Case, snake_case, title_case
+{
+    "key": "ctrl+shift+alt+u ctrl+shift+alt+u",
+    "command": "editor.action.transformToUppercase"
+},
+{
+    "key": "ctrl+shift+alt+l ctrl+shift+alt+l",
+    "command": "editor.action.transformToLowercase"
+},
+{
+    "key": "ctrl+shift+alt+s ctrl+shift+alt+s",
+    "command": "editor.action.transformToSnakecase"
+},
+{
+    "key": "ctrl+shift+alt+t ctrl+shift+alt+t",
+    "command": "editor.action.transformToTitlecase"
+},
+{
+  "key": "shift+alt+m shift+alt+m",
+  "command": "editor.action.transformToCamelcase"
+},
+
+  // toggling visibility of  status_bar, minimap , activity_bar
+  {
+    "key": "ctrl+shift+z",
+    "command": "workbench.action.toggleStatusbarVisibility"
+  },
+  {
+    "key": "ctrl+shift+oem_2",
+    "command": "editor.action.toggleMinimap"
+  },
+  {
+    "key": "ctrl+shift+' ctrl+shift+/",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+
+
+
+//  ----------------------------------------------------------------------------------------------------------
+
+//   -------- EXTENSION KEYBINDINGS ----------
+{
+  "key": "ctrl+shift+alt+m",
+  "command": "glassit.increase"
+},
+{
+  "key": "ctrl+shift+alt+n",
+  "command": "glassit.decrease"
+},
+
+{
+  "key": "shift+alt+l shift+alt+l",
+  "command": "errorLens.toggle"
+},
+
+
+//  ----------------------------------------------------------------------------------------------------------
+
+// Only these are needed in order to have 
+// Add Cursor up/down + Copy Line up/down
+
+{
+  "key": "shift+alt+up",
+  "command": "editor.action.copyLinesUpAction",
+  "when": "editorTextFocus && !editorReadonly"
+},
+{
+  "key": "shift+alt+up",
+  "command": "-editor.action.insertCursorAbove",
+  "when": "editorTextFocus"
+},
+{
+  "key": "shift+alt+down",
+  "command": "-editor.action.insertCursorBelow",
+  "when": "editorTextFocus"
+},
+{
+  "key": "shift+alt+down",
+  "command": "editor.action.copyLinesDownAction",
+  "when": "editorTextFocus && !editorReadonly"
+},
+{
+  "key": "ctrl+alt+z",
+  "command": "-glassit.increase"
+},
+{
+  "key": "ctrl+alt+z",
+  "command": "toggleVim"
+},
+]
