@@ -142,7 +142,11 @@ abbrev-alias .3='cd ../../..'
 abbrev-alias .4='cd ../../../..'
 abbrev-alias .5='cd ../../../../..'
 
+
+abbrev-alias code-prac='cd ~/Documents/code'
+
 abbrev-alias czsh='nvim ~/.config/zsh/.zshrc'   
+abbrev-alias ckitty='nvim ~/.config/kitty/kitty.conf'
 abbrev-alias czathura='nvim ~/.config/zathura/zathurarc'
 
 abbrev-alias devlog='cd ~/Documents/code/dotfiles'
@@ -150,8 +154,6 @@ abbrev-alias devlog-code='code ~/Documents/code/dotfiles'
 
 abbrev-alias gh-prof='cd ~/Documents/code/Niranjan-GopaL'
 abbrev-alias gh-prof-code='code ~/Documents/code/Niranjan-GopaL'
-
-
 
 
 

@@ -1,16 +1,14 @@
-## PR for hyprdots
-- git clone -b <branch_name> <repo_url>
-- While creating a fork, remember to UNCHECK the ]MERGE ONLY main branch[
+## Sigining commits with GPG keys ( GNU Encryption  )
+
+- Sign your commits with GPG Keys
+- Password command line utility :- `pass` to store all the GPG keys and secrets
 
 
-## Main Objective :-
+```sh
+sudo pacman -S gnupg
+```
 
-- How to have 2 local repositories collaborate
-- how to branch properly
-- there is BOUND TO BE merge conflicts
-- merge conflicts are good ?
-
-#### First thought :-
+## Branching in this repo
 
 > `3 branches` :- `main`, `eos`, `dos++` 
 > - `eos` will have all the things commited from eos 
