@@ -31,13 +31,17 @@ case "$1" in
     -t)
         update_dotfile "$HOME/.config/tmux/tmux.conf" "$HOME/Documents/code/dotfiles/.config/tmux.conf"
         ;;
+    -vscode)
+        update_dotfile "$HOME/.config/Code/User/settings.json" "$HOME/Documents/code/dotfiles/code_oss/settings.json"
+        update_dotfile "$HOME/.config/Code/User/keybindings.json" "$HOME/Documents/code/dotfiles/code_oss/keybindings.json"
+        ;;
     --dots)
         script_path=$(readlink -f "$0")
         sudo cp "$HOME/Documents/code/dotfiles/.config/dotsclone.sh" "$script_path"
         ;;
     --hypr)
         update_dotfile "$HOME/.config/hypr/hyprland.conf" "$HOME/Documents/code/dotfiles/.config/hypr/hyprland.conf"
-        update_dotfile "$HOME/.config/hypr/keybindings.conf" "$HOME/Documents/code/dotfiles/.config/hypr/hyprland.conf"
+        update_dotfile "$HOME/.config/hypr/keybindings.conf" "$HOME/Documents/code/dotfiles/.config/hypr/keybindings.conf"
         ;;
     --all)
         update_dotfile "$HOME/.config/zsh/.zshrc" "$HOME/Documents/code/dotfiles/.config/.zshrc"
@@ -45,7 +49,9 @@ case "$1" in
         update_dotfile "$HOME/.config/tmux/tmux.conf" "$HOME/Documents/code/dotfiles/.config/tmux.conf"
         update_dotfile "$HOME/.config/zathura/zathurarc" "$HOME/Documents/code/dotfiles/.config/zathurarc"
         update_dotfile "$HOME/.config/hypr/hyprland.conf" "$HOME/Documents/code/dotfiles/.config/hypr/hyprland.conf"
-        update_dotfile "$HOME/.config/hypr/keybindings.conf" "$HOME/Documents/code/dotfiles/.config/hypr/hyprland.conf"
+        update_dotfile "$HOME/.config/hypr/keybindings.conf" "$HOME/Documents/code/dotfiles/.config/hypr/keybindings.conf"
+        update_dotfile "$HOME/.config/Code/User/settings.json" "$HOME/Documents/code/dotfiles/code_oss/settings.json"
+        update_dotfile "$HOME/.config/Code/User/keybindings.json" "$HOME/Documents/code/dotfiles/code_oss/keybindings.json"
         ;;
     *)
         echo "Usage: dotsclone -z| -k| -t| --dots| --all"
