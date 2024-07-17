@@ -78,7 +78,7 @@
     "key": "ctrl+4",
     "command": "workbench.action.openEditorAtIndex4"
   },
-// --------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------
 
 
 
@@ -164,18 +164,29 @@
   "command": "selectPrevSuggestion",
   "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
 },
-
-
+// QuickOpenNavigation is the one you see with Ctrl+p
 {
-  "key": "ctrl+j",
-  "command": "selectNextSuggestion",
-  "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
 },
 {
-  "key": "ctrl+k",
-  "command": "selectPrevSuggestion",
-  "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
 },
+// ctrl +shift + p is quickOpen
+{
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenNavigateNext",
+    "when": "inQuickOpen"
+},
+{
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenNavigatePrevious",
+    "when": "inQuickOpen"
+},
+
 
 
 
@@ -212,6 +223,15 @@
     "key": "ctrl+shift+k",
     "command": "editor.action.insertCursorAbove",
     "when": "editorTextFocus"
+  },
+
+
+  // Miscellaneous
+
+  // mapping ctlr+t to have the fn that was supposed to be of ctrl+j
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.togglePanel"
   },
 
 ]
