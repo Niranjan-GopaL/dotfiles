@@ -1,66 +1,55 @@
 // Place your key bindings in this file to override the defaults
 [
   // Place your key bindings in this file to override the defaults
-  
   //   how to open this file (keybindings.jaon) , settings
   {
     "key": "ctrl+k ctrl+l",
     "command": "workbench.action.openGlobalKeybindingsFile"
   },
-
   {
     "key": "ctrl+o ctrl+p",
     "command": "workbench.action.openApplicationSettingsJson"
   },
-
-
-// THIS IS REALLY USEFUL for webDev lol
+  // THIS IS REALLY USEFUL for webDev lol
   {
     "key": "ctrl+n",
     "command": "extension.advancedNewFile"
   },
-
   {
     "key": "ctrl+shift+f ctrl+shift+f",
     "command": "fileutils.newFolder"
   },
-
-
-//   FOLDING KEYBINDINGS
-
-{
+  //   FOLDING KEYBINDINGS
+  {
     "key": "ctrl+k ctrl+-",
     "command": "editor.unfoldAll",
     "when": "editorTextFocus && foldingEnabled"
-},
-
-{
+  },
+  {
     "key": "ctrl+k ctrl+j",
     "command": "-editor.unfoldAll",
     "when": "editorTextFocus && foldingEnabled"
-},
-
-
-{
+  },
+  {
     "key": "shift+alt+[",
     "command": "editor.fold",
     "when": "editorTextFocus && foldingEnabled"
-},
-{
+  },
+  {
     "key": "ctrl+shift+[",
     "command": "-editor.fold",
     "when": "editorTextFocus && foldingEnabled"
-},
-{
+  },
+  {
     "key": "shift+alt+]",
     "command": "editor.unfold",
     "when": "editorTextFocus && foldingEnabled"
-},
-{
+  },
+  {
     "key": "ctrl+shift+]",
     "command": "-editor.unfold",
     "when": "editorTextFocus && foldingEnabled"
-},
+  },
 
 
 
@@ -149,37 +138,80 @@
 },
 
 
-//  ----------------------------------------------------------------------------------------------------------
+// ---------------------------- VIM -----------------------
 
-// Only these are needed in order to have 
-// Add Cursor up/down + Copy Line up/down
+// while in vim, to enable indentation using tabs and shift tabs
 
 {
-  "key": "shift+alt+up",
-  "command": "editor.action.copyLinesUpAction",
-  "when": "editorTextFocus && !editorReadonly"
+  "key": "tab",
+  "command": "tab",
+  "when": "editorTextFocus && !editorTabMovesFocus"
 },
 {
-  "key": "shift+alt+up",
-  "command": "-editor.action.insertCursorAbove",
-  "when": "editorTextFocus"
+  "key": "shift+tab",
+  "command": "outdent",
+  "when": "editorTextFocus && !editorTabMovesFocus"
+},
+
+// Traverse VSCode IntelliSense suggestions with vim keybindings.
+{
+  "key": "ctrl+j",
+  "command": "selectNextSuggestion",
+  "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
 },
 {
-  "key": "shift+alt+down",
-  "command": "-editor.action.insertCursorBelow",
-  "when": "editorTextFocus"
+  "key": "ctrl+k",
+  "command": "selectPrevSuggestion",
+  "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+},
+
+
+{
+  "key": "ctrl+j",
+  "command": "selectNextSuggestion",
+  "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
 },
 {
-  "key": "shift+alt+down",
-  "command": "editor.action.copyLinesDownAction",
-  "when": "editorTextFocus && !editorReadonly"
+  "key": "ctrl+k",
+  "command": "selectPrevSuggestion",
+  "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
 },
-{
-  "key": "ctrl+alt+z",
-  "command": "-glassit.increase"
-},
+
+
+
 {
   "key": "ctrl+alt+z",
   "command": "toggleVim"
 },
+
+
+
+
+//  ----------------------------------------------------------------------------------------------------------
+
+// Only these are needed in order to have 
+// Add Cursor up/down + Copy Line up/down in VimBindings
+
+  {
+    "key": "shift+alt+k",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+j",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  
+  {
+    "key": "ctrl+shift+j",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+
 ]

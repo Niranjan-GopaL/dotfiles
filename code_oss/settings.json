@@ -8,7 +8,7 @@
     "security.workspace.trust.enabled": false,
 
     // My fonts
-    "editor.fontFamily": "'Maple Mono','CaskaydiaCove Nerd Font','Monaspace Neon','JetBrainsMono Nerd Font Propo','Fira Code', 'monospace', monospace",
+    "editor.fontFamily": "'Maple Mono','Monaspace Radon','Monaspace Krypton','Monaspace Neon','CaskaydiaCove Nerd Font','JetBrainsMono Nerd Font Propo','Fira Code', 'monospace', monospace",
     "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'liga'",
 
     "extensions.autoUpdate": "onlySelectedExtensions",
@@ -22,18 +22,62 @@
     "files.autoSave": "afterDelay",
 
     // vim settings
+    "vim.leader": "<space>",
     "vim.useSystemClipboard": true,
+    
     "vim.insertModeKeyBindings": [
       {
         "before": ["j", "k"],
         "after": ["<Esc>", "l"]
       }
     ],
+
+    "vim.normalModeKeyBindings": [
+            {
+                "before":["1"],
+                "after":  ["0"]
+            },
+            {
+                "before":["2"],
+                "after":  ["$"]
+            },
+            {
+                "before":["J"],
+                "after":  ["C-f"]
+            },
+            {
+                "before":["K"],
+                "after":  ["C-b"]
+            },
+
+           // boomark extension will be envoked via space (leader) 
+            {
+                "before": ["<leader>", "m"],
+                "commands": [
+                    "bookmarks.toggle"
+                ]
+            },
+            {
+                "before": ["<leader>", "b"],
+                "commands": [
+                    "bookmarks.list"
+                ]
+            }
+    ],
+
     "vim.useCtrlKeys": true,
-    "vim.handleKeys": {
+      "vim.handleKeys": {
       "<C-f>": false,
       "<C-h>": false,
-      "<C-a>": false
+      "<C-a>": false,
+      "<C-l>": false,
+      "<C-d>": false,
+      "<C-b>": false,
+      "<C-w>": false,
+      "<C-p>": false,
+      
+      // control + space is HOW TO ENVOKE INTELLISENSE suggestion while in the middle of the word
+      "<C-space>": false
     },
   
     // persists the foldings 
