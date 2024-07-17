@@ -69,10 +69,11 @@ set -g mouse on
 
 leader + 
 
-- i        => installs all the plugins 
--  c       => new window
--  [0-9]   => cycle through opened window
--  n       => next window in cycle
+- [       => Copy mode
+- i       => installs all the plugins 
+- c       => new window
+- [0-9]   => cycle through opened window
+- n       => next window in cycle
 
 
 - %        => HORIZONTAL SPLIT, focus in next PANE
@@ -80,12 +81,16 @@ leader +
 - x        => close current pane ( you can just type `exit` in terminal in that pane  )
 - q        => see the index of each pane
 - arrow    => navigate between split
-
+- t        => time view
 
 -  d => detach from tmux session
 - `tmux ls`     => ALL SESSIONS you have opened 
 - `tmux attach` => attaches back last detached session
 - `tmux session`=> creates a new session
+
+- meta + h/l    => tmux tab navigation
+- prefix + z    => hide panes
+- prefix+ ctrl+hjkl => resize panes
 
 - From inside a tmux session, go to another tmux session := `leader + s` ( list sessions inside tmux)
 
