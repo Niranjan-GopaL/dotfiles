@@ -1,7 +1,7 @@
 set recolor true
 set guioptions ""
-set recolor-darkcolor "#D4BE98"
-set recolor-lightcolor "#292828"
+set recolor-lightcolor "#35374B"
+set recolor-darkcolor "#9EC8B9"
 
 set selection-clipboard clipboard
 

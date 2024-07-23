@@ -1,7 +1,7 @@
 {
     "workbench.colorTheme": "Palenight Italic",
     "window.menuBarVisibility": "toggle",
-    "editor.fontSize": 12,
+    "editor.fontSize": 15,
     "editor.scrollbar.verticalScrollbarSize": 0,
     "security.workspace.trust.untrustedFiles": "newWindow",
     "security.workspace.trust.startupPrompt": "never",
@@ -17,14 +17,27 @@
     "terminal.sourceControlRepositoriesKind": "both",
     "telemetry.telemetryLevel": "off",
     "editor.mouseWheelZoom": true,
-    "workbench.sideBar.location": "right",
     "errorLens.enabled": false,
     "files.autoSave": "afterDelay",
 
     // vim settings
     "vim.leader": "<space>",
     "vim.useSystemClipboard": true,
+    "vim.smartRelativeLine": true,
+    "editor.cursorSurroundingLines": 10,
     
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "#eff702",
+    "vim.highlightedyank.duration": 450,
+
+
+
+    // these are the symbols used as seperators, you  can remove - 
+    // so that className=`w-24 h-24 rounded-full mx-auto` ; rounded-full w-24 is a single word
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+
+
+
     "vim.insertModeKeyBindings": [
       {
         "before": ["j", "k"],
@@ -35,6 +48,8 @@
     "vim.normalModeKeyBindings": [
 
             // go to beginning and end of a line
+            // to go to end of line you can also do f`last char`
+            // ( NOTE : % goes to matching brackets )
             {
                 "before":["1"],
                 "after":  ["0"]
@@ -44,17 +59,26 @@
                 "after":  ["$"]
             },
 
+            // since Ctrl+r was to select VS Code project ; also t and u seemed more ergonomic
+            // t and u -----> undo and redo [AWESOME]
+            {
+                "before":["t"],
+                "after":  ["C-r"]
+            },
+
             // absolutely GENIUS ; you get the scrolling feeling in vim
             // use JK with :set scrolloff=15 ( or :set so=15 ) ; 
             // while scrolling your cursor will be on the 15th line from the top
             // another useful motion => H M L go to Highest line in your screen, middle line, last line
+
+            // coupled with `Smooth scrolling enabled` it's really good 
             {
                 "before":["J"],
-                "after":  ["C-f"]
+                "after":  ["C-d"]
             },
             {
                 "before":["K"],
-                "after":  ["C-b"]
+                "after":  ["C-u"]
             },
 
            // boomark extension will be envoked via space (leader) 
@@ -83,27 +107,57 @@
                 ]
             },
             {
-                "before": ["<leader>", "t"],
+                "before": ["<leader>", "l"],
                 "commands": [
                     "bookmarks.listFromAllFiles"
                 ]
             },
+
+            // File Explorer Vim is insane
+            /*
+                    a - New file
+                    f - New folder
+                    r - Rename item
+                    x - Cut item
+                    y - Copy item
+                    p - Paste item
+            */
             {
-                "before": ["<leader>", "s"],
+                "before": ["<leader>", "e"],
+                "commands": ["workbench.view.explorer"]
+            },
+    
+          
+    
+            // THis is INSANE
+            {
+                "before": ["g", "h"],
                 "commands": [
-                    "bookmarks.openSettings"
+                    "editor.action.showDefinitionPreviewHover"
                 ]
-            }
+            },
+            {
+                "before": ["H"], // Focus previous tab at the left
+                "commands": ["workbench.action.previousEditor"]
+            },
+            {
+                "before": ["L"], // Focus next tab at the right
+                "commands": ["workbench.action.nextEditor"]
+            },
+
     ],
 
     "vim.useCtrlKeys": true,
       "vim.handleKeys": {
-      "<C-f>": false,
-      "<C-h>": false,
-      "<C-a>": false,
-      "<C-l>": false,
-      "<C-d>": false,
+      "<C-a>": true,
+      // Imma try navigating using C-d and C-u even if that seems really wierd
+      "<C-d>": true,
+      
       "<C-b>": false,
+      "<C-f>": false,
+      "<C-r>": false,
+      "<C-h>": false,
+      "<C-l>": false,
       "<C-w>": false,
       "<C-p>": false,
       
@@ -125,14 +179,18 @@
         "**/.DS_Store": true,
         "**/Thumbs.db": true
     },
-    "editor.minimap.enabled": false,
     "workbench.iconTheme": "material-icon-theme",
     "explorer.confirmDragAndDrop": false,
     "workbench.productIconTheme": "fluent-icons",
-    "workbench.activityBar.location": "hidden",
     "editor.wordWrap": "on",
     "explorer.confirmDelete": false,
-    "editor.cursorSurroundingLines": 15,
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.location": "hidden",
+    "editor.minimap.enabled": false,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "editor.cursorBlinking": "solid",
   
   }
   

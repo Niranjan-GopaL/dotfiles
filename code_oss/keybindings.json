@@ -54,7 +54,8 @@
 
 
 //   changing tabs easily --------------------------------------------------------------------------------------------------
-{
+  // sought of redundant since H / L are for changing tabs now
+  {
     "key": "ctrl+tab",
     "command": "workbench.action.nextEditor"
   },
@@ -62,6 +63,18 @@
     "key": "ctrl+shift+tab",
     "command": "workbench.action.previousEditor"
   },
+
+    // Zoom in and out 
+  {
+    "key": "ctrl+shift+alt+j",
+    "command": "editor.action.fontZoomIn"
+  },
+  {
+    "key": "ctrl+shift+alt+k",
+    "command": "editor.action.fontZoomOut"
+  },
+
+
   {
     "key": "ctrl+1",
     "command": "workbench.action.openEditorAtIndex1"
@@ -138,7 +151,7 @@
 },
 
 
-// ---------------------------- VIM -----------------------
+// ----------------- VIM -----------------------
 
 // while in vim, to enable indentation using tabs and shift tabs
 
@@ -153,7 +166,7 @@
   "when": "editorTextFocus && !editorTabMovesFocus"
 },
 
-// Traverse VSCode IntelliSense suggestions with vim keybindings.
+  // Traverse VSCode IntelliSense suggestions with vim keybindings.
 {
   "key": "ctrl+j",
   "command": "selectNextSuggestion",
@@ -187,6 +200,68 @@
     "when": "inQuickOpen"
 },
 
+/*
+        a - New file
+        f - New folder
+        r - Rename item
+        x - Cut item
+        y - Copy item
+        p - Paste item
+*/
+{
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+},
+{
+    "key": "f",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+},
+{
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+},
+{
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+},
+{
+    "key": "y",
+    "command": "filesExplorer.copy",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+},
+{
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+},
+
+
+
+
+{
+  "key": "h",
+  "command": "editor.action.scrollLeftHover",
+  "when": "editorHoverFocused"
+},
+{
+  "key": "j",
+  "command": "editor.action.scrollDownHover",
+  "when": "editorHoverFocused"
+},
+{
+  "key": "k",
+  "command": "editor.action.scrollUpHover",
+  "when": "editorHoverFocused"
+},
+{
+  "key": "l",
+  "command": "editor.action.scrollRightHover",
+  "when": "editorHoverFocused"
+},
 
 
 
@@ -234,4 +309,22 @@
     "command": "workbench.action.togglePanel"
   },
 
+  // Find all occurances of somthing in entire workspace ; Include, Exclde files with regex
+  {
+    "key": "shift+alt+f shift+alt+f",
+    "command": "workbench.action.findInFiles"
+  },
+
+
+  // Earlier Ctrl+d ; Go to the next occurance of the selection ; 
+  // NOTE : on pressing ctrl+Q YOU WILL BE IN `VISUAL MODE` 
+  //        --> JUST PRESS `v` AND YOU WILL BE BACKE TO BE IN NORMAL MODE , 
+  //        --> ( or press `I`) to go to insert mode DIRECTLY but most of the times you would wanna be in normal mode
+  {
+    "key": "ctrl+q",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+
+  
 ]

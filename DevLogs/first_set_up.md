@@ -144,7 +144,7 @@ ls -l ~/.zshrc
 You should see something like:
 
 ```sh
-~/.zshrc -> ~/.config/zsh/.zshrc
+   ~/.zshrc -> ~/.config/zsh/.zshrc
 ```
 
 ### Testing the Configuration
@@ -300,12 +300,14 @@ This is how you run something ( generally a GUI application if you launch throug
 - :blist           <-- Show all bookmarks available
 - :blist <name>    <-- got to that bookmark
 - :bdelete         <-- prompt to delete a bookmark
-
+- ctrl+n           <-- you can see the page number in bottom right
 
 Navigation
+- H/L <-- goes  to top / bottom of the page
 - jkhl / JKHL / arrow keys  
 - Tab + hjkl <-- Table of Contents [Hyprlinks?]
-- :10 (10th page) 
+- :10 ( 10th page ) 
+- nG  ( go to nth page)
 - Create temporary bookmarks :-
    m + [0-9] <-- creates a temp bookmark on that page and store that in the number[0-9]
    ' + [0-9] <-- go to the page associated with that number
@@ -320,6 +322,8 @@ Navigation
 
 Interface Navigation :-
 
+
+- f/F <-- follow link
 - D/d <-- booklet form 
 - R   <-- Rotate current pag by 90
 - A   <-- Fit Back to the Screen size

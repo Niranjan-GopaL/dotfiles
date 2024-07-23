@@ -3,6 +3,16 @@
 - Docker containers ALWAYS expose some PORTS through which outside world interacts with it
 
 
+## Quick set up of Next14 + Docker 
+
+
+
+
+
+
+
+
+
 ## Both the containers have to be in the same NETWROK
 ```sh
 docker network create

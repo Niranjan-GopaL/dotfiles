@@ -14,6 +14,10 @@ export QT_IM_MODULE='fcitx'
 export SDL_IM_MODULE='fcitx'
 export XMODIFIERS='@im=fcitx'
 
+export PATH="$HOME/.config/tmux/plugins/tmuxifier/bin:$PATH"
+eval "$(tmuxifier init -)"
+
+
 
 # Path to powerlevel10k theme
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
@@ -147,8 +151,13 @@ abbrev-alias code-prac='cd ~/Documents/code'
 
 abbrev-alias czsh='nvim ~/.config/zsh/.zshrc'   
 abbrev-alias ckitty='nvim ~/.config/kitty/kitty.conf'
+abbrev-alias ctmux='nvim ~/.config/tmux/tmux.conf'
 abbrev-alias czathura='nvim ~/.config/zathura/zathurarc'
+abbrev-alias chypr='nvim ~/.config/hypr/windowrules.conf ~/.config/hypr/keybindings.conf ~/.config/hypr/hyprland.conf'
 
+
+abbrev-alias hypr='cd ~/.config/hypr/'
+abbrev-alias hyde-themes='cd ~/.config/hyde/themes/'
 abbrev-alias devlog='cd ~/Documents/code/dotfiles'
 abbrev-alias devlog-code='code ~/Documents/code/dotfiles'
 
@@ -165,10 +174,12 @@ abbrev-alias mkdir=' mkdir -p'
 # pokemon-colorscripts --no-title -r 1,3,6
 abbrev-alias p='pokemon-colorscripts -r 1,3,6'
 abbrev-alias t='tmux -u'
+abbrev-alias ts='tmuxifier'
 abbrev-alias r='ranger'
 abbrev-alias f='fastfetch'
 abbrev-alias b='btop --utf-force'
-
+abbrev-alias n='nvim'
+abbrev-alias z='zathura  &'
 
 abbrev-alias g='git '
 abbrev-alias gc='git commit -m "'

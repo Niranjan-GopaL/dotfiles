@@ -1,8 +1,29 @@
 ## Keybindings
 
+[VSCode Too God stuff]
+- Ctrl+Q := Select next same selection
+  // NOTE : on pressing ctrl+Q YOU WILL BE IN `VISUAL MODE` 
+  //        --> JUST PRESS `v` AND YOU WILL BE BACKE TO BE IN NORMAL MODE , 
+  //        --> ( or press `I`) to go to insert mode DIRECTLY but most of the times you would wanna be in normal mode
+
+
+
+- Search Editor => can you search and replace all the occurance of something across all files ; selectively changes some of them,etc
+  (`shift+alt+f shift+alt+f`)
+- Really powerful way to go through ANYTHING => `ctrl+shift+o` this will DISPLAY ALL OBJECTS IN VSC
+- `gh` => will show whatever we see when we hover over that (DOCUMENTATION)
+
+
 [VIM]
+- using f to traverse in a line is insane;
+- the reason why vim has % $ for bindings is because they ran out of keys ; everything was already bound to something ;
+- I remapped 0 and $ to 1 and 2 ( since i rarelu use recursive vim stuff like 2j 2<C-a> etc )
+- :viB select inside block
+- 3ctrl + a => increases the number under cursor by 3   3 -> 6
+- 3ctrl + x => decreases the number under curose by 3   3 -> 0 
 - remapped start of line, end of line => 1,2
-- JK to half a page up/down [Still need getting used to ]
+- HL to half a page up/down [Still need getting used to ]
+- H and L are best ; if you wanna go up mindlessly? JK is the way
 - BUT USE MARKERS
   ma     <- bookmarker on a
   `a     <- go to that bookmark
@@ -25,9 +46,6 @@
 
 ## Temporary To-do
 - Tmux session need to persist
-- Remap vim emulator keybindings (JK to move half a page up / down )
-- navigate using ctrl j/k in command pallate / file picker 
-- bookmark extension explore ; reserve use of leader for marked lines management and naviagtion
 
 
 ## In free time
@@ -46,6 +64,9 @@
 ## Completed
 
 [DONE]
+- Remap vim emulator keybindings (JK to move half a page up / down )
+- navigate using ctrl j/k in command pallate / file picker [WORKED BEAUTIFULLY]
+- bookmark extension explore ; reserve use of leader for marked lines management and naviagtion
 - more useful tmux config ( easier to rename window ; start indexing from 1 ; )
 - set up anki and sync it
 - tmux config or zsh config [Only show the current parent directory]
