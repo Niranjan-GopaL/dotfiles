@@ -1,9 +1,7 @@
 ### Initial Things done+
 
 0. Make a DevFile to record everything
-
 1. Log in to Github via ssh 
-
 2. Common Utilities
    1. Connect to Bluetooth 
    2. Zathura Zathura-pdf-popler ( further customisation later ) 
@@ -16,46 +14,20 @@
    sudo yay -Sy ueberzugq
 ```
    5. cava + mcp + ncmpcpp => $MUSIC
-
-
-
 3. zsh abbrv-alias IS GOD-TIER ;
-
-
 4. Dev Utilities
    0. `sudo pacman -Sy timew` <-- Time spent in command line
    1. Installing tmux 
    2. Installing nvm, node, npm, GITHUB CLI (gh) in terminal 
    3. Docker [PLEASE_WORK]
-
-
 5. Signed in to Mozilla to keep Consistent stuff
    - used legendsonthemove1111@gmail.com to sign in
    - add-ons don't persist ?
 
-
-
 > [PUSH ALL THE SIGNATURES TO GITHUB] 
 
 
-### Explore after all Projects
-- jk / arrowKeys speed needs to increase the longer you press it 
-- yay pacman sway waybar cliphist
-- start using other aliases related to aur and arch repo
-```sh
-abbrev-alias ld='eza -lhD --icons=auto'   # long list dirs
-abbrev-alias lt='eza --icons=auto --tree' # list folder as tree
-abbrev-alias un='$aurhelper -Rns'         # uninstall package
-abbrev-alias up='$aurhelper -Syu'         # update system/package/aur
-abbrev-alias pl='$aurhelper -Qs'          # list installed package
-abbrev-alias pa='$aurhelper -Ss'          # list availabe package
-abbrev-alias pc='$aurhelper -Sc'          # remove unused cache
-abbrev-alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
-abbrev-alias vc='code' # gui code editor
-```
 
-<!--     FUCK THIS ; JUST USE THIS CAREFULLY  -->
-<!-- ## PLEASE WORK : running a Windows VM -->
 
 ## 7. Installing mpd ( Music Player Daemon ) + NCMPCPP ( front-end for it, manages music, lyrics fetch, vizulisation )
 
@@ -365,17 +337,38 @@ Understand Keybindings.conf to set KNOW IT ALL !!!
 
 - sup + backspace          : wlogout menu
 
+
+### VIM
+- using f to traverse in a line is insane;
+- the reason why vim has % $ for bindings is because they ran out of keys ; everything was already bound to something ;
+- I remapped 0 and $ to 1 and 2 ( since i rarelu use recursive vim stuff like 2j 2<C-a> etc )
+- :viB select inside block
+- 3ctrl + a => increases the number under cursor by 3   3 -> 6
+- 3ctrl + x => decreases the number under curose by 3   3 -> 0 
+- remapped start of line, end of line => 1,2
+- HL to half a page up/down [Still need getting used to ]
+- H and L are best ; if you wanna go up mindlessly? JK is the way
+- BUT USE MARKERS
+  ma     <- bookmarker on a
+  `a     <- go to that bookmark
+  :marks <- shows all the marks set
+  :delmarks a s d f <- deletes all those book marks
+
+
 ### VSC
 
+[VSCode Too God stuff]
+- Ctrl+Q := Select next same selection
+  // NOTE : on pressing ctrl+Q YOU WILL BE IN `VISUAL MODE` 
+  //        --> JUST PRESS `v` AND YOU WILL BE BACKE TO BE IN NORMAL MODE , 
+  //        --> ( or press `I`) to go to insert mode DIRECTLY but most of the times you would wanna be in normal mode
 
-#### Find it Faster ( fzf and rg ) extension
-cmd+shift+j / ctrl+shift+j to search files,
-cmd+shift+u / ctrl+shift+u to search for text within files,
-cmd+shift+ctrl+u / ctrl+shift+alt+u to search for text within files with type pre-filtering.
 
-- Open terminal in vsc directory    : Ctrl + shift + C
 
-- Current file to rightpanel        : Ctrl + Alt + left / right
+- Search Editor => can you search and replace all the occurance of something across all files ; selectively changes some of them,etc
+  (`shift+alt+f shift+alt+f`)
+- Really powerful way to go through ANYTHING => `ctrl+shift+o` this will DISPLAY ALL OBJECTS IN VSC
+- `gh` => will show whatever we see when we hover over that (DOCUMENTATION)
 
 
 - Fold / Unfold                     : ctrl + shift + [ ] 

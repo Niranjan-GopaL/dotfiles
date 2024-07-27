@@ -27,11 +27,6 @@ sudo nvim /etc/hosts    # Replace any occurrence of the existing computer name w
 - Set tab title     ctrl+shift+alt+t (also ⇧+⌘+i on macOS)
 
 
-
-
-
-
-
 ## Vim 
 
 Recording keys 
