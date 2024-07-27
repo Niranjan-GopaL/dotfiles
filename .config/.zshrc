@@ -152,6 +152,7 @@ abbrev-alias code-prac='cd ~/Documents/code'
 abbrev-alias czsh='nvim ~/.config/zsh/.zshrc'   
 abbrev-alias ckitty='nvim ~/.config/kitty/kitty.conf'
 abbrev-alias ctmux='nvim ~/.config/tmux/tmux.conf'
+abbrev-alias cnvim='nvim ~/.config/nvim/ '
 abbrev-alias czathura='nvim ~/.config/zathura/zathurarc'
 abbrev-alias chypr='nvim ~/.config/hypr/windowrules.conf ~/.config/hypr/keybindings.conf ~/.config/hypr/hyprland.conf'
 
@@ -164,6 +165,9 @@ abbrev-alias devlog-code='code ~/Documents/code/dotfiles'
 abbrev-alias gh-prof='cd ~/Documents/code/Niranjan-GopaL'
 abbrev-alias gh-prof-code='code ~/Documents/code/Niranjan-GopaL'
 
+
+abbrev-alias algo='cd ~/Documents/code/Learning_NumberTheory_Combinatorics_etc/'
+abbrev-alias algo-code='code ~/Documents/code/Learning_NumberTheory_Combinatorics_etc/'
 
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)

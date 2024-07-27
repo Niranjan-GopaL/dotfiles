@@ -58,6 +58,18 @@
 ### Learn for fun
 - how to customize waybar [PERSONLIZE]
 - Learning Vimium ( use ? for bried description of keys )
+- start using other aliases related to aur and arch repo
+```sh
+abbrev-alias ld='eza -lhD --icons=auto'   # long list dirs
+abbrev-alias lt='eza --icons=auto --tree' # list folder as tree
+abbrev-alias un='$aurhelper -Rns'         # uninstall package
+abbrev-alias up='$aurhelper -Syu'         # update system/package/aur
+abbrev-alias pl='$aurhelper -Qs'          # list installed package
+abbrev-alias pa='$aurhelper -Ss'          # list availabe package
+abbrev-alias pc='$aurhelper -Sc'          # remove unused cache
+abbrev-alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
+abbrev-alias vc='code' # gui code editor
+```
 
 
 
