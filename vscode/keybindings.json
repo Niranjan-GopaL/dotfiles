@@ -1,186 +1,131 @@
+// Place your key bindings in this file to override the defaults
 [
-  // Place your key bindings in this file to override the defaults
+    // Place your key bindings in this file to override the defaults
+    //   how to open this file (keybindings.jaon) , settings
+    {
+      "key": "ctrl+k ctrl+l",
+      "command": "workbench.action.openGlobalKeybindingsFile"
+    },
+    {
+      "key": "ctrl+o ctrl+p",
+      "command": "workbench.action.openApplicationSettingsJson"
+    },
+    // THIS IS REALLY USEFUL for webDev lol
+    {
+      "key": "ctrl+n",
+      "command": "extension.advancedNewFile"
+    },
+    {
+      "key": "ctrl+shift+f ctrl+shift+f",
+      "command": "fileutils.newFolder"
+    },
+    //   FOLDING KEYBINDINGS
+    {
+      "key": "ctrl+k ctrl+-",
+      "command": "editor.unfoldAll",
+      "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+      "key": "ctrl+k ctrl+j",
+      "command": "-editor.unfoldAll",
+      "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+      "key": "shift+alt+[",
+      "command": "editor.fold",
+      "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+      "key": "ctrl+shift+[",
+      "command": "-editor.fold",
+      "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+      "key": "shift+alt+]",
+      "command": "editor.unfold",
+      "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+      "key": "ctrl+shift+]",
+      "command": "-editor.unfold",
+      "when": "editorTextFocus && foldingEnabled"
+    },
   
-  //   how to open this file (keybindings.jaon) , settings
+  
+  
+  //   changing tabs easily --------------------------------------------------------------------------------------------------
+    // sought of redundant since H / L are for changing tabs now
+    {
+      "key": "ctrl+tab",
+      "command": "workbench.action.nextEditor"
+    },
+    {
+      "key": "ctrl+shift+tab",
+      "command": "workbench.action.previousEditor"
+    },
+  
+      // Zoom in and out 
+    {
+      "key": "ctrl+shift+alt+j",
+      "command": "editor.action.fontZoomIn"
+    },
+    {
+      "key": "ctrl+shift+alt+k",
+      "command": "editor.action.fontZoomOut"
+    },
+  
+ 
+    // asign ctrl + 1, ctrl + 2 to first tab and last tab
+    {
+      "key": "ctrl+1",
+      "command": "workbench.action.openEditorAtIndex1"
+    },
+  
+    // ------------------------------------------------------------------------------------------------
+  
+  
+  
+  // transform upper_Case, lower_Case, snake_case, title_case
   {
-    "key": "ctrl+k ctrl+l",
-    "command": "workbench.action.openGlobalKeybindingsFile"
-  },
-
-  {
-    "key": "ctrl+o ctrl+p",
-    "command": "workbench.action.openApplicationSettingsJson"
-  },
-
-
-// THIS IS REALLY USEFUL for webDev lol
-  {
-    "key": "ctrl+n",
-    "command": "extension.advancedNewFile"
-  },
-
-  {
-    "key": "ctrl+shift+f ctrl+shift+f",
-    "command": "fileutils.newFolder"
-  },
-
-
-//   FOLDING KEYBINDINGS
-
-{
-    "key": "ctrl+k ctrl+-",
-    "command": "editor.unfoldAll",
-    "when": "editorTextFocus && foldingEnabled"
-},
-
-{
-    "key": "ctrl+k ctrl+j",
-    "command": "-editor.unfoldAll",
-    "when": "editorTextFocus && foldingEnabled"
-},
-
-
-{
-    "key": "shift+alt+[",
-    "command": "editor.fold",
-    "when": "editorTextFocus && foldingEnabled"
-},
-{
-    "key": "ctrl+shift+[",
-    "command": "-editor.fold",
-    "when": "editorTextFocus && foldingEnabled"
-},
-{
-    "key": "shift+alt+]",
-    "command": "editor.unfold",
-    "when": "editorTextFocus && foldingEnabled"
-},
-{
-    "key": "ctrl+shift+]",
-    "command": "-editor.unfold",
-    "when": "editorTextFocus && foldingEnabled"
-},
-
-
-
-//   changing tabs easily --------------------------------------------------------------------------------------------------
-{
-    "key": "ctrl+tab",
-    "command": "workbench.action.nextEditor"
+      "key": "ctrl+shift+alt+u ctrl+shift+alt+u",
+      "command": "editor.action.transformToUppercase"
   },
   {
-    "key": "ctrl+shift+tab",
-    "command": "workbench.action.previousEditor"
+      "key": "ctrl+shift+alt+l ctrl+shift+alt+l",
+      "command": "editor.action.transformToLowercase"
   },
   {
-    "key": "ctrl+1",
-    "command": "workbench.action.openEditorAtIndex1"
+      "key": "ctrl+shift+alt+s ctrl+shift+alt+s",
+      "command": "editor.action.transformToSnakecase"
   },
   {
-    "key": "ctrl+2",
-    "command": "workbench.action.openEditorAtIndex2"
+      "key": "ctrl+shift+alt+t ctrl+shift+alt+t",
+      "command": "editor.action.transformToTitlecase"
   },
   {
-    "key": "ctrl+3",
-    "command": "workbench.action.openEditorAtIndex3"
+    "key": "shift+alt+m shift+alt+m",
+    "command": "editor.action.transformToCamelcase"
   },
-  {
-    "key": "ctrl+4",
-    "command": "workbench.action.openEditorAtIndex4"
-  },
-// --------------------------------------------------------------------------------------------------------------------
-
-
-
-// transform upper_Case, lower_Case, snake_case, title_case
-{
-    "key": "ctrl+shift+alt+u ctrl+shift+alt+u",
-    "command": "editor.action.transformToUppercase"
-},
-{
-    "key": "ctrl+shift+alt+l ctrl+shift+alt+l",
-    "command": "editor.action.transformToLowercase"
-},
-{
-    "key": "ctrl+shift+alt+s ctrl+shift+alt+s",
-    "command": "editor.action.transformToSnakecase"
-},
-{
-    "key": "ctrl+shift+alt+t ctrl+shift+alt+t",
-    "command": "editor.action.transformToTitlecase"
-},
-
-
-  // toggling visibility of  status_bar, minimap , activity_bar
-  {
-    "key": "ctrl+shift+z",
-    "command": "workbench.action.toggleStatusbarVisibility"
-  },
-  {
-    "key": "ctrl+shift+oem_2",
-    "command": "editor.action.toggleMinimap"
-  },
-  {
-    "key": "ctrl+shift+' ctrl+shift+/",
-    "command": "workbench.action.toggleActivityBarVisibility"
-  },
-
-
-//   ABSOLUTELY COOL STUFF : Courtesy of TOGGLE - THE EXTENSION --------------------------------------------------------------------------------
-{
-    "key": "F3",
-    "command": "toggle",
-    "when": "editorTextFocus",
-    "args": {
-        "id": "indentation_guide",
-        "value": [
-              {
-                "editor.guides.indentation": true
-              },
-              {
-                "editor.guides.indentation": false
-              }
-        ]
-    }
-  },
-
-  {
-    "key": "ctrl+alt+x",
-    "command": "toggle",
-    "when": "editorTextFocus",
-    "args": {
-        "id": "inlay_hints",
-        "value": [
-              {
-                "editor.inlayHints.enabled": "on"
-              },
-              {
-                "editor.inlayHints.enabled": "offUnlessPressed"
-              }
-        ]
-    }
-  },
-
-  {
-    "key": "ctrl+alt+shift+x",
-    "command": "toggle",
-    "when": "editorTextFocus",
-    "args": {
-        "id": "inlay_hints",
-        "value": [
-              {
-                "codeium.enableCodeLens": true
-              },
-              {
-                "codeium.enableCodeLens": false
-              }
-        ]
-    }
-  },
-
-//  ----------------------------------------------------------------------------------------------------------
-
-    //   -------- EXTENSION KEYBINDINGS ----------
+  
+    // toggling visibility of  status_bar, minimap , activity_bar
+    {
+      "key": "ctrl+shift+z",
+      "command": "workbench.action.toggleStatusbarVisibility"
+    },
+    {
+      "key": "ctrl+shift+oem_2",
+      "command": "editor.action.toggleMinimap"
+    },
+    {
+      "key": "ctrl+shift+' ctrl+shift+/",
+      "command": "workbench.action.toggleActivityBarVisibility"
+    },
+  
+  
+  
+  //  ----------------------------------------------------------------------------------------------------------
+  
+  //   -------- EXTENSION KEYBINDINGS ----------
   {
     "key": "ctrl+shift+alt+m",
     "command": "glassit.increase"
@@ -189,312 +134,248 @@
     "key": "ctrl+shift+alt+n",
     "command": "glassit.decrease"
   },
-
+  
   {
     "key": "shift+alt+l shift+alt+l",
     "command": "errorLens.toggle"
   },
-
-
+  
+  
+  // ----------------- VIM -----------------------
+  
+  // while in vim, to enable indentation using tabs and shift tabs
+  
   {
-    "key": "ctrl+q",
-    "command": "code-runner.run"
+    "key": "tab",
+    "command": "tab",
+    "when": "editorTextFocus && !editorTabMovesFocus"
   },
-
+  {
+    "key": "shift+tab",
+    "command": "outdent",
+    "when": "editorTextFocus && !editorTabMovesFocus"
+  },
+  
+    // Traverse VSCode IntelliSense suggestions with vim keybindings.
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  // QuickOpenNavigation is the one you see with Ctrl+p
+  {
+      "key": "ctrl+j",
+      "command": "workbench.action.quickOpenSelectNext",
+      "when": "inQuickOpen"
+  },
+  {
+      "key": "ctrl+k",
+      "command": "workbench.action.quickOpenSelectPrevious",
+      "when": "inQuickOpen"
+  },
+  // ctrl +shift + p is quickOpen
+  {
+      "key": "ctrl+j",
+      "command": "workbench.action.quickOpenNavigateNext",
+      "when": "inQuickOpen"
+  },
+  {
+      "key": "ctrl+k",
+      "command": "workbench.action.quickOpenNavigatePrevious",
+      "when": "inQuickOpen"
+  },
+  
+  /*
+          a - New file
+          f - New folder
+          r - Rename item
+          x - Cut item
+          y - Copy item
+          p - Paste item
+  */
+  {
+      "key": "a",
+      "command": "explorer.newFile",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+      "key": "f",
+      "command": "explorer.newFolder",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+      "key": "r",
+      "command": "renameFile",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+      "key": "x",
+      "command": "filesExplorer.cut",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+      "key": "y",
+      "command": "filesExplorer.copy",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+  },
+  {
+      "key": "p",
+      "command": "filesExplorer.paste",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  
+  
+  
+  
+  {
+    "key": "h",
+    "command": "editor.action.scrollLeftHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "j",
+    "command": "editor.action.scrollDownHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "k",
+    "command": "editor.action.scrollUpHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "l",
+    "command": "editor.action.scrollRightHover",
+    "when": "editorHoverFocused"
+  },
+  
+  
+  
   {
     "key": "ctrl+alt+z",
     "command": "toggleVim"
   },
-
-{
-    "key": "ctrl+g",
-    "command": "workbench.action.gotoLine"
-  },
-
-  {
-    "key": "ctrl+alt+shift+j",
-    "command": "workbench.action.navigateLeft"
-  },
-
-    // no ide why this does not work   
-  {
-    "key": "ctrl+alt+shif+k",
-    "command": "workbench.action.navigateRight"
-  },
-    
-
-
-//   AHK -----------------------------------------------------------------------------------------------------------------
-
-  {
-    "key": "ctrl+shift+r ctrl+shift+r",
-    "command": "run.ahk",
-    "when": "editorLangId == 'ahk'"
-  },
-  {
-    "key": "ctrl+f9",
-    "command": "-run.ahk",
-    "when": "editorLangId == 'ahk'"
-  },
-  {
-    "key": "ctrl+shift+r ctrl+shift+r",
-    "command": "ahk2.run",
-    "when": "!editorHasSelection && editorLangId == 'ahk2' && resourceScheme == 'file'"
-  },
-  {
-    "key": "ctrl+f5",
-    "command": "-ahk2.run",
-    "when": "!editorHasSelection && editorLangId == 'ahk2' && resourceScheme == 'file'"
-  },
-  {
-    "key": "ctrl+shift+c ctrl+shift+c",
-    "command": "ahk2.compile",
-    "when": "editorLangId == 'ahk2' && resourceScheme == 'file'"
-  },
-  {
-    "key": "ctrl+shift+f5",
-    "command": "-ahk2.compile",
-    "when": "editorLangId == 'ahk2' && resourceScheme == 'file'"
-  },
-  {
-    "key": "ctrl+shift+s ctrl+shift+s",
-    "command": "ahk2.stop",
-    "when": "ahk2:isRunning && editorLangId == 'ahk2'"
-  },
-  {
-    "key": "ctrl+f6",
-    "command": "-ahk2.stop",
-    "when": "ahk2:isRunning && editorLangId == 'ahk2'"
-  },
   
-
-
-// --------------------------------------------------------------------------------------------------------------------------
-
-
-  {
-    "key": "ctrl+shift+alt+1",
-    "command": "vscode-macros.user1"
-  },
-  {
-    "key": "ctrl+shift+alt+2",
-    "command": "vscode-macros.user2"
-  },
-  {
-    "key": "ctrl+shift+alt+3",
-    "command": "vscode-macros.user3"
-  },
-
-
-
-
-  {
-    "key": "ctrl+shift+l",
-    "command": "editor.action.selectHighlights",
-    "when": "editorFocus"
-  },
-  {
-    "key": "ctrl+shift+l",
-    "command": "-editor.action.selectHighlights",
-    "when": "editorFocus"
-  },
   
+  
+  
+  //  ----------------------------------------------------------------------------------------------------------
+  
+  // Important Editing   
+  
+  // Only these are needed in order to have 
+  // Add Cursor up/down + Copy Line up/down in VimBindings
+  
+        // Find all occurances of somthing in entire workspace ; Include, Exclde files with regex
+        {
+            "key": "shift+alt+f shift+alt+f",
+            "command": "workbench.action.findInFiles"
+        },
 
+        {
+            "key": "ctrl+alt+j",
+            "command": "editor.action.moveLinesDownAction",
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "key": "ctrl+alt+k",
+            "command": "editor.action.moveLinesUpAction",
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "key": "shift+alt+k",
+            "command": "editor.action.copyLinesUpAction",
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        {
+            "key": "shift+alt+j",
+            "command": "editor.action.copyLinesDownAction",
+            "when": "editorTextFocus && !editorReadonly"
+        },
+        
+        {
+            "key": "ctrl+shift+j",
+            "command": "editor.action.insertCursorBelow",
+            "when": "editorTextFocus"
+        },
+        {
+            "key": "ctrl+shift+k",
+            "command": "editor.action.insertCursorAbove",
+            "when": "editorTextFocus"
+        },
+        
+  
+        // Miscellaneous
+        
+        // Jupyter notebook => Add new cell below 
+        {
+            "key": "shift+alt+j shift+alt+j",
+            "command": "jupyter.notebookeditor.addcellbelow"
+        },
 
-  // When I changed the a keybinding and then later changed it back this is what happened
-  // Notice the minus sign
+        // Jupyter notebook => Delete cell ; Stop using Jupitor notebooks for coding ( Use it for only DOCUMENTATION )
+        {
+            "key": "ctrl+shift+; ctrl+x",
+            "command": "jupyter.deleteCells",
+            "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
+        },
 
-  // {
-  //   "key": "pagedown",
-  //   "command": "editor.action.pageDownHover",
-  //   "when": "editorHoverFocused"
-  // },
-  // {
-  //   "key": "pagedown",
-  //   "command": "-editor.action.pageDownHover",
-  //   "when": "editorHoverFocused"
-  // },
-  // {
-  //   "key": "pageup",
-  //   "command": "editor.action.pageUpHover",
-  //   "when": "editorHoverFocused"
-  // },
-  // {
-  //   "key": "pageup",
-  //   "command": "-editor.action.pageUpHover",
-  //   "when": "editorHoverFocused"
-  // },
-
-
-
-{
-    "key": "ctrl+shift+backspace",
-    "command": "-search.searchEditor.action.deleteFileResults",
-    "when": "inSearchEditor"
-},
-
-{
-    "key": "delete",
-    "command": "-deleteFile",
-    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceMoveableToTrash && !explorerResourceReadonly && !inputFocus"
-},
-{
-    "key": "ctrl+enter",
-    "command": "-explorer.openToSide",
-    "when": "explorerViewletFocus && foldersViewVisible && !inputFocus"
-},
-{
-    "key": "ctrl+enter",
-    "command": "-search.action.openResultToSide",
-    "when": "fileMatchOrMatchFocus && searchViewletVisible"
-},
-{
-    "key": "ctrl+w ctrl+w",
-    "command": "-workbench.action.focusFirstEditorGroup",
-    "when": "!editorTextFocus && !filesExplorerFocus && !inSearchEditor && !replaceInputBoxFocus && !searchViewletFocus && !terminalFocus"
-},
-{
-    "key": "ctrl+w ctrl+w",
-    "command": "-workbench.action.focusNextGroup",
-    "when": "!editorTextFocus && !filesExplorerFocus && !inSearchEditor && !replaceInputBoxFocus && !searchViewletFocus && !terminalFocus"
-},
-{
-    "key": "ctrl+w up",
-    "command": "-workbench.action.navigateUp",
-    "when": "!editorTextFocus && !terminalFocus"
-},
-{
-    "key": "ctrl+w down",
-    "command": "-workbench.action.navigateDown",
-    "when": "!editorTextFocus && !terminalFocus"
-},
-{
-    "key": "ctrl+w j",
-    "command": "-workbench.action.navigateDown",
-    "when": "!editorTextFocus && !terminalFocus"
-},
-{
-    "key": "ctrl+w left",
-    "command": "-workbench.action.navigateLeft",
-    "when": "!editorTextFocus && !terminalFocus"
-},
-{
-    "key": "ctrl+w right",
-    "command": "-workbench.action.navigateRight",
-    "when": "!editorTextFocus && !terminalFocus"
-},
-{
-    "key": "ctrl+w q",
-    "command": "-workbench.action.closeActiveEditor",
-    "when": "!editorTextFocus && !filesExplorerFocus && !searchViewletFocus && !terminalFocus"
-},
-{
-    "key": "ctrl+w k",
-    "command": "-workbench.action.navigateUp",
-    "when": "!editorTextFocus && !terminalFocus"
-},
-{
-    "key": "ctrl+w h",
-    "command": "-workbench.action.navigateLeft",
-    "when": "!editorTextFocus && !terminalFocus"
-},
-{
-    "key": "ctrl+w l",
-    "command": "-workbench.action.navigateRight",
-    "when": "!editorTextFocus && !terminalFocus"
-},
-{
-    "key": "ctrl+r",
-    "command": "-workbench.action.reloadWindow",
-    "when": "isDevelopment"
-},
-{
-    "key": "ctrl+r",
-    "command": "-workbench.action.terminal.runRecentCommand",
-    "when": "accessibilityModeEnabled && terminalFocus && terminalHasBeenCreated || accessibilityModeEnabled && terminalFocus && terminalProcessSupported || accessibilityModeEnabled && accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewIsShown && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'"
-},
-{
-    "key": "ctrl+r",
-    "command": "-extension.variable",
-    "when": "editorTextFocus"
-},
-{
-    "key": "ctrl+r",
-    "command": "-extension.vim_ctrl+r",
-    "when": "editorTextFocus && vim.active && vim.use<C-r> && !inDebugRepl"
-},
-{
-    "key": "ctrl+right",
-    "command": "-extension.vim_ctrl+right",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-},
-{
-    "key": "ctrl+r",
-    "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
-    "when": "inQuickOpen && inRecentFilesPicker"
-},
-{
-    "key": "ctrl+shift+r",
-    "command": "-workbench.action.quickOpenNavigatePreviousInRecentFilesPicker",
-    "when": "inQuickOpen && inRecentFilesPicker"
-},
-{
-    "key": "shift+alt+m shift+alt+m",
-    "command": "editor.action.transformToCamelcase"
-},
-{
-    "key": "ctrl+shift+g g",
-    "command": "-workbench.view.scm",
-    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
-},
-{
-    "key": "ctrl+oem_3",
-    "command": "-workbench.action.terminal.toggleTerminal",
-    "when": "terminal.active"
-},
-{
-    "key": "ctrl+shift+[",
-    "command": "-notebook.fold",
-    "when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'"
-},
-{
-    "key": "ctrl+shift+[",
-    "command": "notebook.fold",
-    "when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'"
-},
-{
-    "key": "left",
-    "command": "-notebook.fold",
-    "when": "notebookEditorFocused && !inputFocus && activeEditor == 'workbench.editor.notebook'"
-},
+// Very useful NAVIGATION ( Navigate BACK, Navigate FRONT )
+                {
+                    "key": "shift+alt+oem_minus",
+                    "command": "workbench.action.navigateBack",
+                    "when": "canNavigateBack"
+                },
+                {
+                    "key": "shift+alt+oem_plus",
+                    "command": "workbench.action.navigateForward",
+                    "when": "canNavigateForward"
+                },
 
 
 
+        // Split EDitor ; Split Editor in Groups -------------------------------------------------------------------------------------------
 
-{
-    "key": "shift+alt+r",
-    "command": "-remote-wsl.revealInExplorer",
-    "when": "editorFocus && remoteName == 'wsl'"
-},
-{
-    "key": "shift+alt+r shift+alt+r",
-    "command": "fileutils.renameFile"
-},
+        // This does not CHANGE THE LAYOUT ( more useful than SPLIT, =>  SPLIT IN GROUP )
+        // ctrl + shift + \ => to `split in group` AND `join back` ( Wroks like toggle )
 
-{
-    "key": "ctrl+shift+alt+g",
-    "command": "workbench.view.scm",
-    "when": "workbench.scm.active"
-},
-{
-    "key": "ctrl+shift+g",
-    "command": "-workbench.view.scm",
-    "when": "workbench.scm.active"
-},
-{
-    "key": "ctrl+f",
-    "command": "-repl.action.filter",
-    "when": "inDebugRepl && textInputFocus"
-},
+        // These are in SAME GROUP
+        {
+            "key": "ctrl+shift+oem_5 ctrl+shift+oem_5",
+            "command": "workbench.action.splitEditorInGroup",
+            "when": "activeEditorCanSplitInGroup"
+        },
+        {
+            "key": "ctrl+shift+oem_5 ctrl+shift+oem_5",
+            "command": "workbench.action.joinEditorInGroup",
+            "when": "sideBySideEditorActive"
+        },
+        
+        // alt + \ -> split down ; ctrl + \ -> split up => THIS OPENS A NEW GROUP
+
+        // IMPORTANT TRICK => SOOOOO FUCKING COOL => USE ctrl + k ctrk + m TO FOCUS ON JUST ONE TAB 
+        // 1. SPLIT IN NEW GROUP ( ctlr + \ or alt + \ )
+        // 2. Ctrl + K Ctrl + M
+
+        // Generally, one 2 editor groups will be there, you can easy navigate by using H and L ( same as next and prevoius tab )
+
+        {
+            "key": "alt+oem_5",
+            "command": "workbench.action.splitEditorDown"
+        },
+
+
+        // open this file in NEW GROUP 
+        // to JOIN in it back to group 1 => ahift + alt + 1
+        // to JOIN in it back to group 2 => ahift + alt + 2
+        {
+            "key": "ctrl+2 ctrl+2",
+            "command": "workbench.action.moveEditorToNextGroup"
+        }
+
 
 ]

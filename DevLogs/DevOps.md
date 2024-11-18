@@ -3,6 +3,11 @@
 - Docker containers ALWAYS expose some PORTS through which outside world interacts with it
 
 
+## What I want is --> DOCKER COMPOSE
+
+
+
+
 ## Both the containers have to be in the same NETWROK
 ```sh
 docker network create

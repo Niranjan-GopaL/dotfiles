@@ -1,0 +1,179 @@
+{
+
+    //  Vim CONFIGS 
+    "vim.leader": "<space>",
+    "vim.useSystemClipboard": true,
+    "vim.smartRelativeLine": true,
+    "editor.cursorSurroundingLines": 14,
+    
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "#2ff702",
+    "vim.highlightedyank.duration": 450,
+    
+    
+    
+    // these are the symbols used as seperators, you  can remove - 
+    // so that className=`w-24 h-24 rounded-full mx-auto` ; rounded-full w-24 is a single word
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+
+    
+    
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>", "l"]
+        }
+    ],
+    
+    "vim.normalModeKeyBindings": [
+        
+        // go to beginning and end of a line
+        // to go to end of line you can also do f`last char`
+        // ( NOTE : % goes to matching brackets )
+        
+        // {
+            //     "before":["1"],
+            //     "after":  ["0"]
+            // },
+            // {
+                //     "before":["2"],
+            //     "after":  ["$"]
+            // },
+            
+            // since Ctrl+r was to select VS Code project ; also t and u seemed more ergonomic
+            // t and u -----> undo and redo [AWESOME]
+            {
+                "before":["t"],
+                "after":  ["C-r"]
+            },
+            
+            // absolutely GENIUS ; you get the scrolling feeling in vim
+            // use JK with :set scrolloff=15 ( or :set so=15 ) ; 
+            // while scrolling your cursor will be on the 15th line from the top
+            // another useful motion => H M L go to Highest line in your screen, middle line, last line
+            
+            // coupled with `Smooth scrolling enabled` it's really good 
+            // marking important sections of the code using `leader+m`
+
+            {
+                "before":["J"],
+                "after":  ["C-d"]
+            }, 
+            {
+                "before":["K"],
+                "after":  ["C-u"]
+            },
+            
+            // boomark extension will be envoked via space (leader) 
+            {
+                "before": ["<leader>", "m"],
+                "commands": [
+                    "bookmarks.toggle"
+                ]
+            },
+            {
+                "before": ["<leader>", "b"],
+                "commands": [
+                    "bookmarks.list"
+                ]
+            },
+            {
+                "before": ["<leader>", "j"],
+                "commands": [
+                    "bookmarks.jumpToNext"
+                ]
+            },
+            {
+                "before": ["<leader>", "k"],
+                "commands": [
+                    "bookmarks.jumpToPrevious"
+                ]
+            },
+            {
+                "before": ["<leader>", "l"],
+                "commands": [
+                    "bookmarks.listFromAllFiles"
+                ]
+            },
+            
+            // File Explorer Vim is insane
+            /*
+            a - New file
+            f - New folder
+            r - Rename item
+            x - Cut item
+            y - Copy item
+            p - Paste item
+            */
+            {
+                "before": ["<leader>", "e"],
+                "commands": ["workbench.view.explorer"]
+            },
+            
+           {
+            "before": ["<leader>", "g"],
+            "commands" : ["workbench.action.showAllSymbols"]
+           },
+            
+            // THis is INSANE
+            {
+                "before": ["g", "h"],
+                "commands": [
+                    "editor.action.showDefinitionPreviewHover"
+                ]
+            },
+            {
+                "before": ["H"], // Focus previous tab at the left
+                "commands": ["workbench.action.previousEditor"]
+            },
+            {
+                "before": ["L"], // Focus next tab at the right
+                "commands": ["workbench.action.nextEditor"]
+            },
+            
+
+        ],
+        
+        // Which Control Keys are important for me 
+        "vim.useCtrlKeys": true,
+        "vim.handleKeys": {
+            // Biggest problem ( to select entire contents of a file, in vim I find it's hard := ggVGy )
+            // Copy pasting does come in handy 
+            "<C-a>": false,
+            "<C-0>": false,
+            "<C-c>": false,
+            "<C-x>": false,
+            "<C-v>": false,
+            "<C-p>": false,
+            
+            "J":true, 
+            // Navigating half  page down and up using ctrl up and ctrl down made no sense 
+
+            // this is for codium AI
+            "<C-i>": false,
+            
+            // NOTE : on pressing ctrl+D YOU WILL BE IN `VISUAL MODE` 
+            //        --> JUST PRESS `v` AND YOU WILL BE BACKE TO BE IN NORMAL MODE , 
+            //        --> ( or press `I`) to go to insert mode DIRECTLY but most of the times you would wanna be in normal mode
+
+            // "<C-d>": false,   // better to select next occurance of that word
+
+
+            "<C-r>": false,   // open  projects
+            "<C-b>": false,
+            "<C-f>": false,   // find and replace 
+            "<C-h>": false, 
+            "<C-l>": false,  // select the line
+            "<C-w>": false,
+            
+            // control + space is HOW TO ENVOKE INTELLISENSE suggestion while in the middle of the word
+            "<C-space>": false
+        },
+        
+        // persists the foldings 
+        "editor.foldingStrategy": "auto",
+        "editor.scrollbar.vertical": "visible",
+        
+        // ------------------------------------------------------------------------------------------------------------------
+        
+}
