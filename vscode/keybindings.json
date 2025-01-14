@@ -19,15 +19,13 @@
       "key": "ctrl+shift+f ctrl+shift+f",
       "command": "fileutils.newFolder"
     },
+
+
     //   FOLDING KEYBINDINGS
+    // Make folding easier with VIM ( I think I messed some stuff in folder keybindings )
     {
       "key": "ctrl+k ctrl+-",
       "command": "editor.unfoldAll",
-      "when": "editorTextFocus && foldingEnabled"
-    },
-    {
-      "key": "ctrl+k ctrl+j",
-      "command": "-editor.unfoldAll",
       "when": "editorTextFocus && foldingEnabled"
     },
     {
@@ -36,18 +34,8 @@
       "when": "editorTextFocus && foldingEnabled"
     },
     {
-      "key": "ctrl+shift+[",
-      "command": "-editor.fold",
-      "when": "editorTextFocus && foldingEnabled"
-    },
-    {
       "key": "shift+alt+]",
       "command": "editor.unfold",
-      "when": "editorTextFocus && foldingEnabled"
-    },
-    {
-      "key": "ctrl+shift+]",
-      "command": "-editor.unfold",
       "when": "editorTextFocus && foldingEnabled"
     },
   
@@ -313,12 +301,6 @@
         
         // Jupyter notebook => Add new cell below 
         {
-            "key": "shift+alt+j shift+alt+j",
-            "command": "jupyter.notebookeditor.addcellbelow"
-        },
-
-        // Jupyter notebook => Delete cell ; Stop using Jupitor notebooks for coding ( Use it for only DOCUMENTATION )
-        {
             "key": "ctrl+shift+; ctrl+x",
             "command": "jupyter.deleteCells",
             "when": "editorTextFocus && jupyter.hascodecells && !jupyter.webExtension && !notebookEditorFocused"
@@ -335,11 +317,6 @@
                     "command": "workbench.action.navigateForward",
                     "when": "canNavigateForward"
                 },
-
-
-
-        // Split EDitor ; Split Editor in Groups -------------------------------------------------------------------------------------------
-
         // This does not CHANGE THE LAYOUT ( more useful than SPLIT, =>  SPLIT IN GROUP )
         // ctrl + shift + \ => to `split in group` AND `join back` ( Wroks like toggle )
 
@@ -375,7 +352,11 @@
         {
             "key": "ctrl+2 ctrl+2",
             "command": "workbench.action.moveEditorToNextGroup"
-        }
+        },
+        {
+            "key": "ctrl+shift+q ctrl+shift+q",
+            "command": "workbench.view.extension.codium-sidebar-view-container"
+        },
 
 
 ]

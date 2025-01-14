@@ -18,6 +18,8 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\tokyo.omp.json" | Invoke-Ex
 # oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\json.omp.json" | Invoke-Expression
 # oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\hul10.omp.json" | Invoke-Expression
 # oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\huvix.omp.json" | Invoke-Expression
+
+Function Quick_Python_Code_Path{Set-Location -Path C:\Users\HP\Documents\OneDriveJubi\OneDrive\Desktop}
 Function DSA__prac{Set-Location -Path D:\Code_Practise\Learning_NumberTheory_Combinatorics_etc}
 Function Algo_toolkit{Set-Location -Path D:\Code_Practise\Algorithm-Toolkits}
 Function OpenDotfiles { nvim 'D:\Code_Practise\dotfiles\user_profile.ps1' }
@@ -42,7 +44,16 @@ Function npm-run-dev{npm run dev}
 Function jupyterNotebook {jupyter notebook --notebook-dir=D:/"Code_Practise"}
 Function jupyterNotebook-here {jupyter notebook}
 Function jupyterLab {jupyter lab}
+# Function OpenGx { & "C:\Users\HP\AppData\Local\Programs\Opera GX\opera.exe" --side-profile-name=383038385F32303132313831303533 --with-feature:side-profiles --no-default-browser-check --disable-usage-statistics-question }
+function OOpen {
+    Write-Output "open sim sim"
+    & "C:\Users\HP\AppData\Local\Programs\Opera GX\opera.exe" --side-profile-name=383038385F32303132313831303533 --with-feature:side-profiles --no-default-browser-check --disable-usage-statistics-question
+}
 
+function LLeno {
+    Write-Output "opening Lenovo Accessory"
+    & "C:\Program Files (x86)\Lenovo\Legion Accessory Central\legion_hid.exe" 
+}
 
 # Function to get the file size
 Function Get-FileSize {
@@ -103,6 +114,7 @@ Function List-DirectoryContents {
 # Alias
 
 # Path Aliases
+Set-Alias -Name qik-code -Value Quick_Python_Code_Path
 Set-Alias -Name algo -Value Algo_toolkit
 Set-Alias -Name dsa -Value DSA__prac
 Set-Alias -Name mml -Value ML
@@ -122,6 +134,8 @@ Set-Alias -Name ahk  -Value ahk_lib
 
 
 # Commands
+Set-Alias gx OOpen
+Set-Alias lenv LLeno
 Set-Alias vim nvim
 Set-Alias c   cls
 Set-Alias gs  gitstatus 

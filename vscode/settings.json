@@ -1,241 +1,288 @@
 {
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "workbench.sideBar.location": "right",
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
-  "terminal.integrated.profiles.windows": {
-    "PowerShell": {
-      "source": "PowerShell",
-      "icon": "terminal-powershell"
+    
+    //  Vim CONFIGS 
+    "vim.leader": "<space>",
+    "vim.useSystemClipboard": true,
+    "vim.smartRelativeLine": true,
+    "editor.cursorSurroundingLines": 14,
+    
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "#2ff702",
+    "vim.highlightedyank.duration": 450,
+    
+    
+    
+    // these are the symbols used as seperators, you  can remove - 
+    // so that className=`w-24 h-24 rounded-full mx-auto` ; rounded-full w-24 is a single word
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+
+    
+    
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>", "l"]
+        }
+    ],
+    
+    "vim.normalModeKeyBindings": [
+        
+        // go to beginning and end of a line
+        // to go to end of line you can also do f`last char`
+        // ( NOTE : % goes to matching brackets )
+        
+        // {
+            //     "before":["1"],
+            //     "after":  ["0"]
+            // },
+            // {
+                //     "before":["2"],
+            //     "after":  ["$"]
+            // },
+            
+            // since Ctrl+r was to select VS Code project ; also t and u seemed more ergonomic
+            // t and u -----> undo and redo [AWESOME]
+            {
+                "before":["t"],
+                "after":  ["C-r"]
+            },
+            
+            // absolutely GENIUS ; you get the scrolling feeling in vim
+            // use JK with :set scrolloff=15 ( or :set so=15 ) ; 
+            // while scrolling your cursor will be on the 15th line from the top
+            // another useful motion => H M L go to Highest line in your screen, middle line, last line
+            
+            // coupled with `Smooth scrolling enabled` it's really good 
+            // marking important sections of the code using `leader+m`
+
+            {
+                "before":["J"],
+                "after":  ["C-d"]
+            }, 
+            {
+                "before":["K"],
+                "after":  ["C-u"]
+            },
+            
+            // boomark extension will be envoked via space (leader) 
+            {
+                "before": ["<leader>", "m"],
+                "commands": [
+                    "bookmarks.toggle"
+                ]
+            },
+            {
+                "before": ["<leader>", "b"],
+                "commands": [
+                    "bookmarks.list"
+                ]
+            },
+            {
+                "before": ["<leader>", "j"],
+                "commands": [
+                    "bookmarks.jumpToNext"
+                ]
+            },
+            {
+                "before": ["<leader>", "k"],
+                "commands": [
+                    "bookmarks.jumpToPrevious"
+                ]
+            },
+            {
+                "before": ["<leader>", "l"],
+                "commands": [
+                    "bookmarks.listFromAllFiles"
+                ]
+            },
+            
+            // File Explorer Vim is insane
+            /*
+            a - New file
+            f - New folder
+            r - Rename item
+            x - Cut item
+            y - Copy item
+            p - Paste item
+            */
+            {
+                "before": ["<leader>", "e"],
+                "commands": ["workbench.view.explorer"]
+            },
+            
+           {
+            "before": ["<leader>", "g"],
+            "commands" : ["workbench.action.showAllSymbols"]
+           },
+            
+            // THis is INSANE
+            {
+                "before": ["g", "h"],
+                "commands": [
+                    "editor.action.showDefinitionPreviewHover"
+                ]
+            },
+            {
+                "before": ["H"], // Focus previous tab at the left
+                "commands": ["workbench.action.previousEditor"]
+            },
+            {
+                "before": ["L"], // Focus next tab at the right
+                "commands": ["workbench.action.nextEditor"]
+            },
+            
+
+        ],
+        
+        // Which Control Keys are important for me 
+        "vim.useCtrlKeys": true,
+        "vim.handleKeys": {
+            // Biggest problem ( to select entire contents of a file, in vim I find it's hard := ggVGy )
+            // Copy pasting does come in handy 
+            "<C-a>": false,
+            "<C-0>": false,
+            "<C-c>": false,
+            "<C-x>": false,
+            "<C-v>": false,
+            "<C-p>": false,
+            
+            "J":true, 
+            // Navigating half  page down and up using ctrl up and ctrl down made no sense 
+
+            // this is for codium AI
+            "<C-i>": false,
+            
+            // NOTE : on pressing ctrl+D YOU WILL BE IN `VISUAL MODE` 
+            //        --> JUST PRESS `v` AND YOU WILL BE BACKE TO BE IN NORMAL MODE , 
+            //        --> ( or press `I`) to go to insert mode DIRECTLY but most of the times you would wanna be in normal mode
+
+            // "<C-d>": false,   // better to select next occurance of that word
+
+
+            "<C-r>": false,   // open  projects
+            "<C-b>": false,
+            "<C-f>": false,   // find and replace 
+            "<C-h>": false, 
+            "<C-l>": false,  // select the line
+            "<C-w>": false,
+            
+            // control + space is HOW TO ENVOKE INTELLISENSE suggestion while in the middle of the word
+            "<C-space>": false
+        },
+        
+        // persists the foldings 
+        "editor.foldingStrategy": "auto",
+        "editor.scrollbar.vertical": "visible",
+        
+        // ------------------------------------------------------------------------------------------------------------------
+        
+        
+        // General Editor configs 
+
+        // "window.zoomLevel": 1,  default zoom level
+        "editor.minimap.scale": 2,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "vscode.github",
+        "editor.guides.bracketPairs": "active",
+        "editor.mouseWheelZoom": true,
+        "css.format.spaceAroundSelectorSeparator": true,
+        "workbench.iconTheme": "material-icon-theme",
+        "git.confirmSync": false,
+
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "editor.minimap.renderCharacters": false,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "window.restoreFullscreen": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.sideBar.location": "right",
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.wrapTabs": true,
+    
+    "screencastMode.fontSize": 30,
+    "screencastMode.verticalOffset": 5,
+    
+    "window.newWindowDimensions": "offset",
+    "scm.experimental.showHistoryGraph": true,
+    
+    "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",      
+    "editor.fontFamily": "'Cascadia Code', 'Monaspace Krypton', 'JetBrainsMono Nerd Font'  ,'Monaspace Radon', 'Abecedary',  Consolas,'Courier New' ,'Gabriola'",
+    "terminal.integrated.fontFamily": "'Cascadia Code','Abecedary', Consolas,  'Courier New' ,'Gabriola','JetBrainsMono Nerd Font'",
+    
+    "git.openRepositoryInParentFolders": "never", "git.autofetch": true,
+    "editor.cursorBlinking": "phase",
+    "git.postCommitCommand": "push",
+    "git.enableSmartCommit": true,
+    
+    "editor.codeActionsOnSave": {},
+    
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    
+    
+    
+      // Using the light mode
+  "indentRainbow.indicatorStyle": "light",
+  // we use a simple 1 pixel wide line
+//   "indentRainbow.lightIndicatorStyleLineWidth": 1,
+  // the same colors as above but more visible
+  "indentRainbow.colors": [
+    "rgba(255,255,64,0.3)",
+    "rgba(127,255,127,0.3)",
+    "rgba(255,127,255,0.3)",
+    "rgba(79,236,236,0.3)"],
+    
+    
+    
+    //    Custom file  formatters 
+    "[jsonc]": {
+        "editor.defaultFormatter":"vscode.github"
     },
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [],
-      "icon": "terminal-cmd"
+    "[markdown]": {
+        "editor.wordWrap": "off"
+    },  
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer"
     },
-    "Git Bash": {
-      "source": "Git Bash"
+    "[python]": {
+        "editor.formatOnType": true,
+        // "editor.defaultFormatter": "ms-python.autopep8",
     },
-    "Ubuntu (WSL)": {
+    // this is GODSEND ; but THEY WILL SLOW computer down if it 
+    "python.analysis.autoImportCompletions":true, 
+    "python.analysis.indexing": true,
 
-      "path": "C:\\Windows\\System32\\wsl.exe",
-      "args": ["-d", "Ubuntu"]
-    }
-  },
-  "[python]": {
-    "editor.formatOnType": true,
-    // "editor.defaultFormatter": "ms-python.autopep8",
+    // to make repl be in current working directory and not the project directory 
+    "python.terminal.executeInFileDir": true,
+    "verilog.linting.iverilog.runAtFileLocation":true,
+
+    
+    
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.fontSize": 20,
+    "terminal.integrated.env.windows": {},
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+        "source": "PowerShell",
+        "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+        "path": [
+            "${env:windir}\\Sysnative\\cmd.exe",
+            "${env:windir}\\System32\\cmd.exe"
+        ],
+        "args": [],
+        "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+        "source": "Git Bash"
+        },
+        "Ubuntu (WSL)": {
+        "path": "C:\\Windows\\System32\\wsl.exe",
+        "args": ["-d", "Ubuntu"]
+        }
     },
 
-  // this is GODSEND ; but THEY WILL SLOW computer down if it 
-  "python.analysis.autoImportCompletions":true, 
-  "python.analysis.indexing": true,
-
-  "code-runner.saveFileBeforeRun": true,
-  "solidity.telemetry": true,
-  // "[solidity]": {
-  //   "editor.defaultFormatter": "NomicFoundation.hardhat-solidity"
-  // },
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "vscode.github",
-  "editor.guides.bracketPairs": "active",
-  "cSpell.enabled": false,
-  "editor.mouseWheelZoom": true,
-  "css.format.spaceAroundSelectorSeparator": true,
-  "tabnine.experimentalAutoImports": true,
-
-
-  "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer"
-  },
-  "code-runner.runInTerminal": false,
-  "code-runner.executorMapByFileExtension": {
-    ".cpp": "cd $dir && g++ *.cpp -o $fileNameWithoutExt && $fileNameWithoutExt.exe ",
-    ".vb": "cd $dir && vbc /nologo $fileName && $dir$fileNameWithoutExt",
-    ".vbs": "cscript //Nologo",
-    ".scala": "scala",
-    ".jl": "julia",
-    ".cr": "crystal",
-    ".ml": "ocaml",
-    ".zig": "zig run",
-    ".exs": "elixir",
-    ".hx": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
-    ".rkt": "racket",
-    ".scm": "csi -script",
-    ".ahk": "autohotkey",
-    ".au3": "autoit3",
-    ".kt": "cd $dir && kotlinc $fileName -include-runtime -d $fileNameWithoutExt.jar && java -jar $fileNameWithoutExt.jar",
-    ".kts": "kotlinc -script",
-    ".dart": "dart",
-    ".pas": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
-    ".pp": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
-    ".d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
-    ".hs": "runhaskell",
-    ".nim": "nim compile --verbosity:0 --hints:off --run",
-    ".csproj": "dotnet run --project",
-    ".fsproj": "dotnet run --project",
-    ".lisp": "sbcl --script",
-    ".kit": "kitc --run",
-    ".v": "v run",
-    ".vsh": "v run",
-    ".sass": "sass --style expanded",
-    ".cu": "cd $dir && nvcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-    ".ring": "ring",
-    ".sml": "cd $dir && sml $fileName",
-
-  },
-
-
-
-// ----------------------------------------------------------------------------------------------------------------
-
-/*  LIGATURES 
-
-      --
-      ---
-      -~
-      (*
-      {|
-      }#
-      [|
-      ]#
-      .-
-      ..
-      ...
-      ..=
-      ..<
-      .?
-      .=
-      ::
-      :::
-      ::=
-      :=
-      ://
-      ;;
-      !.
-      !:
-      !!
-      !!.
-      !=
-      !==
-      ?.
-      ?:
-      ??
-      ??=
-      ?=
-      *)
-      **
-      ***
-      *>
-      */ /*
-      #(
-      #{
-      #[
-      #:
-      #!
-      #?
-      #=
-      #_
-      #_(
-      /*
-      />
-      // 
-      ///
-      /\
-      \/
-      \\
-      &&
-      |}
-      |]
-      ||
-      |||
-      |||>
-      ||>
-      |>
-      $>
-      ++
-      +++
-      +>
-      ==
-      ===
-      >=
-      >>
-      >>>
-      <!--
-      <*
-      <*>
-      <|
-      <||
-      <|||
-      <|>
-      <$
-      <$>
-      <+
-      <+>
-      <=
-      <>
-      <<
-      <<<
-      <~
-      <~>
-      <~~
-      </
-      </>
-      ~-
-      ~@
-      ~=
-      ~>
-      ~~
-      ~~>
-      ^=
-      %%
-      
-*/
-      
-      
-      
-"editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",      
-"editor.fontFamily": "'Monaspace Radon', 'Cascadia Code', 'Monaspace Krypton','Abecedary', Consolas,  'Courier New' ,'Gabriola','JetBrainsMono Nerd Font'",
-"terminal.integrated.fontFamily": "'Cascadia Code','Abecedary', Consolas,  'Courier New' ,'Gabriola','JetBrainsMono Nerd Font'",
-
-  "git.openRepositoryInParentFolders": "never",
-  "rapidapi.terminalLink.enabled": false,
-  "editor.codeActionsOnSave": {},
-  "code-runner.executorMap": {
-    "javascript": "node",
-    "php": "C:\\php\\php.exe",
-    "python": "python",
-    "perl": "perl",
-    "ruby": "C:\\Ruby23-x64\\bin\\ruby.exe",
-    "go": "go run",
-    "html": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
-    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-    "c": "cd,$  && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
-  },
-  "code-runner.clearPreviousOutput": true,
-  "terminal.integrated.fontSize": 20,
-  "git.autofetch": true,
-  "[markdown]": {
-    "editor.wordWrap": "off"
-  },
-"editor.cursorBlinking": "expand",
-  "git.postCommitCommand": "push",
-  "git.enableSmartCommit": true,
-  "terminal.integrated.env.windows": {},
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "[jsonc]": {
-    "editor.defaultFormatter":"vscode.github"
-  },
-  "prettier.tabWidth": 4,
-
-  // "editor.fontFamily": "'Fira Code iScript', 'Fira Code', 'Courier New', monospace",
-  
-  // "editor.fontLigatures": true,
-  "window.newWindowDimensions": "offset",
-  "window.restoreFullscreen": true,
 
 
 
@@ -247,228 +294,52 @@
 
 
 
-//   // <--------------------------VIM CONFIGS--------------------------------------------------------------------------------------------------------------------------------->
-//   "vim.easymotion": true,
-//   "vim.incsearch": true,
-  "vim.useSystemClipboard": true,
-//   "vim.useCtrlKeys": true,
-//   "vim.hlsearch": true,
-//   "vim.leader": "<space>"
-//   /"C:\Users\HP\.vscode\extensions\exceedsystem.vscode-macros-1.4.0\macros.js"when cursor moves over it
-  "vim.foldfix" : true,
-
-  "vim.cursorStylePerMode.insert": "block",
-  "vim.cursorStylePerMode.normal": "block",
-  "vim.cursorStylePerMode.replace": "line",
-  "vim.cursorStylePerMode.visual": "line",
-
-
-//     // ---------------------NORMAL MODE --------------------------------------------------------------
-//   "vim.normalModeKeyBindings": [
-//     {
-//       "before": ["<leader>", "d"],
-//       "after": ["d", "d"]
-//     }
-   
-//   ],
-
-//     // ---------------------INSERT MODE --------------------------------------------------------------
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
-    },
-],  
-  
-  "vim.visualModeKeyBindings": [
-    {
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
-    },
-],  
-  
-//     // --------------------- NORMAL KEYBINDINGS MODE --------------------------------------------------------------
-//   "vim.normalModeKeyBindingsNonRecursive": [
-//     {
-//       "before": ["<leader>", "d"],
-//       "after": ["d", "d"]
-//     },
-//     {
-//       "before": ["<C-n>"],
-//       "commands": [":nohl"]
-//     },
-//     {
-//       "before": ["<leader>", "w"],
-//       "commands": ["workbench.action.splitEditor"]
-//     },
-//     {
-//       "before": ["<leader>", "h"],
-//       "after": ["_"]
-//     },
-//     {
-//       "before": ["<leader>", "l"],
-//       "after": ["$"]
-//     } 
-//   ],
-
-//   // ---------------------NORMAL MODE --------------------------------------------------------------
-//   "vim.handleKeys": {
-//     "<C-w>":false,
-//     "<C-[>":false,
-//     "<C-]>":false,
-//     "<C-b>":false,
-//     "<C-l>":false,
-//     "<C-a>": false,
-//     "<C-f>": false,
-//     // VS Code new marker @ next occurence
-//     "<C-d>": false,
-//     // Copy
-//     "<C-c>": false,
-//     // Cut
-//     "<C-x>": false,
-//     // Paste
-//     "<C-v>": false,
-//     "<C-z>": false,
-//     "<C-y>": false
-
-//   }, 
-//   // <--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  "editor.lineNumbers": "relative",
-  "workbench.iconTheme": "material-icon-theme",
-// "window.zoomLevel": 1,
-"editor.cursorSmoothCaretAnimation": "on",
-"workbench.editor.enablePreview": false,
-"editor.minimap.scale": 2,
-"editor.minimap.renderCharacters": false,
-"screencastMode.fontSize": 30,
-"screencastMode.verticalOffset": 5,
 "security.workspace.trust.untrustedFiles": "open",
-"workbench.editor.tabSizing": "shrink",
-"workbench.editor.wrapTabs": true,
 "javascript.inlayHints.enumMemberValues.enabled": true,
 "go.inlayHints.compositeLiteralFields": true,
 "go.inlayHints.constantValues": true,
-"git.confirmSync": false,
 "security.workspace.trust.banner": "never",
 
 
-// "vscodemacros.userMacroCommands": [
-  
-//   {
-//     "path": "C:\\Users\\HP\\OneDrive\\Desktop\\Learning_Blog-2.txt",
-//     "name": "OpenLearningBlog"
-//   },
-//   {
-//     "path": "C:\\Users\\HP\\.vscode\\extensions\\exceedsystem.vscode-macros-1.4.0\\macros.js",
-//     "name": "OpenMacrojs"
-//   },
-//   {
-//     "path": "C:\\Users\\HP\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\HS for paths.ahk",
-//     "OpenHS": "OpenHS"
-//   }
-// ],
-
 
 "glassit.alpha": 255,
-"editor.smoothScrolling": true,
-"editor.fastScrollSensitivity": 15,
 "errorLens.enabled": true,
 "hediet.vscode-drawio.resizeImages": null,
 "editor.inlayHints.enabled": "offUnlessPressed",
 "diffEditor.wordWrap": "off",
 "go.toolsManagement.autoUpdate": true,
-"code-runner.terminalRoot": "/mnt/",
 "reactSnippets.settings.prettierEnabled": true,
 "vscodeGoogleTranslate.preferredLanguage": "English",
 "window.menuBarVisibility": "compact",
 "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\g++.exe",
-"terminal.integrated.enableMultiLinePasteWarning": false,
-"workbench.colorTheme": "Palenight Italic",
+"workbench.colorTheme": "Mayukai Alucard",
 "settingsSync.ignoredExtensions": [
   "nhoizey.gremlins"
 ],
 "workbench.editor.pinnedTabSizing": "compact",
 "editor.showFoldingControls": "always",
 "workbench.editorAssociations": {
-    "*.pdf": "default",
+    "*.pdf": "pdf.preview",
     "*.c": "default"
 },
 "graphviz-interactive-preview.renderLockAdditionalTimeout": 10000,
-"aws.suppressPrompts": {
-  "codeWhispererConnectionExpired": true
-},
 "editor.detectIndentation": false,
+
 "AutoHotkey2.CompilerCMD": "C:\\Program Files\\AutoHotkey\\v2\\AutoHotkey64.exe",
 
-// Toggle intendation  indentation guides (those lines that show intendetation level)
-// "editor.guides.indentation": false, // NICE SOLUTION := Toggle extension
-
-/* in ctrl k l ( my keybindings )
-  {
-    "key": "F3",
-    "command": "toggle",
-    "when": "editorTextFocus",
-    "args": {
-        "id": "indentation_guide",
-        "value": [
-              {
-                "editor.guides.indentation": true
-              },
-              {
-                "editor.guides.indentation": false
-              }
-        ]
-    }
-  }
-*/
 
 
 
-
-"vscode-neovim.useWSL": true,
-"vscode-neovim.neovimInitVimPaths.linux": "~/.local/bin/nvim",
-"redhat.telemetry.enabled": true,
-
-"indentRainbow.colors": [
-    "rgba(255,255,64,0.07)",
-    "rgba(127,255,127,0.07)",
-    "rgba(255,127,255,0.07)",
-    "rgba(79,236,236,0.07)"
-  ],
-"indentRainbow.tabmixColor": "",
+"errorLens.messageEnabled": true,
 "errorLens.enabledDiagnosticLevels": [
     "error",
     "info"
 ],
+
 "C_Cpp.inlayHints.referenceOperator.showSpace": true,
 "C_Cpp.inlayHints.referenceOperator.enabled": true,
 "cph.general.defaultLanguage": "cpp",
-"errorLens.messageEnabled": true,
+
 "editor.lineHeight": 38,
 "editor.guides.indentation": false,
 "editor.guides.highlightActiveBracketPair": false,
@@ -481,8 +352,21 @@
     "jsdelivr.com",
     "unpkg.com"
 ],
-"workbench.activityBar.location": "hidden",
-"files.autoSave": "afterDelay",
 "codeium.enableCodeLens": false,
+"files.autoSave": "afterDelay",
+"codeium.enableConfig": {
+    "*": true,
+    "markdown": true
+},
+"window.customTitleBarVisibility": "never",
+"verilog.linting.linter": "iverilog",
+"verilog.runInTerminal": true,
+"notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+},
+"editor.minimap.enabled": false,
+"editor.lineNumbers": "relative",
+"notebook.lineNumbers": "on",
 
 }
