@@ -50,6 +50,12 @@ function OOpen {
     & "C:\Users\HP\AppData\Local\Programs\Opera GX\opera.exe" --side-profile-name=383038385F32303132313831303533 --with-feature:side-profiles --no-default-browser-check --disable-usage-statistics-question
 }
 
+function Chrome {
+    Write-Output "お寺開いていれば"
+    & "C:\Program Files\Google\Chrome\Application\chrome.exe" --profile-directory="Profile 11" 
+}
+
+
 function LLeno {
     Write-Output "opening Lenovo Accessory"
     & "C:\Program Files (x86)\Lenovo\Legion Accessory Central\legion_hid.exe" 
@@ -135,6 +141,7 @@ Set-Alias -Name ahk  -Value ahk_lib
 
 # Commands
 Set-Alias gx OOpen
+Set-Alias zx Chrome
 Set-Alias lenv LLeno
 Set-Alias vim nvim
 Set-Alias c   cls
