@@ -1,2 +1,0 @@
-- See the keybindings.conf
-- cliphist is the ccliboard manager ; How to use it ? ASK IN **DISCORD**
