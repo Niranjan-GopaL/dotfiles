@@ -362,6 +362,14 @@
             "command": "-notebook.addFindMatchToSelection",
             "when": "config.notebook.multiCursor.enabled && notebookCellEditorFocused && activeEditor == 'workbench.editor.notebook'"
         },
-
+        {
+            "key": "shift+alt+q",
+            "command": "code-runner.run"
+        },
+        {
+            "key": "ctrl+j",
+            "command": "-extension.vim_ctrl+j",
+            "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
+        },
 
 ]

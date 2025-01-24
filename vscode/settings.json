@@ -14,7 +14,7 @@
     
     // these are the symbols used as seperators, you  can remove - 
     // so that className=`w-24 h-24 rounded-full mx-auto` ; rounded-full w-24 is a single word
-    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?_",
 
     
     
@@ -140,6 +140,7 @@
             // Biggest problem ( to select entire contents of a file, in vim I find it's hard := ggVGy )
             // Copy pasting does come in handy 
             "<C-a>": false,
+            "<C-d>": false,
             "<C-0>": false,
             "<C-c>": false,
             "<C-x>": false,
@@ -182,7 +183,6 @@
         "editor.minimap.enabled": false,
         "editor.lineNumbers": "relative",
         "window.zoomLevel": 2,
-        "window.customTitleBarVisibility": "auto",
         "editor.minimap.scale": 2,
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "vscode.github",
@@ -209,7 +209,7 @@
     "scm.experimental.showHistoryGraph": true,
     
     "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",      
-    "editor.fontFamily": "'CaskaydiaCove','Cascadia Code', 'Monaspace Krypton', 'JetBrainsMono Nerd Font'  ,'Monaspace Radon', 'Abecedary',  Consolas,'Courier New' ,'Gabriola'",
+    "editor.fontFamily": "'Cascadia Code', 'Monaspace Krypton', 'JetBrainsMono Nerd Font'  ,'Monaspace Radon', 'Abecedary',  Consolas,'Courier New' ,'Gabriola'",
     "terminal.integrated.fontFamily": "'Cascadia Code','Abecedary', Consolas,  'Courier New' ,'Gabriola','JetBrainsMono Nerd Font'",
     
     "git.openRepositoryInParentFolders": "never", "git.autofetch": true,
@@ -289,7 +289,7 @@
 "vscodeGoogleTranslate.preferredLanguage": "English",
 "window.menuBarVisibility": "compact",
 "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\g++.exe",
-"workbench.colorTheme": "Mayukai Alucard",
+"workbench.colorTheme": "Nebula Pandas Theme",
 "settingsSync.ignoredExtensions": [
   "nhoizey.gremlins"
 ],

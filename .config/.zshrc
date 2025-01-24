@@ -159,7 +159,7 @@ function abbrev-alias() {
 
 # For some reason vr and lab (normal alias) was being added to elias array that are abbrev-alias commands
 function expand-ealias() {
-    if [[ $LBUFFER =~ "\<(${(j:|:)ealiases})\$" && ! $LBUFFER =~ "(cv|lab)$" ]]; then
+    if [[ $LBUFFER =~ "\<(${(j:|:)ealiases})\$" && ! $LBUFFER =~ "(cv|lab|doc)$" ]]; then
         zle _expand_alias
         zle expand-word
     fi
@@ -216,12 +216,15 @@ abbrev-alias ctmux='code /home/nira/.config/tmux/tmux.conf'
 
 
 # Custom paths, these are better as alias
+alias mult='/home/nira/Documents/code/Emerging_Multiplier_Architectures'
 alias devlog='cd /home/nira/Documents/code/dotfiles/ubuntu_devlogs'
 alias cv="cd /home/nira/Documents/code/Exploring_Open_CV"
 alias lab="cd /home/nira/Documents/code"
 alias moml='cd /home/nira/Documents/code/MultiObjective_Machine_Learning'
 alias nova='cd /home/nira/Documents/code/NovaCore'
-
+alias downloads='cd /home/nira/Downloads'
+alias doc='cd /home/nira/Documents'
+alias work='cd /home/nira/Documents/code'
 
 # Sync dotsfile change wil repo
 abbrev-alias mvzsh='cp ~/.zshrc'
