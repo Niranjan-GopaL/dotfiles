@@ -204,7 +204,6 @@ abbrev-alias lr='eza -lha --icons=auto --recurse' # recursive listing of all fil
 
 
 
-
 # Handy change dir shortcuts
 abbrev-alias ..='cd ..'
 abbrev-alias ...='cd ../..'
@@ -216,12 +215,19 @@ abbrev-alias ctmux='code /home/nira/.config/tmux/tmux.conf'
 
 
 # Custom paths, these are better as alias
-alias mult='/home/nira/Documents/code/Emerging_Multiplier_Architectures'
+
+
+alias fonts='cd /home/nira/.local/share/fonts'
+alias sysfonts='/usr/share/fonts'
+
+alias mult='cd /home/nira/Documents/code/ece/Emerging_Multiplier_Architectures'
 alias devlog='cd /home/nira/Documents/code/dotfiles/ubuntu_devlogs'
-alias cv="cd /home/nira/Documents/code/Exploring_Open_CV"
+alias cv="cd /home/nira/Documents/code/aiml/Exploring_Open_CV"
 alias lab="cd /home/nira/Documents/code"
-alias moml='cd /home/nira/Documents/code/MultiObjective_Machine_Learning'
-alias nova='cd /home/nira/Documents/code/NovaCore'
+alias moml='cd /home/nira/Documents/code/aiml/MultiObjective_Machine_Learning'
+alias nova='cd /home/nira/Documents/code/processors/NovaCore'
+alias ece='cd /home/nira/Documents/code/ece'
+alias proc='cd /home/nira/Documents/code/processors'
 alias downloads='cd /home/nira/Downloads'
 alias doc='cd /home/nira/Documents'
 alias work='cd /home/nira/Documents/code'
@@ -283,3 +289,4 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+export PATH="$HOME/.cargo/bin:$PATH"

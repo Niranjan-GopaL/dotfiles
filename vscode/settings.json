@@ -1,6 +1,4 @@
-{
-    
-    //  Vim CONFIGS 
+{ //  Vim CONFIGS 
     "vim.leader": "<space>",
     "vim.useSystemClipboard": true,
     "vim.smartRelativeLine": true,
@@ -14,8 +12,7 @@
     
     // these are the symbols used as seperators, you  can remove - 
     // so that className=`w-24 h-24 rounded-full mx-auto` ; rounded-full w-24 is a single word
-    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?_",
-
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?-",
     
     
     "vim.insertModeKeyBindings": [
@@ -57,7 +54,7 @@
 
             {
                 "before":["J"],
-                "after":  ["C-d"]
+                "after": ["C-d"] 
             }, 
             {
                 "before":["K"],
@@ -130,7 +127,6 @@
                 "before": ["L"], // Focus next tab at the right
                 "commands": ["workbench.action.nextEditor"]
             },
-            
 
         ],
         
@@ -140,14 +136,13 @@
             // Biggest problem ( to select entire contents of a file, in vim I find it's hard := ggVGy )
             // Copy pasting does come in handy 
             "<C-a>": false,
-            "<C-d>": false,
             "<C-0>": false,
             "<C-c>": false,
             "<C-x>": false,
             "<C-v>": false,
             "<C-p>": false,
             
-            "J":true, 
+            "J": true, 
             // Navigating half  page down and up using ctrl up and ctrl down made no sense 
 
             // this is for codium AI
@@ -157,7 +152,10 @@
             //        --> JUST PRESS `v` AND YOU WILL BE BACKE TO BE IN NORMAL MODE , 
             //        --> ( or press `I`) to go to insert mode DIRECTLY but most of the times you would wanna be in normal mode
 
-            // "<C-d>": false,   // better to select next occurance of that word
+            // better to select next occurance of that word
+            // if I enable this, then shift J won't work => since J is mapped to Control d in vim, 
+            // which conflicts with control d which is used to select next occurance of the word
+            // "<C-d>": false,   
 
 
             "<C-r>": false,   // open  projects
@@ -174,23 +172,16 @@
         // persists the foldings 
         "editor.foldingStrategy": "auto",
         "editor.scrollbar.vertical": "visible",
-        
-        // ------------------------------------------------------------------------------------------------------------------
-        
-        
-        // General Editor configs 
-
-        "editor.minimap.enabled": false,
-        "editor.lineNumbers": "relative",
-        "window.zoomLevel": 2,
-        "editor.minimap.scale": 2,
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "vscode.github",
-        "editor.guides.bracketPairs": "active",
-        "editor.mouseWheelZoom": true,
-        "css.format.spaceAroundSelectorSeparator": true,
-        "workbench.iconTheme": "material-icon-theme",
-        "git.confirmSync": false,
+    "editor.lineNumbers": "relative",
+    "window.zoomLevel": 2,
+    "editor.minimap.scale": 2,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.github",
+    "editor.guides.bracketPairs": "active",
+    "editor.mouseWheelZoom": true,
+    "css.format.spaceAroundSelectorSeparator": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "git.confirmSync": false,
 
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
@@ -206,11 +197,13 @@
     "screencastMode.verticalOffset": 5,
     
     "window.newWindowDimensions": "fullscreen",
-    "scm.experimental.showHistoryGraph": true,
     
-    "editor.fontLigatures": "'calt', 'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",      
-    "editor.fontFamily": "'Cascadia Code', 'Monaspace Krypton', 'JetBrainsMono Nerd Font'  ,'Monaspace Radon', 'Abecedary',  Consolas,'Courier New' ,'Gabriola'",
-    "terminal.integrated.fontFamily": "'Cascadia Code','Abecedary', Consolas,  'Courier New' ,'Gabriola','JetBrainsMono Nerd Font'",
+    "editor.fontLigatures": "'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",      
+
+    // "editor.fontFamily": "Monaspace Xenon",
+    "editor.fontFamily": "Monaspace Krypton",
+    // "editor.fontFamily": "Monaspace Radon",
+    // "editor.fontFamily": "CaskaydiaCove Nerd Font",
     
     "git.openRepositoryInParentFolders": "never", "git.autofetch": true,
     "editor.cursorBlinking": "phase",
@@ -266,70 +259,70 @@
 
 
 
+    "security.workspace.trust.untrustedFiles": "open",
+    "javascript.inlayHints.enumMemberValues.enabled": true,
+    "go.inlayHints.compositeLiteralFields": true,
+    "go.inlayHints.constantValues": true,
+    "security.workspace.trust.banner": "never",
 
 
 
+    "errorLens.enabled": true,
+    "hediet.vscode-drawio.resizeImages": null,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "diffEditor.wordWrap": "off",
+    "go.toolsManagement.autoUpdate": true,
+    "reactSnippets.settings.prettierEnabled": true,
+    "vscodeGoogleTranslate.preferredLanguage": "English",
+    "window.menuBarVisibility": "compact",
+    "workbench.colorTheme": "Beautiful Dracula Darker",
+    "settingsSync.ignoredExtensions": [
+    "nhoizey.gremlins"
+    ],
+    "workbench.editor.pinnedTabSizing": "compact",
+    "editor.showFoldingControls": "always",
+    "editor.detectIndentation": false,
 
 
 
-"security.workspace.trust.untrustedFiles": "open",
-"javascript.inlayHints.enumMemberValues.enabled": true,
-"go.inlayHints.compositeLiteralFields": true,
-"go.inlayHints.constantValues": true,
-"security.workspace.trust.banner": "never",
+    "errorLens.messageEnabled": true,
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "info",
+        "warning"
+    ],
 
 
+    "editor.lineHeight": 38,
+    "editor.guides.indentation": false,
+    "editor.guides.highlightActiveBracketPair": false,
+    "workbench.editor.centeredLayoutAutoResize": false,
 
-"errorLens.enabled": true,
-"hediet.vscode-drawio.resizeImages": null,
-"editor.inlayHints.enabled": "offUnlessPressed",
-"diffEditor.wordWrap": "off",
-"go.toolsManagement.autoUpdate": true,
-"reactSnippets.settings.prettierEnabled": true,
-"vscodeGoogleTranslate.preferredLanguage": "English",
-"window.menuBarVisibility": "compact",
-"C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\g++.exe",
-"workbench.colorTheme": "Nebula Pandas Theme",
-"settingsSync.ignoredExtensions": [
-  "nhoizey.gremlins"
-],
-"workbench.editor.pinnedTabSizing": "compact",
-"editor.showFoldingControls": "always",
-"editor.detectIndentation": false,
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+    "files.autoSave": "afterDelay",
+    "verilog.linting.linter": "iverilog",
+        "verilog.runInTerminal": true,
 
-
-
-
-
-"errorLens.messageEnabled": true,
-"errorLens.enabledDiagnosticLevels": [
-    "error",
-    "info"
-],
-
-"C_Cpp.inlayHints.referenceOperator.showSpace": true,
-"C_Cpp.inlayHints.referenceOperator.enabled": true,
-
-"editor.lineHeight": 38,
-"editor.guides.indentation": false,
-"editor.guides.highlightActiveBracketPair": false,
-"workbench.editor.centeredLayoutAutoResize": false,
-
-"jupyter.widgetScriptSources": [
-    "jsdelivr.com",
-    "unpkg.com"
-],
-"files.autoSave": "afterDelay",
-"verilog.linting.linter": "iverilog",
-    "verilog.runInTerminal": true,
-
-    "notebook.experimental.useMarkdownRenderer": true,
-    "notebook.lineNumbers": "on",
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-    "terminal.integrated.inheritEnv": false,
+        "notebook.experimental.useMarkdownRenderer": true,
+        "notebook.lineNumbers": "on",
+        "notebook.cellToolbarLocation": {
+            "default": "right",
+            "jupyter-notebook": "left"
+        },
+        "terminal.integrated.inheritEnv": false,
+        "workbench.activityBar.location": "hidden",
+        "github.copilot.enable": {
+            "*": true,
+            "plaintext": false,
+            "markdown": false,
+            "scminput": false
+        },
+        "makefile.configureOnOpen": true,
+        "workbench.statusBar.visible": false,
+        "editor.minimap.enabled": false,
 
 
 }
