@@ -188,7 +188,6 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "window.restoreFullscreen": true,
     "workbench.editor.enablePreview": false,
-    "workbench.sideBar.location": "right",
     "workbench.editor.tabSizing": "shrink",
     "workbench.editor.wrapTabs": true,
     
@@ -200,9 +199,9 @@
     "editor.fontLigatures": "'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",      
 
     // "editor.fontFamily": "Monaspace Xenon",
-    "editor.fontFamily": "Monaspace Krypton",
+    // "editor.fontFamily": "Monaspace Krypton",
     // "editor.fontFamily": "Monaspace Radon",
-    // "editor.fontFamily": "CaskaydiaCove Nerd Font",
+    "editor.fontFamily": "CaskaydiaCove Nerd Font",
     
     "git.openRepositoryInParentFolders": "never", "git.autofetch": true,
     "editor.cursorBlinking": "phase",
@@ -273,8 +272,7 @@
     "go.toolsManagement.autoUpdate": true,
     "reactSnippets.settings.prettierEnabled": true,
     "vscodeGoogleTranslate.preferredLanguage": "English",
-    "window.menuBarVisibility": "compact",
-    "workbench.colorTheme": "Beautiful Dracula Darker",
+    "workbench.colorTheme": "Ayu Mirage Bordered",
     "settingsSync.ignoredExtensions": [
     "nhoizey.gremlins"
     ],
@@ -312,7 +310,6 @@
             "jupyter-notebook": "left"
         },
         "terminal.integrated.inheritEnv": false,
-        "workbench.activityBar.location": "hidden",
         "github.copilot.enable": {
             "*": true,
             "plaintext": false,
@@ -320,9 +317,13 @@
             "scminput": false
         },
         "makefile.configureOnOpen": true,
-        "workbench.statusBar.visible": false,
         "editor.minimap.enabled": false,
         "window.zoomLevel": 1,
+        "vim.cursorStylePerMode.replace": "block-outline",
+        "workbench.sideBar.location": "right",
+        "workbench.activityBar.location": "hidden",
+        "window.menuBarVisibility": "compact",
+        "window.titleBarStyle": "native",
 
 
 }

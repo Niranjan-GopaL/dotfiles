@@ -4,6 +4,8 @@
 ` $ something & disown` 
 This is how you run something ( generally a GUI application if you launch through Terminal )
 
+- Ctrl + N	       <-- Toggle Zathura’s information bar.
+- Ctrl + M	       <-- Toggle Zathura’s input field bar.
 - :open            <-- Tab complete and open a file in current session
 - :info            <-- All metadata info (when this was made, etc)
 - :bmark <name>    <-- add current page as <name> to bookmark
@@ -11,6 +13,9 @@ This is how you run something ( generally a GUI application if you launch throug
 - :blist <name>    <-- got to that bookmark
 - :bdelete         <-- prompt to delete a bookmark
 - ctrl+n           <-- you can see the page number in bottom right
+- Shift + P	       <-- Go to the currently selected page.
+- Shift + H	       <-- Go to the top of the currently selected page.
+- Shift + L	       <-- Go to the bottom of the currently selected page.
 
 Navigation
 - H/L <-- goes  to top / bottom of the page
