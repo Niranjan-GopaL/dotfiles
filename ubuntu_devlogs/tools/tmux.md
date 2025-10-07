@@ -2,6 +2,7 @@
 MOST IMPORTANT SHORTCUT
 > prefix + ? => All shortcuts you are using 
 prefix + w ( just like prefix + s but better )
+prefix + z ( 
 
 
 # Copy Mode
