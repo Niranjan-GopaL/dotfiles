@@ -12,21 +12,15 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 # initializing conda in your current shell session
-eval "$(/home/nira/miniconda3/bin/conda shell.zsh hook)"
+# eval "$(/home/nira/miniconda3/bin/conda shell.zsh hook)"
 
 
-# CUDA paths
-export PATH="/usr/local/cuda-12.6/bin${PATH:+:${PATH}}"
-export LD_LIBRARY_PATH=/usr/local/cuda-12.6/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+# CUDA 12.9 paths
+export PATH="/usr/local/cuda-12.9/bin${PATH:+:${PATH}}"
+export LD_LIBRARY_PATH="/usr/local/cuda-12.9/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
 
 
-# Load pyenv automatically
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
 
-# Load pyenv-virtualenv automatically
-eval "$(pyenv virtualenv-init -)"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -193,7 +187,7 @@ abbrev-alias  e='exit'  # exit
 abbrev-alias ls='eza -1  --git --icons=auto' # short list
 abbrev-alias  l='eza -lah --git --icons=auto' # long list
 abbrev-alias ll='eza -lha --icons=auto --sort=name  --sort=modified --group-directories-first' # long list all
-abbrev-alias ld='eza -lhD --icons=auto' # long list dirs
+abbrev-alias lld='eza -lhD --icons=auto' # long list dirs
 # abbrev-alias la='eza -lha --icons=auto .[!.]*' # list only hidden files, it recursievly
 abbrev-alias la='eza -lha --icons=auto | grep "^\."' # list only hidden files
 
@@ -211,7 +205,9 @@ alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 abbrev-alias czsh='code ~/.zshrc' 
+abbrev-alias ckitty='code ~/.config/kitty/kitty.conf'
 abbrev-alias ctmux='code /home/nira/.config/tmux/tmux.conf'
+abbrev-alias vivado='sudo /tools/Xilinx/Vivado/2024.2/bin/vivado'
 
 
 # Custom paths, these are better as alias
@@ -222,23 +218,28 @@ alias sysfonts='/usr/share/fonts'
 
 alias mult='cd /home/nira/Documents/code/ece/Emerging_Multiplier_Architectures'
 alias devlog='cd /home/nira/Documents/code/dotfiles/ubuntu_devlogs'
+alias aiml='cd /home/nira/Documents/code/aiml'
 alias cv="cd /home/nira/Documents/code/aiml/Exploring_Open_CV"
 alias lab="cd /home/nira/Documents/code"
 alias moml='cd /home/nira/Documents/code/aiml/MultiObjective_Machine_Learning'
 alias nova='cd /home/nira/Documents/code/processors/NovaCore'
 alias ece='cd /home/nira/Documents/code/ece'
+alias rtl='cd /home/nira/Documents/code/ece/rtl '
 alias proc='cd /home/nira/Documents/code/processors'
 alias downloads='cd /home/nira/Downloads'
 alias doc='cd /home/nira/Documents'
 alias work='cd /home/nira/Documents/code'
+alias dsa='cd /home/nira/Documents/code/swe/Algorithm-Toolkits'
+alias swe= 'cd /home/nira/Documents/code/swe'
+
+
 
 # Sync dotsfile change wil repo
 abbrev-alias mvzsh='cp ~/.zshrc'
 
 # Always mkdir a path (this doesn't inhibit functionality to make a single dir)
 alias mkdir='mkdir -p'
-alias nvim='~/nvim-docker-niranjan.sh'
-
+alias n='nvim'
 abbrev-alias p='python3 '
 abbrev-alias g='git '
 abbrev-alias gc='git commit -m "'
@@ -275,18 +276,24 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=$PATH:/usr/local/bin/ngrok 
+export PATH="/opt/riscv32/bin:$PATH"
+export PATH="$HOME/.local/kitty.app/bin:$PATH"
+
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/nira/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/nira/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/nira/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/nira/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/nira/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/nira/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/nira/anaconda3/bin:$PATH"
+        export PATH="/home/nira/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-export PATH="$HOME/.cargo/bin:$PATH"
