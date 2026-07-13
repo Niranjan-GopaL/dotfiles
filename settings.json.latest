@@ -1,0 +1,389 @@
+{ //  Vim CONFIGS  Make circular_line_buffer
+
+    "vim.leader": "<space>",
+    "vim.useSystemClipboard": true,
+    "vim.smartRelativeLine": true,
+    "editor.cursorSurroundingLines": 14,
+    
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "#2ff702",
+    "vim.highlightedyank.duration": 450,
+    
+    
+    
+    // these are the symbols used as seperators, you  can remove - 
+    // so that className=`w-24 h-24 rounded-full mx-auto` ; rounded-full w-24 is a single word
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?-",
+    
+    
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>", "l"]
+        }
+    ],
+    
+    "vim.normalModeKeyBindings": [
+        
+        // go to beginning and end of a line
+        // to go to end of line you can also do f`last char`
+        // ( NOTE : % goes to matching brackets )
+        
+        // {
+            //     "before":["1"],
+            //     "after":  ["0"]
+            // },
+            // {
+                //     "before":["2"],
+            //     "after":  ["$"]
+            // },
+            
+            // since Ctrl+r was to select VS Code project ; also t and u seemed more ergonomic
+            // t and u -----> undo and redo [AWESOME]
+            {
+                "before":["t"],
+                "after":  ["C-r"]
+            },
+            
+            // absolutely GENIUS ; you get the scrolling feeling in vim
+            // use JK with :set scrolloff=15 ( or :set so=15 ) ; 
+            // while scrolling your cursor will be on the 15th line from the top
+            // another useful motion => H M L go to Highest line in your screen, middle line, last line
+            
+            // coupled with `Smooth scrolling enabled` it's really good 
+            // marking important sections of the code using `leader+m`
+
+            {
+                "before":["J"],
+                "after": ["C-d"] 
+            }, 
+            {
+                "before":["K"],
+                "after":  ["C-u"]
+            },
+            
+            // boomark extension will be envoked via space (leader) 
+            {
+                "before": ["<leader>", "m"],
+                "commands": [
+                    "bookmarks.toggle"
+                ]
+            },
+            {
+                "before": ["<leader>", "b"],
+                "commands": [
+                    "bookmarks.list"
+                ]
+            },
+            {
+                "before": ["<leader>", "j"],
+                "commands": [
+                    "bookmarks.jumpToNext"
+                ]
+            },
+            {
+                "before": ["<leader>", "k"],
+                "commands": [
+                    "bookmarks.jumpToPrevious"
+                ]
+            },
+            {
+                "before": ["<leader>", "l"],
+                "commands": [
+                    "bookmarks.listFromAllFiles"
+                ]
+            },
+            
+            // File Explorer Vim is insane
+            /*
+            a - New file
+            f - New folder
+            r - Rename item
+            x - Cut item
+            y - Copy item
+            p - Paste item
+            */
+            {
+                "before": ["<leader>", "e"],
+                "commands": ["workbench.view.explorer"]
+            },
+            
+            {
+            "before": ["<leader>", "g"],
+            "commands" : ["workbench.action.showAllSymbols"]
+            },
+            
+            // THis is INSANE
+            {
+                "before": ["g", "h"],
+                "commands": [
+                    "editor.action.showDefinitionPreviewHover"
+                ]
+            },
+            {
+                "before": ["H"], // Focus previous tab at the left
+                "commands": ["workbench.action.previousEditor"]
+            },
+            {
+                "before": ["L"], // Focus next tab at the right
+                "commands": ["workbench.action.nextEditor"]
+            },
+
+        ],
+        
+        // Which Control Keys are important for me 
+        "vim.useCtrlKeys": true,
+        "vim.handleKeys": {
+
+            // VSCodeVim sometimes captures ESC before VS Code sees it.
+            "<Esc>": false,
+
+            // MOST AWESOME KEYBINDINGS :- Alt + Q => find and add next occurance of current selection and insert a MULTI CURSOR ( Old Ctrl + d working )
+
+            // Biggest problem ( to select entire contents of a file, in vim I find it's hard := ggVGy )
+            // Copy pasting does come in handy 
+            "<C-a>": false,
+            "<C-0>": false,
+            "<C-c>": false,
+            "<C-x>": false,
+            "<C-v>": false,
+            "<C-p>": false,
+            
+            "J": true, 
+            // Navigating half  page down and up using ctrl up and ctrl down made no sense 
+
+            // this is for codium AI
+            "<C-i>": false,
+            
+            // NOTE : on pressing ctrl+D YOU WILL BE IN `VISUAL MODE` 
+            //        --> JUST PRESS `v` AND YOU WILL BE BACKE TO BE IN NORMAL MODE , 
+            //        --> ( or press `I`) to go to insert mode DIRECTLY but most of the times you would wanna be in normal mode
+
+            // better to select next occurance of that word
+            // if I enable this, then shift J won't work => since J is mapped to Control d in vim, 
+            // which conflicts with control d which is used to select next occurance of the word
+            // "<C-d>": false,   
+
+
+            // "<C-r>": false,   // open  projects, it's ctrl+shift+r now
+            "<C-b>": false,
+            "<C-f>": false,   // find and replace 
+            "<C-h>": false, 
+            "<C-l>": false,  // select the line
+            "<C-w>": false,
+            
+            // control + space is HOW TO ENVOKE INTELLISENSE suggestion while in the middle of the word
+            "<C-space>": false
+        },
+        
+        // persists the foldings 
+        "editor.foldingStrategy": "auto",
+        "editor.scrollbar.vertical": "visible",
+    "editor.lineNumbers": "relative",
+    "editor.minimap.scale": 2,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.github",
+    "editor.guides.bracketPairs": "active",
+    "editor.mouseWheelZoom": true,
+    "css.format.spaceAroundSelectorSeparator": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "git.confirmSync": false,
+
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "editor.minimap.renderCharacters": false,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "window.restoreFullscreen": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.wrapTabs": true,
+    
+    "screencastMode.fontSize": 30,
+    "screencastMode.verticalOffset": 5,
+    
+    "window.newWindowDimensions": "fullscreen",
+    
+    "editor.fontLigatures": "'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",      
+    // "editor.fontLigatures": false,
+    
+    // "editor.fontFamily": "CaskaydiaCoveNerdFontMono-Italic",
+    // "editor.fontFamily": "CaskaydiaCove Nerd Font",
+
+    // "editor.fontFamily": "Monaspace Xenon",
+    // "editor.fontFamily": "Monaspace Krypton",
+    // "editor.fontFamily": "Monaspace Radon",
+    // "editor.fontFamily": "Monaspace Argon Frozen",
+    // "editor.fontFamily": "Monaspace Radon Frozen",
+    
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    // "editor.fontFamily": "OpenDyslexic Nerd Font",
+    // "editor.fontFamily": "Monoid Nerd Font Propo",
+    // "editor.fontFamily": "Mononoki Nerd Font",
+
+
+    "git.openRepositoryInParentFolders": "never", "git.autofetch": true,
+    "editor.cursorBlinking": "phase",
+    "git.postCommitCommand": "push",
+    "git.enableSmartCommit": true,
+    
+    "editor.codeActionsOnSave": {},
+    
+    
+    
+    
+    // Using the light mode
+"indentRainbow.indicatorStyle": "light",
+// we use a simple 1 pixel wide line
+//   "indentRainbow.lightIndicatorStyleLineWidth": 1,
+// the same colors as above but more visible
+"indentRainbow.colors": [
+    "rgba(255,255,64,0.3)",
+    "rgba(127,255,127,0.3)",
+    "rgba(255,127,255,0.3)",
+    "rgba(79,236,236,0.3)"],
+    
+    
+    
+    //    Custom file  formatters 
+    "[jsonc]": {
+        "editor.defaultFormatter":"vscode.github"
+    },
+    "[markdown]": {
+        "editor.wordWrap": "off",   // wrap at a fixed column
+        // "editor.wordWrap": "wordWrapColumn",   // wrap at a fixed column
+        // "editor.wordWrapColumn": 180,          // lines longer than 100 chars wrap
+        // "editor.wrapOnEscapedLineFeeds": true  // soft wrap at escaped line breaks
+    },
+    "[python]": {
+        "editor.formatOnType": true,
+        // "editor.defaultFormatter": "ms-python.autopep8",
+    },
+    // this is GODSEND ; but THEY WILL SLOW computer down if it 
+    "python.analysis.autoImportCompletions":true, 
+    "python.analysis.indexing": true,
+
+    // to make repl be in current working directory and not the project directory 
+    "python.terminal.executeInFileDir": true,
+    "verilog.linting.iverilog.runAtFileLocation":true,
+    
+    "terminal.integrated.fontSize": 20,
+    "terminal.integrated.env.windows": {},
+
+
+
+
+
+
+    "security.workspace.trust.untrustedFiles": "open",
+    "javascript.inlayHints.enumMemberValues.enabled": true,
+    "go.inlayHints.compositeLiteralFields": true,
+    "go.inlayHints.constantValues": true,
+    "security.workspace.trust.banner": "never",
+
+
+
+    "errorLens.enabled": false,
+    "hediet.vscode-drawio.resizeImages": null,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "diffEditor.wordWrap": "on",
+    "go.toolsManagement.autoUpdate": true,
+    "reactSnippets.settings.prettierEnabled": true,
+    "vscodeGoogleTranslate.preferredLanguage": "English",
+    "settingsSync.ignoredExtensions": [
+    "nhoizey.gremlins"
+    ],
+    "workbench.editor.pinnedTabSizing": "compact",
+    "editor.showFoldingControls": "always",
+    "editor.detectIndentation": false,
+
+
+
+    "errorLens.messageEnabled": true,
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "info",
+        "warning"
+    ],
+
+
+    // "editor.lineHeight": 38, // this adjusts the spacing between 2 lines
+    "editor.lineHeight": 20, // this adjusts the spacing between 2 lines
+    "editor.guides.indentation": false,
+    "editor.guides.highlightActiveBracketPair": false,
+    "workbench.editor.centeredLayoutAutoResize": false,
+
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+    "files.autoSave": "afterDelay",
+        "verilog.runInTerminal": true,
+
+        "notebook.experimental.useMarkdownRenderer": true,
+        "notebook.cellToolbarLocation": {
+            "default": "right",
+            "jupyter-notebook": "left"
+        },
+        "terminal.integrated.inheritEnv": false,
+        "makefile.configureOnOpen": true,
+        "vim.cursorStylePerMode.replace": "block-outline",
+        "workbench.sideBar.location": "right",
+        "window.menuBarVisibility": "compact",
+        "window.titleBarStyle": "native",
+        "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\g++.exe",
+        "remote.SSH.remoteServerListenOnSocket": true,
+        "remote.SSH.remotePlatform": {
+            "172.16.156.192": "linux",
+            "172.16.121.78": "linux",
+            "172.16.121.57": "linux",
+            "100.105.1.52": "linux"
+        },
+        "files.associations": {
+            "*.py": "python"
+        },
+        "terminal.integrated.commandsToSkipShell": [
+            "matlab.interrupt"
+        ],
+        "verilog.linting.linter": "xvlog",
+        "verilog.linting.iverilog.arguments": "-g2012",
+        "claudeCode.preferredLocation": "panel",
+        "editor.wordWrap": "wordWrapColumn",
+        "chat.editor.wordWrap": "on",
+        "editor.wrapOnEscapedLineFeeds": true,
+        "editor.wordWrapColumn": 100,
+        "glassit.alpha": 255,
+        "workbench.statusBar.visible": false,
+        "workbench.activityBar.location": "hidden",
+        "workbench.colorTheme": "Monokai",
+        "nebulaOni.update.restoreConfiguration": {
+            "themeSettings": {
+                "background": "Grey",
+                "main": "Bumblebee",
+                "highlight": "Ultra Violet",
+                "focusBorder": "ON",
+                "fontStyle": "Italic",
+                "syntaxBrightness": "Normal",
+                "comments": "Dark Violet",
+                "favorite": "OFF"
+            },
+            "favoriteSettings": {
+                "background": "Glacial Blue",
+                "main": "Sakura",
+                "highlight": "Ultra Violet",
+                "focusBorder": "ON",
+                "fontStyle": "Italic",
+                "syntaxBrightness": "Dimmed",
+                "comments": "Dark Magenta",
+                "favorite": "Nebula Oni (Cerberus)"
+            }
+        },
+        "editor.minimap.enabled": false,
+
+    // To temporarily disable warning and error squiggly lines
+    // ( so that you can take a neat screenshot of the code etc)
+    // "workbench.colorCustomizations": {
+    //     "editorWarning.foreground": "#00000000",
+    //     "editorError.foreground": "#00000000",
+    //     "editorInfo.foreground": "#00000000"
+    // }
+}
