@@ -258,6 +258,13 @@
   // Only these are needed in order to have 
   // Add Cursor up/down + Copy Line up/down in VimBindings
   
+// Classical CTRL+D action ( select next occurance, add a multi-cursor there )
+        {
+            "key": "alt+q",
+            "command": "editor.action.addSelectionToNextFindMatch",
+            "when": "editorFocus"
+        },
+
         // Find all occurances of somthing in entire workspace ; Include, Exclde files with regex
         {
             "key": "shift+alt+f shift+alt+f",
@@ -358,83 +365,101 @@
             "command": "workbench.view.extension.codium-sidebar-view-container"
         },
         {
-            "key": "ctrl+d",
-            "command": "-notebook.addFindMatchToSelection",
-            "when": "config.notebook.multiCursor.enabled && notebookCellEditorFocused && activeEditor == 'workbench.editor.notebook'"
-        },
-        {
             "key": "shift+alt+q",
             "command": "code-runner.run"
         },
         {
-            "key": "ctrl+j",
-            "command": "-extension.vim_ctrl+j",
-            "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
+            "key": "ctrl+shift+r",
+            "command": "workbench.action.openRecent"
         },
         {
-            "key": "escape",
-            "command": "-closeReplaceInFilesWidget",
-            "when": "replaceInputBoxFocus && searchViewletVisible"
+            "key": "ctrl+r",
+            "command": "-workbench.action.openRecent"
         },
         {
-            "key": "alt+d",
-            "command": "editor.action.addSelectionToNextFindMatch",
-            "when": "editorFocus"
+            "key": "ctrl+r",
+            "command": "-inlineChat.regenerate",
+            "when": "inlineChatHasProvider && inlineChatVisible"
         },
         {
-            "key": "ctrl+d",
-            "command": "-editor.action.addSelectionToNextFindMatch",
-            "when": "editorFocus"
+            "key": "ctrl+r",
+            "command": "-workbench.action.terminal.chat.rerunRequest",
+            "when": "chatIsEnabled && terminalChatFocus && terminalHasBeenCreated && !terminalChatActiveRequest || chatIsEnabled && terminalChatFocus && terminalProcessSupported && !terminalChatActiveRequest"
         },
         {
-            "key": "shift+enter",
-            "command": "-python.execInREPL",
-            "when": "config.python.REPL.sendToNativeREPL && editorTextFocus && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && editorLangId == 'python'"
+            "key": "ctrl+r",
+            "command": "-jupyter.refreshDataViewer",
+            "when": "isWorkspaceTrusted && jupyter.dataViewerActive"
         },
         {
-            "key": "shift+enter",
-            "command": "-python.execSelectionInTerminal",
-            "when": "editorTextFocus && !findInputFocussed && !isCompositeNotebook && !jupyter.ownsSelection && !notebookEditorFocused && !replaceInputFocussed && editorLangId == 'python'"
+            "key": "ctrl+r",
+            "command": "-workbench.action.reloadWindow",
+            "when": "isDevelopment"
         },
         {
-            "key": "shift+alt+enter",
-            "command": "chatEditor.action.accept",
-            "when": "chat.hasEditorModifications && editorFocus && hasUndecidedChatEditingResource"
+            "key": "ctrl+r",
+            "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+            "when": "inQuickOpen && inRecentFilesPicker"
         },
         {
-            "key": "ctrl+enter",
-            "command": "-chatEditor.action.accept",
-            "when": "chat.hasEditorModifications && editorFocus && hasUndecidedChatEditingResource"
+            "key": "ctrl+r",
+            "command": "-workbench.action.terminal.runRecentCommand",
+            "when": "accessibilityModeEnabled && terminalFocus && terminalHasBeenCreated || accessibilityModeEnabled && terminalFocus && terminalProcessSupported || accessibilityModeEnabled && accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal' || accessibilityModeEnabled && accessibleViewIsShown && terminalProcessSupported && accessibleViewCurrentProviderId == 'terminal'"
         },
         {
-            "key": "shift+alt+enter",
-            "command": "workbench.action.chat.applyInEditor",
-            "when": "accessibleViewInCodeBlock && chatIsEnabled || chatIsEnabled && inChat && !inChatInput"
+            "key": "ctrl+alt+b",
+            "command": "-cph.runTestCases"
         },
-        {
-            "key": "ctrl+enter",
-            "command": "-workbench.action.chat.applyInEditor",
-            "when": "accessibleViewInCodeBlock && chatIsEnabled || chatIsEnabled && inChat && !inChatInput"
-        },
-        {
-            "key": "shift+alt+enter",
-            "command": "workbench.action.chat.insertCodeBlock",
-            "when": "accessibleViewInCodeBlock && chatIsEnabled || chatIsEnabled && inChat && !inChatInput"
-        },
-        {
-            "key": "ctrl+enter",
-            "command": "-workbench.action.chat.insertCodeBlock",
-            "when": "accessibleViewInCodeBlock && chatIsEnabled || chatIsEnabled && inChat && !inChatInput"
-        },
-        {
-            "key": "shift+alt+enter",
-            "command": "github.copilot.generate",
-            "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
-        },
-        {
-            "key": "ctrl+enter",
-            "command": "-github.copilot.generate",
-            "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
-        },
+    
+    // MY ESCAPE STOPPED closing widgets and boxes SO I JUST USE THESE EXPLICIT bindings ---------------------------------------------------
+
+    {
+        "key": "escape",
+        "command": "closeFindWidget",
+        "when": "editorFocus && findWidgetVisible"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.closeQuickOpen",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "escape",
+        "command": "hideSuggestWidget",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.closeParameterHints",
+        "when": "parameterHintsVisible"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.closeMessages",
+        "when": "notificationFocus"
+    },
+    {
+        "key": "ctrl+escape ctrl+escape",
+        "command": "workbench.action.closeModalEditor",
+        "when": "editorFocus && editorPartModal"
+    },
+    {
+        "key": "escape",
+        "command": "-workbench.action.closeModalEditor",
+        "when": "editorFocus && editorPartModal"
+    },
+    {
+        "key": "ctrl+escape ctrl+escape",
+        "command": "workbench.action.closeModalEditor",
+        "when": "editorPartModal && !editorFocus"
+    },
+    {
+        "key": "escape",
+        "command": "-workbench.action.closeModalEditor",
+        "when": "editorPartModal && !editorFocus"
+    }
+
+
+    // -----------------------------------------------------------------------------------------------------------
 
 ]

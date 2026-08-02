@@ -1,4 +1,5 @@
-{ //  Vim CONFIGS 
+{ //  Vim CONFIGS  Make circular_line_buffer
+
     "vim.leader": "<space>",
     "vim.useSystemClipboard": true,
     "vim.smartRelativeLine": true,
@@ -133,6 +134,12 @@
         // Which Control Keys are important for me 
         "vim.useCtrlKeys": true,
         "vim.handleKeys": {
+
+            // VSCodeVim sometimes captures ESC before VS Code sees it.
+            "<Esc>": false,
+
+            // MOST AWESOME KEYBINDINGS :- Alt + Q => find and add next occurance of current selection and insert a MULTI CURSOR ( Old Ctrl + d working )
+
             // Biggest problem ( to select entire contents of a file, in vim I find it's hard := ggVGy )
             // Copy pasting does come in handy 
             "<C-a>": false,
@@ -158,7 +165,7 @@
             // "<C-d>": false,   
 
 
-            "<C-r>": false,   // open  projects
+            // "<C-r>": false,   // open  projects, it's ctrl+shift+r now
             "<C-b>": false,
             "<C-f>": false,   // find and replace 
             "<C-h>": false, 
@@ -197,12 +204,23 @@
     "window.newWindowDimensions": "fullscreen",
     
     "editor.fontLigatures": "'liga', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09'",      
+    // "editor.fontLigatures": false,
+    
+    // "editor.fontFamily": "CaskaydiaCoveNerdFontMono-Italic",
+    // "editor.fontFamily": "CaskaydiaCove Nerd Font",
 
     // "editor.fontFamily": "Monaspace Xenon",
     // "editor.fontFamily": "Monaspace Krypton",
     // "editor.fontFamily": "Monaspace Radon",
-    "editor.fontFamily": "CaskaydiaCove Nerd Font",
+    // "editor.fontFamily": "Monaspace Argon Frozen",
+    // "editor.fontFamily": "Monaspace Radon Frozen",
     
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    // "editor.fontFamily": "OpenDyslexic Nerd Font",
+    // "editor.fontFamily": "Monoid Nerd Font Propo",
+    // "editor.fontFamily": "Mononoki Nerd Font",
+
+
     "git.openRepositoryInParentFolders": "never", "git.autofetch": true,
     "editor.cursorBlinking": "phase",
     "git.postCommitCommand": "push",
@@ -210,16 +228,15 @@
     
     "editor.codeActionsOnSave": {},
     
-    "javascript.updateImportsOnFileMove.enabled": "always",
     
     
     
-      // Using the light mode
-  "indentRainbow.indicatorStyle": "light",
-  // we use a simple 1 pixel wide line
+    // Using the light mode
+"indentRainbow.indicatorStyle": "light",
+// we use a simple 1 pixel wide line
 //   "indentRainbow.lightIndicatorStyleLineWidth": 1,
-  // the same colors as above but more visible
-  "indentRainbow.colors": [
+// the same colors as above but more visible
+"indentRainbow.colors": [
     "rgba(255,255,64,0.3)",
     "rgba(127,255,127,0.3)",
     "rgba(255,127,255,0.3)",
@@ -232,10 +249,10 @@
         "editor.defaultFormatter":"vscode.github"
     },
     "[markdown]": {
-        "editor.wordWrap": "off"
-    },  
-    "[rust]": {
-        "editor.defaultFormatter": "rust-lang.rust-analyzer"
+        "editor.wordWrap": "off",   // wrap at a fixed column
+        // "editor.wordWrap": "wordWrapColumn",   // wrap at a fixed column
+        // "editor.wordWrapColumn": 180,          // lines longer than 100 chars wrap
+        // "editor.wrapOnEscapedLineFeeds": true  // soft wrap at escaped line breaks
     },
     "[python]": {
         "editor.formatOnType": true,
@@ -265,14 +282,13 @@
 
 
 
-    "errorLens.enabled": true,
+    "errorLens.enabled": false,
     "hediet.vscode-drawio.resizeImages": null,
     "editor.inlayHints.enabled": "offUnlessPressed",
-    "diffEditor.wordWrap": "off",
+    "diffEditor.wordWrap": "on",
     "go.toolsManagement.autoUpdate": true,
     "reactSnippets.settings.prettierEnabled": true,
     "vscodeGoogleTranslate.preferredLanguage": "English",
-    "workbench.colorTheme": "Ayu Mirage Bordered",
     "settingsSync.ignoredExtensions": [
     "nhoizey.gremlins"
     ],
@@ -290,7 +306,8 @@
     ],
 
 
-    "editor.lineHeight": 38,
+    // "editor.lineHeight": 38, // this adjusts the spacing between 2 lines
+    "editor.lineHeight": 20, // this adjusts the spacing between 2 lines
     "editor.guides.indentation": false,
     "editor.guides.highlightActiveBracketPair": false,
     "workbench.editor.centeredLayoutAutoResize": false,
@@ -300,30 +317,75 @@
         "unpkg.com"
     ],
     "files.autoSave": "afterDelay",
-    "verilog.linting.linter": "iverilog",
         "verilog.runInTerminal": true,
 
         "notebook.experimental.useMarkdownRenderer": true,
-        "notebook.lineNumbers": "on",
         "notebook.cellToolbarLocation": {
             "default": "right",
             "jupyter-notebook": "left"
         },
         "terminal.integrated.inheritEnv": false,
-        "github.copilot.enable": {
-            "*": true,
-            "plaintext": false,
-            "markdown": false,
-            "scminput": false
-        },
         "makefile.configureOnOpen": true,
-        "editor.minimap.enabled": false,
         "window.zoomLevel": 1,
         "vim.cursorStylePerMode.replace": "block-outline",
         "workbench.sideBar.location": "right",
-        "workbench.activityBar.location": "hidden",
         "window.menuBarVisibility": "compact",
         "window.titleBarStyle": "native",
+        "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+        "python.defaultInterpreterPath": "/home/nira/miniconda3",
+        "remote.SSH.remoteServerListenOnSocket": true,
+        "remote.SSH.remotePlatform": {
+            "172.16.156.192": "linux",
+            "172.16.121.78": "linux",
+            "172.16.121.57": "linux",
+            "100.105.1.52": "linux"
+        },
+        "files.associations": {
+            "*.py": "python"
+        },
+        "terminal.integrated.commandsToSkipShell": [
+            "matlab.interrupt"
+        ],
+        "verilog.linting.linter": "xvlog",
+        "verilog.linting.iverilog.arguments": "-g2012",
+        "claudeCode.preferredLocation": "panel",
+        "editor.wordWrap": "wordWrapColumn",
+        "chat.editor.wordWrap": "on",
+        "editor.wrapOnEscapedLineFeeds": true,
+        "editor.wordWrapColumn": 100,
+        "glassit.alpha": 255,
+        "workbench.statusBar.visible": false,
+        "workbench.activityBar.location": "hidden",
+        "workbench.colorTheme": "Monokai",
+        "nebulaOni.update.restoreConfiguration": {
+            "themeSettings": {
+                "background": "Grey",
+                "main": "Bumblebee",
+                "highlight": "Ultra Violet",
+                "focusBorder": "ON",
+                "fontStyle": "Italic",
+                "syntaxBrightness": "Normal",
+                "comments": "Dark Violet",
+                "favorite": "OFF"
+            },
+            "favoriteSettings": {
+                "background": "Glacial Blue",
+                "main": "Sakura",
+                "highlight": "Ultra Violet",
+                "focusBorder": "ON",
+                "fontStyle": "Italic",
+                "syntaxBrightness": "Dimmed",
+                "comments": "Dark Magenta",
+                "favorite": "Nebula Oni (Cerberus)"
+            }
+        },
+        "editor.minimap.enabled": false,
 
-
+    // To temporarily disable warning and error squiggly lines
+    // ( so that you can take a neat screenshot of the code etc)
+    // "workbench.colorCustomizations": {
+    //     "editorWarning.foreground": "#00000000",
+    //     "editorError.foreground": "#00000000",
+    //     "editorInfo.foreground": "#00000000"
+    // }
 }

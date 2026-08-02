@@ -5,6 +5,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -27,14 +31,16 @@ export LD_LIBRARY_PATH="/usr/local/cuda-12.9/lib64${LD_LIBRARY_PATH:+:${LD_LIBRA
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="jonathan"
+# ZSH_THEME="random"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+# ZSH_THEME_RANDOM_CANDIDATES=( "dallas" "fino-time"  "jonathan")
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -90,9 +96,13 @@ HIST_STAMPS="dd.mm.yyyy"
 plugins=(
     git 
     # vi-mode
+    # zsh-vi-mode
     zsh-autosuggestions
     zsh-syntax-highlighting # must be the last plugin sourced
 )
+
+# VI_MODE_SET_CURSOR=true
+
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 source $ZSH/oh-my-zsh.sh
 
@@ -113,8 +123,6 @@ export LANG=en_US.UTF-8
 
 INSERT_MODE_INDICATOR="%F{yellow}+%f"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
 # ---------------------------- abbrev-alias in zsh ------------------------------------------------------------- 
@@ -151,7 +159,7 @@ function abbrev-alias() {
 #     zle magic-space
 # }
 
-# For some reason vr and lab (normal alias) was being added to elias array that are abbrev-alias commands
+# For some reason vr and lab (normal alias) was being added to alias array that are abbrev-alias commands
 function expand-ealias() {
     if [[ $LBUFFER =~ "\<(${(j:|:)ealiases})\$" && ! $LBUFFER =~ "(cv|lab|doc)$" ]]; then
         zle _expand_alias
@@ -204,9 +212,9 @@ abbrev-alias ...='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
-abbrev-alias czsh='code ~/.zshrc' 
-abbrev-alias ckitty='code ~/.config/kitty/kitty.conf'
-abbrev-alias ctmux='code /home/nira/.config/tmux/tmux.conf'
+abbrev-alias czsh='nvim ~/.zshrc' 
+abbrev-alias ckitty='nvim ~/.config/kitty/kitty.conf'
+abbrev-alias ctmux='nvim /home/nira/.config/tmux/tmux.conf'
 abbrev-alias vivado='sudo /tools/Xilinx/Vivado/2024.2/bin/vivado'
 
 
@@ -230,7 +238,9 @@ alias downloads='cd /home/nira/Downloads'
 alias doc='cd /home/nira/Documents'
 alias work='cd /home/nira/Documents/code'
 alias dsa='cd /home/nira/Documents/code/swe/Algorithm-Toolkits'
-alias swe= 'cd /home/nira/Documents/code/swe'
+alias swe='cd /home/nira/Documents/code/swe'
+alias claude_dir='cd /home/nira/Documents/code/swe/claude_code_project'
+alias algo='cd /home/nira/Documents/code/swe/claude_code_project/website_for_AdvancedDSA'
 
 
 
@@ -241,6 +251,7 @@ abbrev-alias mvzsh='cp ~/.zshrc'
 alias mkdir='mkdir -p'
 alias n='nvim'
 abbrev-alias p='python3 '
+abbrev-alias f='fg '
 abbrev-alias g='git '
 abbrev-alias gc='git commit -m "'
 abbrev-alias ga='git add '
@@ -297,3 +308,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+export PATH="$HOME/.local/bin:$PATH"
+
+# opencode
+export PATH=/home/nira/.opencode/bin:$PATH
